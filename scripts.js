@@ -2,7 +2,7 @@
 $('body').scrollspy({ target: '#mainNavbar' })
 
 $('[data-spy="scroll"]').each(function () {
-    var $spy = $(this).scrollspy('refresh')
+    let $spy = $(this).scrollspy('refresh')
   })
 
 // BS. Navbar scrolling
@@ -10,8 +10,19 @@ $(function () {
     $(document).scroll(function() {
         let $nav = $('#mainNavbar');
         $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        $nav.toggleClass('shadow', $(this).scrollTop() > $nav.height());
     })
 })
+
+// Scroll Indicator (captures percentage)
+// - inspired by Bloomberg Article Scroll Indicator, a pen by Derek Palladino, published at: https://codepen.io/derekjp/pen/pJzpxB
+$(window).scroll(function(){
+    let wintop = $(window).scrollTop(), docheight = 
+        $(document).height(), winheight = $(window).height();
+    let scrolled = (wintop/(docheight-winheight))*100;
+
+    $('.scroll-line').css('width', (scrolled + '%'));
+});
 
 // Hamburger Icon animation
 $(document).ready(function () {
@@ -21,11 +32,13 @@ $(document).ready(function () {
 });
 
 // Copyright Date Script
-let dates = document.querySelector('span#date');
+let copyDates = document.querySelector('span#copyDate'),
+    pubStr = document.querySelector('span#pubDate'),
+    pubNum = parseInt(pubStr.textContent);
 
-if (new Date().getFullYear()>2018) {
-    let dateCopyright = new Date().getFullYear();
-    dates.textContent = `-${dateCopyright}`;
+if (new Date().getFullYear()>pubNum) {
+    let currDate = new Date().getFullYear();
+    copyDates.textContent = `-${currDate}`;
 }
 
 // Global site tag (gtag.js) - Google Analytics Script

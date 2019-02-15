@@ -13,19 +13,22 @@
 <body data-spy="scroll" data-target="#mainNavbar">
 
 <header>
-    <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-sm fixed-top py-0 my-0 p-lg-3" role="navigation">
+    <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-sm fixed-top py-0 my-0 p-lg-2" role="navigation">
       <div class="container-fluid">
         <a href="#" class="navbar-brand">
             <img src="images/logo_100h/logo_wh.png" width="140px" alt="We Dare logo (arrow breaking out of circle)" 
-                class="m-1 p-0"></img>
+                id="logo-white" class="m-1 p-0 d-none"></img>
+            <img src="images/logo_100h/logo.png" width="140px" alt="We Dare logo (arrow breaking out of circle)" 
+                id="logo-color" class="m-1 p-0"></img>
         </a>
+    <!-- Hamburger Icon -->
         <button id="hamburger" class="navbar-toggler rounded-0 my-1" type="button" data-toggle="collapse" data-target="#navbarContent" 
             aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
             <div class="animated-icon my-2">
                 <span></span><span></span><span></span>
             </div>
         </button>
-    
+    <!-- Full Navbar Menu -->
         <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
@@ -37,12 +40,14 @@
             </ul>
         </div>
       </div>
-    </nav>    
+    </nav>
+    <!-- Scroll Indicator -->
+    <div class="nav col-12 scroll-line"></div>
 </header>
 
-<main id="header" class="jumbotron text-center bg-transparent shadow-lg rounded-0">
-    <h2 class="display-5 mt-5 pt-4">Do you dare to</h2>
-    <h1 class="display-3 text-uppercase pb-2">dream big?</h1>
+<main id="header" class="jumbotron text-center bg-light shadow-lg rounded-0">
+    <h2 class="display-5 mt-5 pt-4"><span class="highlight shadow">Do you dare to</span></h2>
+    <h1 class="display-3 text-uppercase pb-2 mb-4"><span class="highlight shadow-lg">dream big?</span></h1>
     <p class="lead font-weight-light">
         If you do, we are on the same page here. My name is Anna and I also dare to enjoy coding and the magic it can create. By mixing HTML5, CSS3, and JavaScript (ES5+) with a splash of Bootstrap (3+), I dare to make the web a cosier place.
     </p>
@@ -169,7 +174,7 @@
                     <h6 class="card-text">Features:</h6>
                     <ul class="list-group list-group-flush mb-3">
                         <li class="list-group-item">CSS animation <a href="https://codepad.co/snippet/3SuRP9Xh" alt="Rainbow Loader by Avan C. source code">"Rainbow Loader"</a> created by Avan C.;</li>
-                        <li class="list-group-item">HTML5, CSS3, and JS(ES5) in the original commit.</li>
+                        <li class="list-group-item">HTML5, CSS3, and JS(ES2017).</li>
                     </ul>
                     <div class="btn btn-sm px-0" aria-label="Project's buttons">
                         <a href="http://wedare.tech/bullseye/" class="btn btn-sm btn-outline btn-outline-light rounded-0 mr-2 d-sm-flex d-md-inline-flex">
@@ -308,7 +313,7 @@
 </div>
 
 <footer class="footer text-light text-right card-footer small mt-5">
-    © Anna Kova, 2018<span id="date"></span>.
+    © Anna Kova, <span id="pubDate">2018</span><span id="copyDate"></span>.
 </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
