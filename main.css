@@ -140,7 +140,7 @@ a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a:hover {
-    color: var(--primary);
+    color: var(--white) !important;
     text-decoration: underline; }
 
 a:not([href]):not([tabindex]) {
@@ -332,50 +332,50 @@ h6, .h6 {
     font-size: 1.75rem; } }
 
 .display-1 {
-  font-size: 5rem;
-  font-weight: 300;
-  line-height: 1.2; }
-  @media (min-width: 576px) {
-    .display-1 {
-    font-size: 6rem; } }
-  @media (min-width: 1800px) {
-    .display-1 {
-    font-size: 8rem; } }
-
-.display-2 {
   font-size: 4.5rem;
   font-weight: 300;
   line-height: 1.2; }
   @media (min-width: 576px) {
-    .display-2 {
+    .display-1 {
     font-size: 5.5rem; } }
   @media (min-width: 1800px) {
-    .display-2 {
+    .display-1 {
     font-size: 7.5rem; } }
 
+.display-2 {
+  font-size: 4.25rem;
+  font-weight: 300;
+  line-height: 1.2; }
+  @media (min-width: 576px) {
+    .display-2 {
+    font-size: 5.25rem; } }
+  @media (min-width: 1800px) {
+    .display-2 {
+    font-size: 7.25rem; } }
+
 .display-3 {
-  font-size: 3.5rem;
+  font-size: 3.25rem;
   font-weight: 200;
   letter-spacing: .2rem;
   word-spacing: .2rem;
   line-height: 1.2; }
   @media (min-width: 576px) {
     .display-3 {
-    font-size: 4.5rem; } }
+    font-size: 4.25rem; } }
   @media (min-width: 1800px) {
     .display-3 {
-    font-size: 6.5rem; } }
+    font-size: 6.25rem; } }
 
 .display-4 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: 300;
   line-height: 1.2; }
   @media (min-width: 576px) {
     .display-4 {
-    font-size: 3.5rem; } }
+    font-size: 3.25rem; } }
   @media (min-width: 1800px) {
     .display-4 {
-    font-size: 5.5rem; } }
+    font-size: 5.25rem; } }
 
 hr {
   margin-top: 1rem;
@@ -3154,11 +3154,16 @@ input[type="button"].btn-block {
   display: flex;
   flex-direction: column;
   min-width: 0;
+  width: 85%;
+  margin: 0 auto;
   word-wrap: break-word;
   background-color: var(--white);
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem; }
+  @media (min-width: 576px) {
+    .card {
+      width: 100%; } }
   .card > hr {
     margin-right: 0;
     margin-left: 0; }
@@ -6860,13 +6865,17 @@ html {
 
 span.highlight {
   color: var(--white);
-  background: var(--danger); }
+  background: var(--danger);
+  border-radius: 0.25rem !important;  }
 
 #header > p {
   color: var(--primary); }
 
+li.list-group-item > a {
+  text-decoration: underline; }
+
 /* Scroll Indicator */
-@import "compass/css3";
+/* @import "compass/css3"; */
 
 div.scroll-line {
   position: fixed;

@@ -13,16 +13,15 @@
 <body data-spy="scroll" data-target="#mainNavbar">
 
 <header>
-    <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-sm fixed-top py-0 my-0 p-lg-2" role="navigation">
+    <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md fixed-top py-0 my-0 p-lg-2" role="navigation">
       <div class="container-fluid">
         <a href="#" class="navbar-brand">
-            <img src="images/logo_100h/logo_wh.png" width="140px" alt="We Dare logo (arrow breaking out of circle)" 
-                id="logo-white" class="m-1 p-0 d-none"></img>
-            <img src="images/logo_100h/logo.png" width="140px" alt="We Dare logo (arrow breaking out of circle)" 
-                id="logo-color" class="m-1 p-0"></img>
+            <img src="images/logo_100h/logo.png" width="140px" id="logo-color" class="m-1 p-0"
+                alt="We Dare logo (arrow breaking out of circle)"></img>
         </a>
     <!-- Hamburger Icon -->
-        <button id="hamburger" class="navbar-toggler rounded-0 my-1" type="button" data-toggle="collapse" data-target="#navbarContent" 
+        <button id="hamburger" class="navbar-toggler rounded-1 my-1" type="button" 
+            data-toggle="collapse" data-target="#navbarContent" 
             aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
             <div class="animated-icon my-2">
                 <span></span><span></span><span></span>
@@ -37,6 +36,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#contacts">Contacts</a>
                 </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="images/Anna-Kanterova-resume.pdf" target="_blank">Resume</a>
+                </li>
             </ul>
         </div>
       </div>
@@ -45,17 +48,17 @@
     <div class="nav col-12 scroll-line"></div>
 </header>
 
-<main id="header" class="jumbotron text-center bg-light shadow-lg rounded-0">
+<main id="header" class="jumbotron text-center bg-light shadow-lg rounded-1">
     <h2 class="display-5 mt-5 pt-4"><span class="highlight shadow">Do you dare to</span></h2>
     <h1 class="display-3 text-uppercase pb-2 mb-4"><span class="highlight shadow-lg">dream big?</span></h1>
     <p class="lead font-weight-light">
-        If you do, we are on the same page here. My name is Anna and I also dare to enjoy coding and the magic it can create. By mixing HTML5, CSS3, and JavaScript (ES5+) with a splash of Bootstrap (3+), I dare to make the web a cosier place.
+        If you do, we are on the same page here. My name is Anna and I also dare to enjoy coding and the magic it can create. By mixing HTML5, CSS3, and JavaScript with a splash of Bootstrap, I dare to make the web a cozier place.
     </p>
     <p class="lead font-weight-normal">
         Would you dare with me?
     </p>
-    <a href="#contacts" class="btn rounded-0 btn-primary text-white shadow-lg mx-2 mt-2">Contact me</a>
-    <a href="#contacts" class="btn rounded-0 btn-danger text-white shadow-lg mx-2 mt-2">Partner with me</a>
+    <a href="#contacts" class="btn rounded-1 btn-primary text-white shadow-lg mx-2 mt-2">Contact me</a>
+    <a href="#contacts" class="btn rounded-1 btn-danger text-white shadow-lg mx-2 mt-2">Partner with me</a>
 </main>
 
 <div class="container">
@@ -63,12 +66,14 @@
         <h3 class="display-5 text-uppercase text-light my-4 text-center">Projects</h3>
         <div class="card-columns">
         <!-- Currency Calculator -->
-            <div class="card border border-light bg-transparent shadow-lg mb-4 rounded-0">
+            <div class="card border border-light bg-transparent shadow-lg mb-4 rounded-1">
                 <img src="images/projects/currency-calculator_930x790.png" alt="Currency Calculator screenshot" 
-                    class="card-img-top rounded-0">
+                    class="card-img-top rounded-1">
                 <div class="card-body">
                     <h5 class="card-title text-white">Currency Calculator</h5>
-                    <p class="card-text">Currency Converter App helps users to convert USD into another usable currency (RUB, CAD, or EUR) in just a moment. Based on current market exchange rates, app will calculate the currency's corresponding value of the entered amount of money.</p>
+                    <p class="card-text">
+                        Currency Converter App helps users to convert USD into another usable currency (RUB, CAD, or EUR) in just a moment. Based on current market exchange rates, the app will calculate the currency's corresponding value of the entered amount of money.
+                    </p>
                     <h6 class="card-text">Features:</h6>
                     <ul class="list-group list-group-flush mb-3">
                         <li class="list-group-item">AJAX requests;</li>
@@ -76,12 +81,13 @@
                         <li class="list-group-item">HTML5, CSS3, JS(ES6).</li>
                     </ul>
                     <div class="btn btn-sm px-0" aria-label="Project's buttons">
-                        <a href="http://wedare.tech/currency-calc/" class="btn btn-sm btn-outline btn-outline-light rounded-0 mr-2 d-sm-flex d-md-inline-flex">
-                            <i class="fas fa-chevron-circle-right h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
+                        <a href="http://wedare.tech/currency-calc/" target="_blank" 
+                            class="btn btn-sm btn-outline btn-outline-light rounded-1 mr-2 d-sm-flex d-md-inline-flex">
+                            <i class="fab fa-flickr h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
                             <span class="pt-1">Explore</span></a>
-                        <a href="https://github.com/m3ta007/currency-calculator" 
-                            class="btn btn-sm btn-outline btn-outline-secondary rounded-0 my-1 d-sm-flex d-md-inline-flex">
-                            <i class="fab fa-github h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
+                        <a href="https://github.com/m3ta007/currency-calculator" target="_blank" 
+                            class="btn btn-sm btn-outline btn-outline-secondary rounded-1 my-1 d-sm-flex d-md-inline-flex">
+                            <i class="fab fa-github-square h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
                             <span class="pt-1">Repository</span></a>
                     </div>
                 </div>
@@ -90,25 +96,28 @@
                 </div>
             </div> 
         <!-- Bullseye -->
-        <div class="card border border-light bg-transparent shadow-lg mb-4 rounded-0">
+            <div class="card border border-light bg-transparent shadow-lg mb-4 rounded-1">
                 <img src="images/projects/bullseye_930x790.png" alt="Bullseye Game Page screenshot" 
-                    class="card-img-top border-bottom rounded-0">
+                    class="card-img-top border-bottom rounded-1">
                 <div class="card-body">
                     <h5 class="card-title text-white">Bullseye Game</h5>
                     <p class="card-text">Online game randomizing the results.</p>
                     <h6 class="card-text">Features:</h6>
                     <ul class="list-group list-group-flush mb-3">
-                        <li class="list-group-item">Babel and Browserify version <a href="https://github.com/m3ta007/JS-dev-tools/tree/master/babel" alt="Alternative Repository">available here</a>;</li>
-                        <li class="list-group-item">CSS animation <a href="https://codepad.co/snippet/3SuRP9Xh" alt="Rainbow Loader by Avan C. source code">"Rainbow Loader"</a> created by Avan C.;</li>
+                        <li class="list-group-item">Babel and Browserify version available <a href="https://github.com/m3ta007/JS-dev-tools/tree/master/babel" 
+                            alt="Alternative Repository">here</a>;</li>
+                        <li class="list-group-item">CSS animation "<a href="https://codepad.co/snippet/3SuRP9Xh" 
+                            alt="Rainbow Loader by Avan C. source code">Rainbow Loader</a>" created by Avan C.;</li>
                         <li class="list-group-item">HTML5, CSS3, and JS(ES2017).</li>
                     </ul>
                     <div class="btn btn-sm px-0" aria-label="Project's buttons">
-                        <a href="http://wedare.tech/bullseye/" class="btn btn-sm btn-outline btn-outline-light rounded-0 mr-2 d-sm-flex d-md-inline-flex">
-                            <i class="fas fa-play-circle h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
+                        <a href="http://wedare.tech/bullseye/" target="_blank" 
+                            class="btn btn-sm btn-outline btn-outline-light rounded-1 mr-2 d-sm-flex d-md-inline-flex">
+                            <i class="fas fa-caret-square-right h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
                             <span class="pt-1">Play now</span></a>
-                        <a href="https://github.com/m3ta007/bullseye" 
-                            class="btn btn-sm btn-outline btn-outline-secondary rounded-0 my-1 d-sm-flex d-md-inline-flex">
-                            <i class="fab fa-github h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
+                        <a href="https://github.com/m3ta007/bullseye" target="_blank" 
+                            class="btn btn-sm btn-outline btn-outline-secondary rounded-1 my-1 d-sm-flex d-md-inline-flex">
+                            <i class="fab fa-github-square h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
                             <span class="pt-1">Repository</span></a>
                     </div>
                 </div>
@@ -117,28 +126,32 @@
                 </div>
             </div>
          <!-- Login Page -->
-            <div class="card border border-light bg-transparent shadow-lg mb-4 rounded-0">
+            <div class="card border border-light bg-transparent shadow-lg mb-4 rounded-1">
                 <img src="images/projects/login_930x790.png" alt="Login page screenshot" 
-                    class="card-img-top border-bottom rounded-0">
+                    class="card-img-top border-bottom rounded-1">
                 <div class="card-body">
                     <h5 class="card-title text-white">Login Page</h5>
-                    <p class="card-text">Template for the login page with options to switch screen mode between light (Day Mode) and dark (Night Mode) themes and local storage of user data and presets.</p>
+                    <p class="card-text">
+                        Template for the login page with options to switch screen mode between light (Day Mode) and dark (Night Mode) themes and local storage of user data and presets.
+                    </p>
                     <h6 class="card-text">Features:</h6>
                     <ul class="list-group list-group-flush mb-3">
                         <li class="list-group-item">Modules bundled with Webpack;</li>
                         <li class="list-group-item">Local Storage for user data, serialized data objects, and color themes;</li>
                         <li class="list-group-item">Switching Day/Night mode (color themes) in one click;</li>
                         <li class="list-group-item">JSON requests;</li>
-                        <li class="list-group-item">ON/OFF Switch design inspired by <a href="https://proto.io/freebies/onoff/" aria-label="Proto.io On/Off FlipSwitch freebie">Proto.io</a>;</li>
+                        <li class="list-group-item">ON/OFF Switch design inspired by <a href="https://proto.io/freebies/onoff/" 
+                            aria-label="Proto.io On/Off FlipSwitch freebie">Proto.io</a>;</li>
                         <li class="list-group-item">HTML5, CSS3, JS(ES6).</li>
                     </ul>
                     <div class="btn btn-sm px-0" aria-label="Project's buttons">
-                        <a href="http://wedare.tech/login/dist/" class="btn btn-sm btn-outline btn-outline-light rounded-0 mr-2 d-sm-flex d-md-inline-flex">
-                            <i class="fas fa-chevron-circle-right h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
+                        <a href="http://wedare.tech/login/dist/" target="_blank" 
+                            class="btn btn-sm btn-outline btn-outline-light rounded-1 mr-2 d-sm-flex d-md-inline-flex">
+                            <i class="fab fa-flickr h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
                             <span class="pt-1">Explore</span></a>
-                        <a href="https://github.com/m3ta007/login-page" 
-                            class="btn btn-sm btn-outline btn-outline-secondary rounded-0 my-1 d-sm-flex d-md-inline-flex">
-                            <i class="fab fa-github h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
+                        <a href="https://github.com/m3ta007/login-page" target="_blank" 
+                            class="btn btn-sm btn-outline btn-outline-secondary rounded-1 my-1 d-sm-flex d-md-inline-flex">
+                            <i class="fab fa-github-square h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
                             <span class="pt-1">Repository</span></a>
                     </div>
                 </div>
@@ -146,23 +159,58 @@
                     February 2019
                 </div>
             </div> 
+         <!-- Login Page -->
+            <div class="card border border-light bg-transparent shadow-lg mb-4 rounded-1">
+                <img src="images/projects/wildcats_930x790.png" alt="Login page screenshot" 
+                    class="card-img-top border-bottom rounded-1">
+                <div class="card-body">
+                    <h5 class="card-title text-white">Gallery Page</h5>
+                    <p class="card-text">
+                            Library of templates with photos of wild cats cubs wrapped in photo slider plugin, customized tabs, and wraparound status bar.
+                    </p>
+                    <h6 class="card-text">Features:</h6>
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item">Customized tabs;</li>
+                        <li class="list-group-item">Photo slider plugin (Galleria);</li>
+                        <li class="list-group-item">Wraparound status bar;</li>
+                        <li class="list-group-item">Responsive layout;</li>
+                        <li class="list-group-item">HTML5, CSS3, JS(ES5), jQuery(3.3).</li>
+                    </ul>
+                    <div class="btn btn-sm px-0" aria-label="Project's buttons">
+                        <a href="http://wedare.tech/wildcats/" target="_blank" 
+                            class="btn btn-sm btn-outline btn-outline-light rounded-1 mr-2 d-sm-flex d-md-inline-flex">
+                            <i class="fab fa-flickr h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
+                            <span class="pt-1">Explore</span></a>
+                        <a href="https://github.com/m3ta007/wild-cats" target="_blank" 
+                            class="btn btn-sm btn-outline btn-outline-secondary rounded-1 my-1 d-sm-flex d-md-inline-flex">
+                            <i class="fab fa-github-square h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
+                            <span class="pt-1">Repository</span></a>
+                    </div>
+                </div>
+                <div class="card-footer small text-secondary border-top border-secondary text-right font-weight-light">
+                    March 2019
+                </div>
+            </div> 
         <!-- RGB game -->
-            <div class="card border border-light bg-transparent shadow-lg mb-4 rounded-0">
-                <img src="images/projects/rgb-color-game_930x790.png" alt="RGB Color Game screenshot" class="card-img-top border-bottom rounded-0">
+            <div class="card border border-light bg-transparent shadow-lg mb-4 rounded-1">
+                <img src="images/projects/rgb-color-game_930x790.png" alt="RGB Color Game screenshot" class="card-img-top border-bottom rounded-1">
                 <div class="card-body">
                     <h5 class="card-title text-white">RGB Color Game</h5>
-                    <p class="card-text">Try to guess the right color for RGB code - values given for Red, Green, and Blue colors.</p>
+                    <p class="card-text">
+                        Try to guess the right color for RGB code - values given for Red, Green, and Blue colors.
+                    </p>
                     <h6 class="card-text">Features:</h6>
                     <ul class="list-group list-group-flush mb-3">
                         <li class="list-group-item">HTML5, CSS3, JS(ES6).</li>
                     </ul>
                     <div class="btn btn-sm px-0" aria-label="Project's buttons">
-                        <a href="http://wedare.tech/rgb" class="btn btn-sm btn-outline btn-outline-light rounded-0 mr-2 d-sm-flex d-md-inline-flex">
-                            <i class="fas fa-play-circle h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
+                        <a href="http://wedare.tech/rgb" target="_blank" 
+                            class="btn btn-sm btn-outline btn-outline-light rounded-1 mr-2 d-sm-flex d-md-inline-flex">
+                            <i class="fas fa-caret-square-right h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
                             <span class="pt-1">Play now</span></a>
-                        <a href="https://github.com/m3ta007/RGB-Color-Game" 
-                            class="btn btn-sm btn-outline btn-outline-secondary rounded-0 my-1 d-sm-flex d-md-inline-flex">
-                            <i class="fab fa-github h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
+                        <a href="https://github.com/m3ta007/RGB-Color-Game" target="_blank" 
+                            class="btn btn-sm btn-outline btn-outline-secondary rounded-1 my-1 d-sm-flex d-md-inline-flex">
+                            <i class="fab fa-github-square h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
                             <span class="pt-1">Repository</span></a>
                     </div>
                 </div>
@@ -171,23 +219,26 @@
                 </div>
             </div> 
         <!-- Scorekeeper -->
-            <div class="card border border-light bg-transparent shadow-lg mb-4 rounded-0">
+            <div class="card border border-light bg-transparent shadow-lg mb-4 rounded-1">
                 <img src="images/projects/scorekeeper_930x790.png" alt="Scorekeeper screenshot" 
-                    class="card-img-top border-bottom rounded-0">
+                    class="card-img-top border-bottom rounded-1">
                 <div class="card-body">
                     <h5 class="card-title text-white">Scorekeeper Website</h5>
-                    <p class="card-text">Little helper for those venturous gamers who want to focus on actually playing but not keeping the score in mind.</p>
+                    <p class="card-text">
+                        Little helper for those venturous gamers who want to focus on actually playing but not keeping the score in mind.
+                    </p>
                     <h6 class="card-text">Features:</h6>
                     <ul class="list-group list-group-flush mb-3">
                         <li class="list-group-item">HTML5, CSS3, JS(ES6).</li>
                     </ul>
                     <div class="btn btn-sm px-0" aria-label="Project's buttons">
-                        <a href="http://wedare.tech/scorekeeper/" class="btn btn-sm btn-outline btn-outline-light rounded-0 mr-2 d-sm-flex d-md-inline-flex">
-                            <i class="fas fa-play-circle h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
+                        <a href="http://wedare.tech/scorekeeper/" target="_blank" 
+                            class="btn btn-sm btn-outline btn-outline-light rounded-1 mr-2 d-sm-flex d-md-inline-flex">
+                            <i class="fas fa-caret-square-right h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
                             <span class="pt-1">Play now</span></a>
-                        <a href="https://github.com/m3ta007/score-keeper" 
-                            class="btn btn-sm btn-outline btn-outline-secondary rounded-0 my-1 d-sm-flex d-md-inline-flex">
-                            <i class="fab fa-github h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
+                        <a href="https://github.com/m3ta007/score-keeper" target="_blank" 
+                            class="btn btn-sm btn-outline btn-outline-secondary rounded-1 my-1 d-sm-flex d-md-inline-flex">
+                            <i class="fab fa-github-square h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
                             <span class="pt-1">Repository</span></a>
                     </div>
                 </div>
@@ -196,24 +247,27 @@
                 </div>
             </div> 
         <!-- Parad/Ice -->
-            <div class="card border border-light bg-transparent shadow-lg mb-4 rounded-0">
+            <div class="card border border-light bg-transparent shadow-lg mb-4 rounded-1">
                 <img src="images/projects/parad-ice-tasting_930x790.png" alt="Parad/Ice Tasting screenshot" 
-                    class="card-img-top border-bottom rounded-0">
+                    class="card-img-top border-bottom rounded-1">
                 <div class="card-body">
                     <h5 class="card-title text-white">Parad/Ice Tasting Langind Page</h5>
-                    <p class="card-text">Template for an idea of popup-tasting of ice cream, gelato, and sorbet. Responsive bright design aims to fuel user's appetite.</p>
+                    <p class="card-text">
+                        Template for an idea of popup-tasting of ice cream, gelato, and sorbet. Responsive bright design aims to fuel user's appetite.
+                    </p>
                     <h6 class="card-text">Features:</h6>
                     <ul class="list-group list-group-flush mb-3">
                         <li class="list-group-item">Bootstrap v.4;</li>
                         <li class="list-group-item">HTML5, CSS3, JS(ES6).</li>
                     </ul>
                     <div class="btn btn-sm px-0" aria-label="Project's buttons">
-                        <a href="http://wedare.tech/parad-ice/" class="btn btn-sm btn-outline btn-outline-light rounded-0 mr-2 d-sm-flex d-md-inline-flex">
-                            <i class="fas fa-chevron-circle-right h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
+                        <a href="http://wedare.tech/parad-ice/" target="_blank" 
+                            class="btn btn-sm btn-outline btn-outline-light rounded-1 mr-2 d-sm-flex d-md-inline-flex">
+                            <i class="fab fa-flickr h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
                             <span class="pt-1">Explore</span></a>
-                        <a href="https://github.com/m3ta007/parad-ice-tasting" 
-                            class="btn btn-sm btn-outline btn-outline-secondary rounded-0 my-1 d-sm-flex d-md-inline-flex">
-                            <i class="fab fa-github h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
+                        <a href="https://github.com/m3ta007/parad-ice-tasting" target="_blank" 
+                            class="btn btn-sm btn-outline btn-outline-secondary rounded-1 my-1 d-sm-flex d-md-inline-flex">
+                            <i class="fab fa-github-square h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
                             <span class="pt-1">Repository</span></a>
                     </div>
                 </div>
@@ -222,23 +276,26 @@
                 </div>
             </div> 
         <!-- Portfolio Neo -->
-            <div class="card border border-light bg-transparent shadow-lg mb-4 rounded-0">
+            <div class="card border border-light bg-transparent shadow-lg mb-4 rounded-1">
                 <img src="images/projects/portfolio-neo_930x790.png" alt="Template Portfolio Wesite screenshot" 
-                    class="card-img-top border-bottom rounded-0">
+                    class="card-img-top border-bottom rounded-1">
                 <div class="card-body">
                     <h5 class="card-title text-white">Template Portfolio Website</h5>
-                    <p class="card-text">Template portfolio of a frontend-developer and web designer with callback request form and sample projects.</p>
+                    <p class="card-text">
+                        Template portfolio of a frontend-developer and web designer with callback request form and sample projects.
+                    </p>
                     <h6 class="card-text">Features:</h6>
                     <ul class="list-group list-group-flush mb-3">
                         <li class="list-group-item">HTML5, CSS3, JS(ES6).</li>
                     </ul>
                     <div class="btn btn-sm px-0" aria-label="Project's buttons">
-                        <a href="http://wedare.tech/portfolio-neo/" class="btn btn-sm btn-outline btn-outline-light rounded-0 mr-2 d-sm-flex d-md-inline-flex">
-                            <i class="fas fa-chevron-circle-right h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
+                        <a href="http://wedare.tech/portfolio-neo/" target="_blank" 
+                            class="btn btn-sm btn-outline btn-outline-light rounded-1 mr-2 d-sm-flex d-md-inline-flex">
+                            <i class="fab fa-flickr h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
                             <span class="pt-1">Explore</span></a>
-                        <a href="https://github.com/m3ta007/portfolio-neo" 
-                            class="btn btn-sm btn-outline btn-outline-secondary rounded-0 my-1 d-sm-flex d-md-inline-flex">
-                            <i class="fab fa-github h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
+                        <a href="https://github.com/m3ta007/portfolio-neo" target="_blank" 
+                            class="btn btn-sm btn-outline btn-outline-secondary rounded-1 my-1 d-sm-flex d-md-inline-flex">
+                            <i class="fab fa-github-square h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
                             <span class="pt-1">Repository</span></a>
                     </div>
                 </div>
@@ -247,12 +304,14 @@
                 </div>
             </div> 
         <!-- Gallery -->
-            <div class="card border border-light bg-transparent shadow-lg mb-4 rounded-0">
+            <div class="card border border-light bg-transparent shadow-lg mb-4 rounded-1">
                 <img src="images/projects/gallery_930x790.png" alt="Photo Gallery screenshot" 
-                    class="card-img-top border-bottom rounded-0">
+                    class="card-img-top border-bottom rounded-1">
                 <div class="card-body">
                     <h5 class="card-title text-white">Photo Gallery</h5>
-                    <p class="card-text">Collection of photos presented in unified sepia style.</p>
+                    <p class="card-text">
+                        Collection of photos presented in unified sepia style.
+                    </p>
                     <h6 class="card-text">Features:</h6>
                     <ul class="list-group list-group-flush mb-3">
                         <li class="list-group-item">CSS Grid & Flexbox;</li>
@@ -260,12 +319,13 @@
                         <li class="list-group-item">HTML5, CSS3, JS(ES6).</li>
                     </ul>
                     <div class="btn btn-sm px-0" aria-label="Project's buttons">
-                        <a href="http://wedare.tech/gallery/" class="btn btn-sm btn-outline btn-outline-light rounded-0 mr-2 d-sm-flex d-md-inline-flex">
-                            <i class="fas fa-chevron-circle-right h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
+                        <a href="http://wedare.tech/gallery/" target="_blank" 
+                            class="btn btn-sm btn-outline btn-outline-light rounded-1 mr-2 d-sm-flex d-md-inline-flex">
+                            <i class="fab fa-flickr h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
                             <span class="pt-1">Explore</span></a>
-                        <a href="https://github.com/m3ta007/gallery-page" 
-                            class="btn btn-sm btn-outline btn-outline-secondary rounded-0 my-1 d-sm-flex d-md-inline-flex">
-                            <i class="fab fa-github h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
+                        <a href="https://github.com/m3ta007/gallery-page" target="_blank" 
+                            class="btn btn-sm btn-outline btn-outline-secondary rounded-1 my-1 d-sm-flex d-md-inline-flex">
+                            <i class="fab fa-github-square h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
                             <span class="pt-1">Repository</span></a>
                     </div>
                 </div>
@@ -274,11 +334,13 @@
                 </div>
             </div> 
         <!-- Java monitoring -->
-            <div class="card border border-light bg-transparent shadow-lg mb-4 rounded-0">
-                <img src="images/projects/java-monitoring-result_930x790.png" alt="Java Screen Monitoring System screenshot" class="card-img-top border-bottom rounded-0">
+            <div class="card border border-light bg-transparent shadow-lg mb-4 rounded-1">
+                <img src="images/projects/java-monitoring-result_930x790.png" alt="Java Screen Monitoring System screenshot" class="card-img-top border-bottom rounded-1">
                 <div class="card-body">
                     <h5 class="card-title text-white">Screen Monitoring System</h5>
-                    <p class="card-text">This application is aimed to monitor the activity on the computer where it's run, by taking every 5 seconds screenshots of the main screen and storing them in the dedicated Dropbox folder. All processes are silently performed in the background.</p>
+                    <p class="card-text">
+                        This application is aimed to monitor the activity on the computer where it's run, by taking every 5 seconds screenshots of the main screen and storing them in the dedicated Dropbox folder. All processes are silently performed in the background.
+                    </p>
                     <h6 class="card-text">Features:</h6>
                     <ul class="list-group list-group-flush mb-3">
                         <li class="list-group-item">Java;</li>
@@ -286,12 +348,12 @@
                     </ul>
                     <div class="btn btn-sm px-0" aria-label="Project's buttons">
                         <a href="https://github.com/m3ta007/JavaScreenMonitorSystem" 
-                            class="btn btn-sm btn-outline btn-outline-light rounded-0 mr-2 d-sm-flex d-md-inline-flex">
+                            class="btn btn-sm btn-outline btn-outline-light rounded-1 mr-2 d-sm-flex d-md-inline-flex">
                             <i class="fab fa-java h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
                             <span class="pt-1">Check now</span></a>
-                        <a href="https://github.com/m3ta007/JavaScreenMonitorSystem" 
-                            class="btn btn-sm btn-outline btn-outline-secondary rounded-0 my-1 d-sm-flex d-md-inline-flex">
-                            <i class="fab fa-github h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
+                        <a href="https://github.com/m3ta007/JavaScreenMonitorSystem" target="_blank" 
+                            class="btn btn-sm btn-outline btn-outline-secondary rounded-1 my-1 d-sm-flex d-md-inline-flex">
+                            <i class="fab fa-github-square h5 my-0 mr-2 pt-1" aria-hidden="true"></i>
                             <span class="pt-1">Repository</span></a>
                     </div>
                 </div>
@@ -302,11 +364,11 @@
         </div>
     </section>
     
-    <section class="card container-fluid border border-light bg-transparent shadow-lg mb-4 rounded-0" id="contacts">
+    <section class="card container-fluid border border-light bg-transparent shadow-lg mb-4 rounded-1" id="contacts">
         <h3 class="display-5 text-uppercase text-light text-center my-4">Contacts</h3>
         <address class="text-light row align-items-center justify-content-center justify-content-sm-around p-1">
             <div class="col-10 col-sm-6 col-md-4 col-lg-6 order-1 order-sm-2 m-0 pb-3 row align-content-center justify-content-center">
-                <div class="col-10 col-sm-12 p-sm-0 col-lg-8 col-xl-6">
+                <div class="col-8 col-sm-12 p-sm-0 col-lg-8 col-xl-6">
                     <img src="images/logo_100h/logo_wh.png" alt="We Dare logo (arrow breaking out of circle)" 
                         class="img-fluid"><br>
                 </div>
@@ -320,22 +382,26 @@
                         CEO & Co-founder<br>
                     </div>
                 </div>
-                <div class="row col-8 col-sm-12 align-content-center text-center text-sm-left p-0 pl-lg-2 pl-xl-5">
-                    <div class="col-12 col-md-6">
+                <div class="row col-8 col-sm-12 align-content-center text-left p-0 pl-lg-2 pl-xl-5">
+                    <div class="col-12 col-md-6 pl-5 pl-sm-3">
                         <i class="fas fa-phone-square h4 my-0 mr-2 pt-1" aria-hidden="true"></i>
                         <a href="tel:+1(202)790-7465">+1 (202) 790-7465</a> <br>
                     </div>
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-6 pl-5 pl-sm-3">
                         <i class="fas fa-envelope-square h4 my-0 mr-2 pt-1" aria-hidden="true"></i>
                         <a href="mailto:anna@wedare.tech">anna@wedare.tech</a><br>
                     </div>
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-6 pl-5 pl-sm-3">
                         <i class="fab fa-linkedin h4 my-0 mr-2 pt-1" aria-hidden="true"></i>
                             <a href="https://www.linkedin.com/in/kanterova/en" class="mr-4 mr-sm-0">LinkedIn Profile</a> <br>
                     </div>
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-6 pl-5 pl-sm-3">
                         <i class="fab fa-github-square h4 my-0 mr-2 pt-1" aria-hidden="true"></i>
                             <a href="https://github.com/m3ta007/" class="mr-4 pr-3 mr-sm-0">GitHub Profile</a><br>
+                    </div>
+                    <div class="col-12 col-md-6 pl-5 pl-sm-3">
+                        <i class="fas fa-external-link-square-alt h4 my-0 mr-2 pt-1" aria-hidden="true"></i>
+                            <a href="images/Anna-Kanterova-resume.pdf" class="mr-4 pr-3 mr-sm-2" target="_blank">Resume</a><br>
                     </div>
                 </div>
             </div>
