@@ -140,7 +140,7 @@ a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a:hover {
-    color: var(--primary);
+    color: var(--offwhite);
     text-decoration: underline; }
 
 a:not([href]):not([tabindex]) {
@@ -151,6 +151,10 @@ a:not([href]):not([tabindex]) {
     text-decoration: none; }
   a:not([href]):not([tabindex]):focus {
     outline: 0; }
+
+li.list-group-item a {
+  text-decoration: underline;
+}
 
 pre,
 code,
