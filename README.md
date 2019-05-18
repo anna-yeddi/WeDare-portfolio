@@ -2,6 +2,11 @@
 
 Original langing page for We Dare Project and Anna Kova's portfolio website. First created in December 2018.
 
+## Updates March through May 2019:
+- Resume and project docs added;
+- Style tweaked;
+- Content updated.
+
 ## Updates 2/15/2019:
 - Navbar & jumbotron redesigned;
 - Scroll Indicator added;
