@@ -6860,13 +6860,16 @@ html {
   height: var(--footer-h);  }
 
 #mainNavbar.scrolled {
-    /* background: #0871a5c4; */
-    /* background: #e9cabec4; */
-    /* background: linear-gradient(to right, var(--light) 60%, var(--danger)); */
-    /* background: linear-gradient(135deg, var(--light) 63%, var(--danger) 63%); */
-    /* background: linear-gradient(45deg, var(--light) 63%, var(--danger) 63%); */
-    background: linear-gradient(135deg, var(--light) 63%, var(--info) 63%, var(--primary) 90%);
-    transition: all 300ms; }
+  /* background: #0871a5c4; */
+  /* background: #e9cabec4; */
+  /* background: linear-gradient(to right, var(--light) 60%, var(--danger)); */
+  /* background: linear-gradient(135deg, var(--light) 63%, var(--danger) 63%); */
+  /* background: linear-gradient(45deg, var(--light) 63%, var(--danger) 63%); */
+  background: linear-gradient(135deg, var(--light) 55%, var(--info) 55%, var(--primary) 90%);
+  transition: all 300ms; }
+/* #mainNavbar.scrolled a {    
+  color: var(--white);
+}     */
 
 #header {
   background-color: var(--light);
