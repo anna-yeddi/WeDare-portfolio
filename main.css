@@ -3315,20 +3315,6 @@ input[type="button"].btn-block {
           .card-group > .card:not(:first-child):not(:last-child):not(:only-child) .card-footer {
             border-radius: 0; } }
 
-.card-columns .card {
-  margin-bottom: 0.75rem; }
-@media (min-width: 576px) {
-  .card-columns {
-    column-count: 2;
-    column-gap: 1.25rem;
-    orphans: 1;
-    widows: 1; }
-    .card-columns .card {
-      display: inline-block;
-      width: 100%; } }
-@media (min-width: 992px) {
-  .card-columns {
-    column-count: 3; } }
           
 .accordion .card:not(:first-of-type):not(:last-of-type) {
   border-bottom: 0;
