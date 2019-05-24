@@ -38,7 +38,7 @@
 html {
   /* width: 100% !important; */
   position: relative !important;
-  min-height: 100%;
+  height: 100%;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -114,8 +114,8 @@ p {
   }
   .nav--scrolled {
     background: linear-gradient(135deg, 
-                var(--light) 63%, var(--info) 62%, var(--primary) 90%);
-    transition: all 300ms;
+                var(--light) 59%, var(--info) 58%, var(--primary) 90%);
+    transition: all .5s;
   }
   .nav--shadow {
     box-shadow: 0 0.5rem 1rem var(--shadow) !important;
@@ -182,7 +182,7 @@ p {
   @media (min-width: 48rem) {
     .nav__toggler {
       display: none;
-  padding: 0.75rem;
+      padding: 0.75rem;
     }
   }
   .nav__toggler:focus,
@@ -205,7 +205,8 @@ p {
      -moz-transition: .5s ease-in-out;
        -o-transition: .5s ease-in-out;
           transition: .5s ease-in-out;
-  cursor: pointer;  }
+  cursor: pointer; 
+}
 
 .nav__hamburger--line {
   display: block;
@@ -223,36 +224,43 @@ p {
      -moz-transition: .25s ease-in-out;
        -o-transition: .25s ease-in-out;
           transition: .25s ease-in-out;
-  background: var(--white); }
+  background: var(--white);
+}
 
 .nav__hamburger--line:nth-child(1) {
-  top: 0px; }
+  top: 0px;
+}
     
 .nav__hamburger--line:nth-child(2) {
-  top: 10px;  }
+  top: 10px; 
+}
 
 .nav__hamburger--line:nth-child(3) {
-  top: 20px;  }
+  top: 20px; 
+}
 
 .nav__hamburger--open .nav__hamburger--line:nth-child(1) {
   top: 11px;
   -webkit-transform: rotate(135deg);
      -moz-transform: rotate(135deg);
        -o-transform: rotate(135deg);
-          transform: rotate(135deg);  }
+          transform: rotate(135deg); 
+}
 
 .nav__hamburger--open .nav__hamburger--line:nth-child(2) {
   opacity: 0;
-  left: -60px; }
+  left: -60px;
+}
 
 .nav__hamburger--open .nav__hamburger--line:nth-child(3) {
   top: 11px;
   -webkit-transform: rotate(-135deg);
      -moz-transform: rotate(-135deg);
        -o-transform: rotate(-135deg);
-          transform: rotate(-135deg);  }
+          transform: rotate(-135deg); 
+}
 
-/* Collapsing of nav menu (with Bootsta*/
+/* Collapsing of nav menu */
 
 .collapse:not(.show) {
   display: none;
@@ -305,7 +313,7 @@ p {
       padding-right: 0.75rem;
       padding-left: 0.75rem;
       color: var(--white-half);
-      /* color: rgba(255, 255, 255, 0.5); */
+      font-size: 1rem;
     }
   }
   .nav-link:hover,
@@ -318,6 +326,7 @@ p {
   .nav-link.show {
     color: var(--white);
   }
+  /* Scroll Spy */
   .sr-only {
     position: absolute;
     width: 1px;
@@ -355,7 +364,8 @@ p {
   color: var(--white);
 }
 body#scrollSpy {
-  position: relative; }
+  position: relative;
+}
 
 
 /* Jumbotron */
@@ -386,7 +396,9 @@ body#scrollSpy {
     .jumbotron {
       padding: 12rem 1.5rem 5rem 1.5rem;
       margin-bottom: 3rem;
+   
     }
+ 
   }
 
   .jumbotron__h1 {
@@ -403,16 +415,21 @@ body#scrollSpy {
     color: var(--white);
     background: var(--danger);
     border-radius: 0.25rem;
+ 
   }
     @media (min-width: 48rem) {
       .jumbotron__h1 {
         font-size: 4.25rem;
+     
       }
+   
     }
     @media (min-width: 75rem) {
       .jumbotron__h1 {
         font-size: 6.25rem;
+     
       }
+   
     }
 
   .jumbotron__h2 {
@@ -429,31 +446,41 @@ body#scrollSpy {
     background: var(--danger);
     border-radius: 0.25rem;
     z-index: 2;
+ 
   }
     @media (min-width: 48rem) {
       .jumbotron__h2 {
         font-size: 2.25rem;
+     
       }
+   
     }
     @media (min-width: 75rem) {
       .jumbotron__h2 {
         font-size: 2.75rem;
+     
       }
+   
     }
 
   .jumbotron__p {
     font-size: 1.15rem;
     font-weight: 300; 
+ 
   }
     @media (min-width: 48rem) {
       .jumbotron__p {
         font-size: 1.25rem;
+     
       }
+   
     }
     @media (min-width: 75rem) {
       .jumbotron__p {
         font-size: 1.75rem;
+     
       }
+   
     }
 
   .jumbotron__btn {
@@ -476,19 +503,24 @@ body#scrollSpy {
     -webkit-text-decoration-skip: objects;
     box-shadow: 0 1rem 3rem var(--shadow)
     /* box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.075) */
+ 
   }
     @media screen and (prefers-reduced-motion: reduce) {
       .jumbotron__btn {
         transition: none;
+     
       }
+   
     }
     /* .jumbotron__btn:hover,
     .jumbotron__btn:focus {
       outline: 0;
       cursor: pointer;
+   
     } */
     .jumbotron__btn--pimary {
       background-color: var(--primary);
+   
     }
       .jumbotron__btn-primary:hover,
       .jumbotron__btn-primary:focus {
@@ -496,9 +528,11 @@ body#scrollSpy {
         background-color: transparent;
         border-color: var(--primary);
         cursor: pointer;
+     
       }
     .jumbotron__btn--danger {
       background-color: var(--danger);
+   
     }
       .jumbotron__btn-danger:hover,
       .jumbotron__btn-danger:focus {
@@ -506,6 +540,7 @@ body#scrollSpy {
         background-color: transparent;
         border-color: var(--danger);
         cursor: pointer;
+     
       }
 
 
@@ -526,12 +561,16 @@ body#scrollSpy {
     .section {
       font-size: 2rem;
       margin: 1.5rem 1rem;
+   
     }
+ 
   }
   @media (min-width: 75rem) {
     .section {
       font-size: 2.25rem;
+   
     }
+ 
   }
 
 .card {
@@ -548,16 +587,21 @@ body#scrollSpy {
     .card {
       grid-template-rows: repeat(10, 5%); 
       margin: 3rem 0;
+   
     }
+ 
   }
   .card--left {
     grid-template-columns: repeat(10, 10%);
+ 
   }
   @media (min-width: 36rem) {
     .card--left {
       width: 100vw;
       grid-template-columns: repeat(20, 5%);
+   
     }
+ 
   }
   .card__screenshot {
     border-radius: 0 0.25rem 0.25rem 0;
@@ -567,15 +611,19 @@ body#scrollSpy {
     overflow: hidden;
     width: 100%;
     max-height: 100%;
+ 
   }
     .card__screenshot--left {
       grid-area: 2 / 1 / 9 / 9;
       align-self: end;
+   
     }
     @media (min-width: 36rem) {
       .card__screenshot--left {
         grid-area: 1 / 1 / 11 / 12;
+     
       }
+   
     }
 
   .card__tech {
@@ -583,64 +631,81 @@ body#scrollSpy {
     object-fit: scale-down;
     width: 100%;
     max-height: 100%;
+ 
   }
     .card__tech--right {
       grid-area: 1 / 6 / 2 / 10;
       align-self: start;
       z-index: 10;
+   
     }
     @media (min-width: 36rem) {
       .card__tech--right {
         grid-area: 9 / 8 / 13 / 14;
         z-index: 10;
+     
       }
+   
     }
 
   .card__about {
     color: var(--offwhite);
     margin: 0;
+ 
   }
     .card__about--right {
       grid-area: 10 / 2 / 16 / 10;
+   
     }
     @media (min-width: 36rem) {
       .card__about--right {
         grid-area: 1 / 14 / 9 / 20;
         align-self: end;
+     
       }
+   
     }
     .card__about--date {
       color: var(--secondary);
       font-size: 0.8rem;
       margin-bottom: 0;
+   
     }
 
   .card__features {
     font-size: 0.9rem;
+ 
   }
     .card__features--right {
       grid-area: 17 / 3 / 20 / 10;
       margin: 0;
+   
     }
     @media (min-width: 36rem) {
       .card__features--right {
         grid-area: 9 / 16 / 14 / 20;
         margin: 0;
+     
       }
+   
     }
     .card__list {
       padding-left: 0;
       margin-bottom: 0;
+   
     }
   
   .card__btns--right {
     grid-area: 21 / 2 / 22 / 11;
+ 
   }
   @media (min-width: 36rem) {
     .card__btns--right {
       grid-area: 13 / 5 / 15 / 20;
       justify-self: end;
+   
     }
+ 
   }
     .card__btn {
       display: inline-block;
@@ -662,17 +727,21 @@ body#scrollSpy {
       -webkit-text-decoration-skip: objects;
       box-shadow: 0 1rem 3rem var(--shadow)
       /* box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.075) */
+   
     }
       @media screen and (prefers-reduced-motion: reduce) {
         .card__btn {
           transition: none;
+       
         }
+     
       }
       .card__btn--light {
         color: var(--light);
         border-color: var(--light);
         padding-top: 0.6rem;
         margin-left: 0;
+     
       }
         .card__btn-light:hover,
         .card__btn-light:focus {
@@ -681,12 +750,14 @@ body#scrollSpy {
           border-color: var(--light--half);
           cursor: pointer;
           /* z-index: 2; */
+       
         }
       .card__btn--secondary {
         color: var(--secondary);
         border-color: var(--secondary);
         padding-top: 0.6rem;
         margin-right: 0;
+     
       }
         .card__btn-secondary:hover,
         .card__btn-secondary:focus {
@@ -695,6 +766,7 @@ body#scrollSpy {
           border-color: var(--secondary-half);
           cursor: pointer;
           /* z-index: 2; */
+       
         }
 
 .icon {
