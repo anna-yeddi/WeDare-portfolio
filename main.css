@@ -51,7 +51,7 @@ html {
 
 body {
   margin: 0;
-  width: 100vw;
+  width: 100%;
   min-height: 100%;
   font-family: var(--font-family-sans-serif);
   font-style: light;
@@ -97,7 +97,7 @@ p {
 
 .nav {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   top: 0;
   right: 0;
   left: 0;
@@ -115,7 +115,20 @@ p {
   .nav--scrolled {
     background: linear-gradient(135deg, 
                 var(--light) 59%, var(--info) 58%, var(--primary) 90%);
-    transition: all .5s;
+    -webkit-transition: all .5s ease-in-out;
+       -moz-transition: all .5s ease-in-out;
+        -ms-transition: all .5s ease-in-out;
+         -o-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
+  }
+  @media screen and (prefers-reduced-motion: reduce) {
+    .nav--scrolled {
+      -webkit-transition: none;
+         -moz-transition: none;
+          -ms-transition: none;
+           -o-transition: none;
+              transition: none;
+    }
   }
   .nav--shadow {
     box-shadow: 0 0.5rem 1rem var(--shadow) !important;
@@ -203,9 +216,19 @@ p {
           transform: rotate(0deg);
   -webkit-transition: .5s ease-in-out;
      -moz-transition: .5s ease-in-out;
+      -ms-transition: .5s ease-in-out;
        -o-transition: .5s ease-in-out;
           transition: .5s ease-in-out;
   cursor: pointer; 
+}
+@media screen and (prefers-reduced-motion: reduce) {
+  .nav__hamburger {
+    -webkit-transition: none;
+       -moz-transition: none;
+        -ms-transition: none;
+         -o-transition: none;
+            transition: none;
+  }
 }
 
 .nav__hamburger--line {
@@ -222,10 +245,20 @@ p {
           transform: rotate(0deg);
   -webkit-transition: .25s ease-in-out;
      -moz-transition: .25s ease-in-out;
+      -ms-transition: .25s ease-in-out;
        -o-transition: .25s ease-in-out;
           transition: .25s ease-in-out;
   background: var(--white);
 }
+  @media screen and (prefers-reduced-motion: reduce) {
+    .nav__hamburger--line {
+      -webkit-transition: none;
+         -moz-transition: none;
+          -ms-transition: none;
+           -o-transition: none;
+              transition: none;
+    }
+  }
 
 .nav__hamburger--line:nth-child(1) {
   top: 0px;
@@ -269,11 +302,20 @@ p {
   position: relative;
   height: 0;
   overflow: hidden;
-  transition: height 0.35s ease;
+  -webkit-transition: height 0.35s ease;
+     -moz-transition: height 0.35s ease;
+      -ms-transition: height 0.35s ease;
+       -o-transition: height 0.35s ease;
+          transition: height 0.35s ease;
+  /* transition: linear .2s; */
 }
   @media screen and (prefers-reduced-motion: reduce) {
     .collapsing {
-      transition: none;
+      -webkit-transition: none;
+         -moz-transition: none;
+          -ms-transition: none;
+           -o-transition: none;
+              transition: none;
     }
   }
 
@@ -396,9 +438,7 @@ body#scrollSpy {
     .jumbotron {
       padding: 12rem 1.5rem 5rem 1.5rem;
       margin-bottom: 3rem;
-   
     }
- 
   }
 
   .jumbotron__h1 {
@@ -415,21 +455,16 @@ body#scrollSpy {
     color: var(--white);
     background: var(--danger);
     border-radius: 0.25rem;
- 
   }
     @media (min-width: 48rem) {
       .jumbotron__h1 {
         font-size: 4.25rem;
-     
       }
-   
     }
     @media (min-width: 75rem) {
       .jumbotron__h1 {
         font-size: 6.25rem;
-     
       }
-   
     }
 
   .jumbotron__h2 {
@@ -446,41 +481,31 @@ body#scrollSpy {
     background: var(--danger);
     border-radius: 0.25rem;
     z-index: 2;
- 
   }
     @media (min-width: 48rem) {
       .jumbotron__h2 {
         font-size: 2.25rem;
-     
       }
-   
     }
     @media (min-width: 75rem) {
       .jumbotron__h2 {
         font-size: 2.75rem;
-     
       }
-   
     }
 
   .jumbotron__p {
     font-size: 1.15rem;
     font-weight: 300; 
- 
   }
     @media (min-width: 48rem) {
       .jumbotron__p {
         font-size: 1.25rem;
-     
       }
-   
     }
     @media (min-width: 75rem) {
       .jumbotron__p {
         font-size: 1.75rem;
-     
       }
-   
     }
 
   .jumbotron__btn {
@@ -497,50 +522,56 @@ body#scrollSpy {
     color: var(--white);
     line-height: 1.5;
     border-radius: 0.25rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, 
-                border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    text-decoration: none;
+    -webkit-transition: color .2s ease-in-out, background-color .2s ease-in-out, 
+                        border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+       -moz-transition: color .2s ease-in-out, background-color .2s ease-in-out, 
+                        border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+        -ms-transition: color .2s ease-in-out, background-color .2s ease-in-out, 
+                        border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+         -o-transition: color .2s ease-in-out, background-color .2s ease-in-out, 
+                        border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+            transition: color .2s ease-in-out, background-color .2s ease-in-out, 
+                        border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+                 text-decoration: none;
     -webkit-text-decoration-skip: objects;
-    box-shadow: 0 1rem 3rem var(--shadow)
+    box-shadow: 0 1rem 3rem var(--shadow);
     /* box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.075) */
- 
   }
     @media screen and (prefers-reduced-motion: reduce) {
       .jumbotron__btn {
-        transition: none;
-     
+        -webkit-transition: none;
+           -moz-transition: none;
+            -ms-transition: none;
+             -o-transition: none;
+                transition: none;
       }
-   
     }
-    /* .jumbotron__btn:hover,
+    .jumbotron__btn:hover,
     .jumbotron__btn:focus {
       outline: 0;
       cursor: pointer;
-   
-    } */
-    .jumbotron__btn--pimary {
-      background-color: var(--primary);
-   
+      background-color: transparent;
+      -webkit-transform: translateY(-.3rem);
+         -moz-transform: translateY(-.3rem);
+          -ms-transform: translateY(-.3rem);
+           -o-transform: translateY(-.3rem);
+              transform: translateY(-.3rem);
     }
-      .jumbotron__btn-primary:hover,
-      .jumbotron__btn-primary:focus {
+    .jumbotron__btn--primary {
+      background-color: var(--primary);
+    }
+      .jumbotron__btn--primary:hover,
+      .jumbotron__btn--primary:focus {
         color: var(--primary);
-        background-color: transparent;
         border-color: var(--primary);
-        cursor: pointer;
-     
       }
     .jumbotron__btn--danger {
       background-color: var(--danger);
-   
     }
-      .jumbotron__btn-danger:hover,
-      .jumbotron__btn-danger:focus {
+      .jumbotron__btn--danger:hover,
+      .jumbotron__btn--danger:focus {
         color: var(--danger);
-        background-color: transparent;
         border-color: var(--danger);
-        cursor: pointer;
-     
       }
 
 
@@ -561,16 +592,12 @@ body#scrollSpy {
     .section {
       font-size: 2rem;
       margin: 1.5rem 1rem;
-   
     }
- 
   }
   @media (min-width: 75rem) {
     .section {
       font-size: 2.25rem;
-   
     }
- 
   }
 
 .card {
@@ -587,21 +614,16 @@ body#scrollSpy {
     .card {
       grid-template-rows: repeat(10, 5%); 
       margin: 3rem 0;
-   
     }
- 
   }
   .card--left {
     grid-template-columns: repeat(10, 10%);
- 
   }
   @media (min-width: 36rem) {
     .card--left {
       width: 100vw;
       grid-template-columns: repeat(20, 5%);
-   
     }
- 
   }
   .card__screenshot {
     border-radius: 0 0.25rem 0.25rem 0;
@@ -611,19 +633,15 @@ body#scrollSpy {
     overflow: hidden;
     width: 100%;
     max-height: 100%;
- 
   }
     .card__screenshot--left {
       grid-area: 2 / 1 / 9 / 9;
       align-self: end;
-   
     }
     @media (min-width: 36rem) {
       .card__screenshot--left {
         grid-area: 1 / 1 / 11 / 12;
-     
       }
-   
     }
 
   .card__tech {
@@ -631,81 +649,64 @@ body#scrollSpy {
     object-fit: scale-down;
     width: 100%;
     max-height: 100%;
- 
   }
     .card__tech--right {
       grid-area: 1 / 6 / 2 / 10;
       align-self: start;
       z-index: 10;
-   
     }
     @media (min-width: 36rem) {
       .card__tech--right {
         grid-area: 9 / 8 / 13 / 14;
         z-index: 10;
-     
       }
-   
     }
 
   .card__about {
     color: var(--offwhite);
     margin: 0;
- 
   }
     .card__about--right {
       grid-area: 10 / 2 / 16 / 10;
-   
     }
     @media (min-width: 36rem) {
       .card__about--right {
         grid-area: 1 / 14 / 9 / 20;
         align-self: end;
-     
       }
-   
     }
     .card__about--date {
       color: var(--secondary);
       font-size: 0.8rem;
       margin-bottom: 0;
-   
     }
 
   .card__features {
     font-size: 0.9rem;
- 
   }
     .card__features--right {
       grid-area: 17 / 3 / 20 / 10;
       margin: 0;
-   
     }
     @media (min-width: 36rem) {
       .card__features--right {
         grid-area: 9 / 16 / 14 / 20;
         margin: 0;
-     
       }
-   
     }
     .card__list {
       padding-left: 0;
       margin-bottom: 0;
-   
     }
   
   .card__btns--right {
     grid-area: 21 / 2 / 22 / 11;
- 
   }
   @media (min-width: 36rem) {
     .card__btns--right {
       grid-area: 13 / 5 / 15 / 20;
       justify-self: end;
-   
     }
- 
   }
     .card__btn {
       display: inline-block;
@@ -721,52 +722,62 @@ body#scrollSpy {
       background-color: transparent;
       line-height: 1.5;
       border-radius: 0.25rem;
-      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, 
-                  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      -webkit-transition: color .2s ease-in-out, background-color .2s ease-in-out, 
+                          border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+         -moz-transition: color .2s ease-in-out, background-color .2s ease-in-out, 
+                          border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+          -ms-transition: color .2s ease-in-out, background-color .2s ease-in-out, 
+                          border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+           -o-transition: color .2s ease-in-out, background-color .2s ease-in-out, 
+                          border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+              transition: color .2s ease-in-out, background-color .2s ease-in-out, 
+                          border-color .2s ease-in-out, box-shadow .2s ease-in-out;
       text-decoration: none;
       -webkit-text-decoration-skip: objects;
       box-shadow: 0 1rem 3rem var(--shadow)
       /* box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.075) */
-   
     }
       @media screen and (prefers-reduced-motion: reduce) {
         .card__btn {
-          transition: none;
-       
+          -webkit-transition: none;
+             -moz-transition: none;
+              -ms-transition: none;
+               -o-transition: none;
+                  transition: none;
         }
-     
+      }
+      .card__btn:hover {
+        color: var(--white);
+        cursor: pointer;
+        -webkit-transform: translateY(-.3rem);
+           -moz-transform: translateY(-.3rem);
+            -ms-transform: translateY(-.3rem);
+             -o-transform: translateY(-.3rem);
+                transform: translateY(-.3rem);
       }
       .card__btn--light {
         color: var(--light);
         border-color: var(--light);
         padding-top: 0.6rem;
         margin-left: 0;
-     
       }
-        .card__btn-light:hover,
-        .card__btn-light:focus {
-          color: var(--white-third);
+        .card__btn--light:hover,
+        .card__btn--light:focus {
           background-color: var(--light);
           border-color: var(--light--half);
-          cursor: pointer;
           /* z-index: 2; */
-       
         }
       .card__btn--secondary {
         color: var(--secondary);
         border-color: var(--secondary);
         padding-top: 0.6rem;
         margin-right: 0;
-     
       }
-        .card__btn-secondary:hover,
-        .card__btn-secondary:focus {
-          color: var(--white-third);
+        .card__btn--secondary:hover,
+        .card__btn--secondary:focus {
           background-color: var(--secondary);
           border-color: var(--secondary-half);
-          cursor: pointer;
           /* z-index: 2; */
-       
         }
 
 .icon {
