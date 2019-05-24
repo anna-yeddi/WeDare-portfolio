@@ -36,9 +36,9 @@
 }
 
 html {
-  /* width: 100% !important; */
+  width: 100%;
   position: relative !important;
-  height: 100%;
+  /* height: 100%; */
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -67,7 +67,13 @@ body {
   margin-bottom: var(--footer-h);
   background-color: var(--primary);
   background: linear-gradient(125deg,
-              var(--primary), var(--info), var(--primary)), 
+              var(--primary) 5%, var(--info) 20%, var(--primary) 35%, var(--info) 50%, var(--primary) 65%, var(--info) 80%, var(--primary) 95%), 
+              center center/cover no-repeat;
+  background: -moz-linear-gradient(125deg,
+              var(--primary) 5%, var(--info) 20%, var(--primary) 35%, var(--info) 50%, var(--primary) 65%, var(--info) 80%, var(--primary) 95%), 
+              center center/cover no-repeat;
+  background: -webkit-linear-gradient(125deg,
+              var(--primary) 5%, var(--info) 20%, var(--primary) 35%, var(--info) 50%, var(--primary) 65%, var(--info) 80%, var(--primary) 95%), 
               center center/cover no-repeat;
   -webkit-background-size: cover;
      -moz-background-size: cover;
@@ -103,7 +109,7 @@ p {
   left: 0;
   z-index: 100;
   padding: 0.25rem;
-  margin: -1px;
+  margin: 0;
   list-style: none;
   color: var(--white);
 }
@@ -114,6 +120,10 @@ p {
   }
   .nav--scrolled {
     background: linear-gradient(135deg, 
+                var(--light) 59%, var(--info) 58%, var(--primary) 90%);
+    background: -moz-linear-gradient(-45deg, 
+                var(--light) 59%, var(--info) 58%, var(--primary) 90%);
+    background: -webkit-linear-gradient(-45deg, 
                 var(--light) 59%, var(--info) 58%, var(--primary) 90%);
     -webkit-transition: all .5s ease-in-out;
        -moz-transition: all .5s ease-in-out;
@@ -189,7 +199,7 @@ p {
   line-height: 1;
   background-color: transparent;
   border: 1px solid transparent;
-  border-radius: 0.25rem;
+  /* border-radius: 0.25rem; */
   cursor: pointer;
 }
   @media (min-width: 48rem) {
@@ -236,7 +246,7 @@ p {
   position: absolute;
   height: 3px;
   width: 100%;
-  border-radius: 0;
+  /* border-radius: 0; */
   opacity: 0.85;
   left: 0;
   -webkit-transform: rotate(0deg);
@@ -413,20 +423,30 @@ body#scrollSpy {
 /* Jumbotron */
 
 .jumbotron {
-  max-height: 90vh;
+  min-height: 90vh;
   width: 100vw;
   text-align: center;
   padding: 10rem 1rem 2rem 1rem;
   margin-bottom: 2rem;
-  border-radius: 0 0 0.3rem 0.3rem;
+  /* border-radius: 0 0 0.3rem 0.3rem; */
   background-color: var(--light);
   /* background: linear-gradient(217deg, rgba(238, 158, 144, 1), rgba(233, 202, 190,0.5) 70.71%), */
   background: linear-gradient(217deg, rgba(238, 158, 144, 1), rgba(233, 202, 190,0.7) 50.71%),
               linear-gradient(127deg, rgba(236, 170, 150, 1), rgba(233, 202, 190,0.7) 60.71%),
               linear-gradient(336deg, rgba(233, 202, 190, 0.6), rgba(233, 202, 190,1) 90.71%), 
               center center/cover no-repeat;
+  background: -moz-linear-gradient(217deg, rgba(238, 158, 144, 1), rgba(233, 202, 190,0.7) 50.71%),
+              -moz-linear-gradient(127deg, rgba(236, 170, 150, 1), rgba(233, 202, 190,0.7) 60.71%),
+              -moz-linear-gradient(336deg, rgba(233, 202, 190, 0.6), rgba(233, 202, 190,1) 90.71%), 
+              center center/cover no-repeat;
+  background: -webkit-linear-gradient(217deg, rgba(238, 158, 144, 1), rgba(233, 202, 190,0.7) 50.71%),
+              -webkit-linear-gradient(127deg, rgba(236, 170, 150, 1), rgba(233, 202, 190,0.7) 60.71%),
+              -webkit-linear-gradient(336deg, rgba(233, 202, 190, 0.6), rgba(233, 202, 190,1) 90.71%), 
+              center center/cover no-repeat;
               /* linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%); */
-  color: var(--primary);
+  color: var(--info);
+  -webkit-clip-path: polygon(100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
+          clip-path: polygon(100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
   box-shadow: 0 1rem 3rem var(--shadow);
   /* box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175); */
   -webkit-background-size: cover;
@@ -438,6 +458,8 @@ body#scrollSpy {
     .jumbotron {
       padding: 12rem 1.5rem 5rem 1.5rem;
       margin-bottom: 3rem;
+      -webkit-clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
+              clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
     }
   }
 
@@ -454,7 +476,7 @@ body#scrollSpy {
     /* box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); */
     color: var(--white);
     background: var(--danger);
-    border-radius: 0.25rem;
+    /* border-radius: 0.25rem; */
   }
     @media (min-width: 48rem) {
       .jumbotron__h1 {
@@ -479,7 +501,7 @@ body#scrollSpy {
     /* box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); */
     color: var(--white);
     background: var(--danger);
-    border-radius: 0.25rem;
+    /* border-radius: 0.25rem; */
     z-index: 2;
   }
     @media (min-width: 48rem) {
@@ -521,7 +543,7 @@ body#scrollSpy {
     font-size: 1rem;
     color: var(--white);
     line-height: 1.5;
-    border-radius: 0.25rem;
+    /* border-radius: 0.25rem; */
     -webkit-transition: color .2s ease-in-out, background-color .2s ease-in-out, 
                         border-color .2s ease-in-out, box-shadow .2s ease-in-out;
        -moz-transition: color .2s ease-in-out, background-color .2s ease-in-out, 
@@ -577,16 +599,34 @@ body#scrollSpy {
 
 /* Sections */
 
-.section {
+#projects {
+  max-width: 65rem;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.section__name {
   margin: 1.25rem 0.25rem;
-  padding: 0.25rem;
+  padding: 0 1.25rem;
   font-size: 1.75rem;
-  font-weight: 100;
+  font-weight: 400;
   line-height: 1.2;
-  letter-spacing: .15rem;
-  text-align: left;
+  letter-spacing: .1rem;
+  display: inline-block;
+  display: -moz-inline-box;
+  display: -webkit-inline-box;
+  text-transform: uppercase;
   word-spacing: .1rem;
   color: var(--light);
+  background: linear-gradient(135deg,
+              var(--offwhite) 7.5%, var(--light) 50%, var(--warning) 92.5%);
+  background: -moz-linear-gradient(-45deg,
+              var(--offwhite) 7.5%, var(--light) 50%, var(--warning) 92.5%);
+  background: -webkit-linear-gradient(-45deg,
+              var(--offwhite) 7.5%, var(--light) 50%, var(--warning) 92.5%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
   @media (min-width: 48rem) {
     .section {
@@ -602,62 +642,85 @@ body#scrollSpy {
 
 .card {
   /* grid for a card */
-  min-height: 90vh;
+  --grid-min-size: 19rem;
+
+  /* min-height: 90vh; */
+  min-height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-rows: repeat(22, 5%); 
+  background: purple; /* temp */
+  grid-template-columns: repeat(auto-fit, [col-start]
+                          minmax(var(--grid-min-size), 1fr) [col-end]);
+  grid-template-rows: [first hd-start] minmax(var(--grid-min-size), 1fr)
+                      [hd-mid] 2.5rem
+                      [hd-end] 1.5rem
+                      [second main-start] min-content
+                      [main-mid] min-content
+                      [main-end] min-content
+                      [third ft-start] min-content
+                      [fourth last ft-end];
+  grid-gap: 0.5rem;
+  /* grid-template-rows: repeat(22, 5%); 
   grid-auto-flow: row;
-  grid-auto-rows: 5%;
+  grid-auto-rows: 5%; */
   margin: 1rem 0;
 }
   @media (min-width: 36rem) {
     .card {
-      grid-template-rows: repeat(10, 5%); 
+      /* grid-template-rows: repeat(10, 5%);  */
       margin: 3rem 0;
     }
   }
   .card--left {
-    grid-template-columns: repeat(10, 10%);
+    /* grid-template-columns: repeat(10, 10%); */
   }
   @media (min-width: 36rem) {
     .card--left {
-      width: 100vw;
-      grid-template-columns: repeat(20, 5%);
+      /* width: 100vw; */
+      /* grid-template-columns: repeat(20, 5%); */
     }
   }
   .card__screenshot {
-    border-radius: 0 0.25rem 0.25rem 0;
+    /* border-radius: 0 0.25rem 0.25rem 0; */
     object-fit: cover;
     object-position: top;
     display: block;
     overflow: hidden;
     width: 100%;
     max-height: 100%;
+    box-shadow: 0 1rem 3rem var(--shadow);
+    /* grid-specific */
+    grid-area: hd-start/col-start/hd-end/col-end;
   }
     .card__screenshot--left {
-      grid-area: 2 / 1 / 9 / 9;
+      /* grid : 2 / 1 / 9 / 9; */
       align-self: end;
     }
     @media (min-width: 36rem) {
       .card__screenshot--left {
-        grid-area: 1 / 1 / 11 / 12;
+        /* grid : 1 / 1 / 11 / 12; */
       }
     }
 
   .card__tech {
-    border-radius: 0.25rem;
-    object-fit: scale-down;
-    width: 100%;
-    max-height: 100%;
+    /* border-radius: 0.25rem; */
+    height: 80%;
+    justify-self: end;
+    align-self: end;
+    /* max-height: 100%; */
+    /* background: var(--primary-third); */
+    /* opacity: 0.8; */
+    filter: drop-shadow(0 1rem 3rem var(--shadow));
+    /* grid-specific */
+    grid-area: hd-mid/col-start/main-start/col-end;
   }
     .card__tech--right {
-      grid-area: 1 / 6 / 2 / 10;
-      align-self: start;
+      /* grid : 1 / 6 / 2 / 10; */
       z-index: 10;
     }
     @media (min-width: 36rem) {
       .card__tech--right {
-        grid-area: 9 / 8 / 13 / 14;
+        /* grid : 9 / 8 / 13 / 14; */
         z-index: 10;
       }
     }
@@ -665,32 +728,65 @@ body#scrollSpy {
   .card__about {
     color: var(--offwhite);
     margin: 0;
+    background: darkgoldenrod; /* temp */
+    /* grid-specific */
+    grid-area: hd-end/col-start/main-mid/col-end;
+    align-content: end;
   }
     .card__about--right {
-      grid-area: 10 / 2 / 16 / 10;
+      /* grid : 10 / 2 / 16 / 10; */
     }
     @media (min-width: 36rem) {
       .card__about--right {
-        grid-area: 1 / 14 / 9 / 20;
+        /* grid : 1 / 14 / 9 / 20; */
         align-self: end;
       }
+    }
+    .card__about--name {
+      text-transform: uppercase;
+      display: inline-block;
+      display: -moz-inline-box;
+      display: -webkit-inline-box;
+      background: linear-gradient(135deg,
+                  var(--offwhite) 7.5%, var(--light) 50%, var(--warning) 92.5%);
+      background: -moz-linear-gradient(-45deg,
+                  var(--offwhite) 7.5%, var(--light) 50%, var(--warning) 92.5%);
+      background: -webkit-linear-gradient(-45deg,
+                  var(--offwhite) 7.5%, var(--light) 50%, var(--warning) 92.5%);
+      -webkit-background-clip: text;
+              background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .card__about--info {
+      background: darkkhaki; /* temp */
+    }
+    .card__about--roles {
+      background: darkcyan; /* temp */
+      /* grid-specific */
+      grid-area: main-mid/col-start/main-end/col-end;
     }
     .card__about--date {
       color: var(--secondary);
       font-size: 0.8rem;
       margin-bottom: 0;
+      text-align: right;
+      background: darkolivegreen; /* temp */
     }
 
   .card__features {
     font-size: 0.9rem;
+    list-style: square inside;
+    background: darkviolet; /* temp */
+    /* grid-specific */
+    grid-area: main-end/col-start/ft-start/col-end;
   }
     .card__features--right {
-      grid-area: 17 / 3 / 20 / 10;
+      /* grid : 17 / 3 / 20 / 10; */
       margin: 0;
     }
     @media (min-width: 36rem) {
       .card__features--right {
-        grid-area: 9 / 16 / 14 / 20;
+        /* grid : 9 / 16 / 14 / 20; */
         margin: 0;
       }
     }
@@ -699,12 +795,18 @@ body#scrollSpy {
       margin-bottom: 0;
     }
   
+  .card__btns {
+    /* grid : 21 / 2 / 22 / 11; */
+    background: darksalmon; /* temp */
+    /* grid-specific */
+    grid-area: ft-start/col-start/ft-end/col-end;
+  }
   .card__btns--right {
-    grid-area: 21 / 2 / 22 / 11;
+    /* grid : 21 / 2 / 22 / 11; */
   }
   @media (min-width: 36rem) {
     .card__btns--right {
-      grid-area: 13 / 5 / 15 / 20;
+      /* grid : 13 / 5 / 15 / 20; */
       justify-self: end;
     }
   }
@@ -721,7 +823,7 @@ body#scrollSpy {
       font-size: 0.9rem;
       background-color: transparent;
       line-height: 1.5;
-      border-radius: 0.25rem;
+      /* border-radius: 0.25rem; */
       -webkit-transition: color .2s ease-in-out, background-color .2s ease-in-out, 
                           border-color .2s ease-in-out, box-shadow .2s ease-in-out;
          -moz-transition: color .2s ease-in-out, background-color .2s ease-in-out, 
