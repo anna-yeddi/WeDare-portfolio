@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<link rel="shortcut icon" href="images/logo_sq.png">
 </head>
+<!-- ScrollSpy link -->
 <body data-spy="scroll" data-target=".nav">
 
+<!-- Navbar -->
 <header class="nav">
   <nav class="nav__container" role="navigation">
     <a href="#" class="nav__logo">
@@ -38,6 +40,7 @@
   <div class="nav__scrolling"></div>
 </header>
 
+<!-- Jumbotron -->
 <main class="jumbotron">
   <h2><span class="jumbotron__h2">Do you dare to</span></h2>
   <h1><span class="jumbotron__h1">dream big?</span></h1>
@@ -51,36 +54,35 @@
   <a href="#contacts" class="jumbotron__btn jumbotron__btn--danger">Hire me</a>
 </main>
 
+<!-- Projects -->
 <section id="projects">
-  <h3 class="section__name">Projects</h3>
-
-<!-- GetHlp -->
-  <div class="card card--left">
-    <img src="images/projects/getHlp_930x790.png" alt="GetHlp page screenshot" 
-      class="card__screenshot card__screenshot--left">
-    <img src="images/techs/AJAX.png" alt="AJAX requests" 
-      class="card__tech card__tech--right">
-    <div class="card__about card__about--right">
-      <h2 class="card__about--name">GetHlp</h2>
-      <p class="card__about--info">
+  <h3><span class="section__name">Projects</span></h3>
+  <div class="projects">
+    
+  <!-- GetHlp -->
+    <div class="card">
+      <img src="images/projects/getHlp_930x790.png" alt="GetHlp page screenshot" 
+        class="card__screenshot">
+      <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
+        <!-- class="card__tech card__tech--right"> -->
+      <h2 class="card__name">GetHlp</h2>
+      <p class="card__info">
         Your Personal Assistant - GetHlp - prompts users to seek and get help with their life's challenges.
       </p>
-    </div>
-    <p class="card__about--roles">
-      <strong>Roles:</strong>
-      Branding, UI/UX Design, Front-End Development.
-    </p>
-    <div class="card__features card__features--right">
-      <h3>Features:</h3>
-      <ul class="card__list">
-        <li>Mobile first design;</li>
-        <li>Responsive layout;</li>
-        <li>SASS maps, functions, mixins etc.;</li>
-        <li>HTML5, CSS3 preprocessed via SASS (Dart) and packed with Grunt (incl. PostCSS & Uglify plugins).</li>
-      </ul>
-    </div>
-    <div class="card__btns card__btns--right" aria-label="Project's buttons">
-      <p class="card__about--date">May 2019</p>
+      <p class="card__roles" class="card__roles">
+        <strong>Roles:</strong>
+        Branding, UI/UX Design, Front-End Development.
+      </p>
+      <div class="card__features">
+        <h3>Features:</h3>
+        <ul class="card__list">
+          <li>Mobile first design;</li>
+          <li>Responsive layout;</li>
+          <li>SASS maps, functions, mixins etc.;</li>
+          <li>HTML5, CSS3 preprocessed via SASS (Dart) and packed with Grunt (incl. PostCSS & Uglify plugins).</li>
+        </ul>
+      </div>
+      <p class="card__date">May 2019</p>
       <a href="https://wedare.tech/getHlp/" target="_blank" aria="Live Page"
         class="card__btn card__btn--light">
         <i class="fab fa-flickr icon" aria-hidden="true"></i>
@@ -90,33 +92,29 @@
         <i class="fab fa-github-square icon" aria-hidden="true"></i>
         <span>Repository</span></a>
     </div>
-  </div>
-<!-- Currency Calculator -->
-  <div class="card card--left">
-    <img src="images/projects/currency-calculator_930x790.png" alt="Currency Calculator screenshot" 
-      class="card__screenshot card__screenshot--left">
-    <img src="images/techs/AJAX.png" alt="AJAX requests" 
-      class="card__tech card__tech--right">
-    <div class="card__about card__about--right">
-      <h2 class="card__about--name">Currency Calculator</h2>
-      <p>
+  <!-- Currency Calculator -->
+    <div class="card">
+      <img src="images/projects/currency-calculator_930x790.png" alt="Currency Calculator screenshot" 
+        class="card__screenshot">
+      <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
+        <!-- class="card__tech card__tech--right"> -->
+      <h2 class="card__name">Currency Calculator</h2>
+      <p class="card__info">
         Currency Converter App helps users to convert USD into another usable currency (RUB, CAD, or EUR) in just a moment. Based on current market exchange rates, the app will calculate the currency's corresponding value of the entered amount of money. Under the hood, converter makes an AJAX request to live REST API and caches current market exchange rates of several currencies in JSON format to be dynamically presented to users at the page.
       </p>
-      <p>
+      <p class="card__roles">
         <strong>Roles:</strong>
         Branding, UI/UX Design, Development.
       </p>
-      <p class="card__about--date">January 2019</p>
-    </div>
-    <div class="card__features card__features--right">
-      <h3>Features:</h3>
-      <ul class="card__list">
-        <li>AJAX requests;</li>
-        <li>JSON API for live exchange rates updates;</li>
-        <li>HTML5, CSS3, JS(ES6).</li>
-      </ul>
-    </div>
-    <div class="card__btns card__btns--right" aria-label="Project's buttons">
+      <p class="card__date">January 2019</p>
+      <div class="card__features">
+        <h3>Features:</h3>
+        <ul class="card__list">
+          <li>AJAX requests;</li>
+          <li>JSON API for live exchange rates updates;</li>
+          <li>HTML5, CSS3, JS(ES6).</li>
+        </ul>
+      </div>
       <a href="https://wedare.tech/currency-calc/" target="_blank" aria="Live Page"
         class="card__btn card__btn--light">
         <i class="fab fa-flickr icon" aria-hidden="true"></i>
@@ -125,36 +123,32 @@
         class="card__btn card__btn--secondary">
         <i class="fab fa-github-square icon" aria-hidden="true"></i>
         <span>Repository</span></a>
-    </div>
-  </div> 
-<!-- Bullseye -->
-  <div class="card card--left">
-    <img src="images/projects/bullseye_930x790.png" alt="Bullseye Game Page screenshot" 
-      class="card__screenshot card__screenshot--left">
-    <img src="images/techs/AJAX.png" alt="AJAX requests" 
-      class="card__tech card__tech--right">
-    <div class="card__about card__about--right">
-      <h2 class="card__about--name">Bullseye Game</h2>
-      <p>
+    </div> 
+  <!-- Bullseye -->
+    <div class="card card--left">
+      <img src="images/projects/bullseye_930x790.png" alt="Bullseye Game Page screenshot" 
+        class="card__screenshot card__screenshot--left">
+      <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
+        <!-- class="card__tech card__tech--right"> -->
+      <h2 class="card__name">Bullseye Game</h2>
+      <p class="card__info">
         Online game randomizing the results.
       </p>
-      <p>
+      <p class="card__roles">
         <strong>Roles:</strong>
         Branding, Strategy, UI/UX Design, Front-End Development.
       </p>
-      <p class="card__about--date">January 2019</p>
-    </div>
-    <div class="card__features card__features--right">                    
-      <h3>Features:</h3>
-      <ul class="card__list">
-        <li>Babel and Browserify version available <a href="https://github.com/m3ta007/JS-dev-tools/tree/master/babel" 
-          alt="Alternative Repository">here</a>;</li>
-        <li>CSS animation "<a href="https://codepad.co/snippet/3SuRP9Xh" 
-          alt="Rainbow Loader by Avan C. source code">Rainbow Loader</a>" created by Avan C.;</li>
-        <li>HTML5, CSS3, and JS(ES2017).</li>
-      </ul>
-    </div>
-    <div class="card__btns card__btns--right" aria-label="Project's buttons">
+      <p class="card__date">January 2019</p>
+      <div class="card__features card__features--right">                    
+        <h3>Features:</h3>
+        <ul class="card__list">
+          <li>Babel and Browserify version available <a href="https://github.com/m3ta007/JS-dev-tools/tree/master/babel" 
+            alt="Alternative Repository">here</a>;</li>
+          <li>CSS animation "<a href="https://codepad.co/snippet/3SuRP9Xh" 
+            alt="Rainbow Loader by Avan C. source code">Rainbow Loader</a>" created by Avan C.;</li>
+          <li>HTML5, CSS3, and JS(ES2017).</li>
+        </ul>
+      </div>
       <a href="https://wedare.tech/bullseye/" target="_blank" aria="Live Page"
         class="card__btn card__btn--light">
         <i class="fas fa-caret-square-right icon" aria-hidden="true"></i>
@@ -164,37 +158,33 @@
         <i class="fab fa-github-square icon" aria-hidden="true"></i>
         <span>Repository</span></a>
     </div>
-  </div>
-<!-- Login Page -->
-  <div class="card card--left">
-    <img src="images/projects/login_930x790.png" alt="Login page screenshot" 
-      class="card__screenshot card__screenshot--left">
-    <img src="images/techs/AJAX.png" alt="AJAX requests" 
-      class="card__tech card__tech--right">
-    <div class="card__about card__about--right">
-      <h2 class="card__about--name">Login Page</h2>
-      <p>
+  <!-- Login Page -->
+    <div class="card card--left">
+      <img src="images/projects/login_930x790.png" alt="Login page screenshot" 
+        class="card__screenshot card__screenshot--left">
+      <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
+        <!-- class="card__tech card__tech--right"> -->
+      <h2 class="card__name">Login Page</h2>
+      <p class="card__info">
         Template for the login page with options to switch screen mode between light (Day Mode) and dark (Night Mode) themes and local storage of user data and presets.
       </p>
-      <p>
+      <p class="card__roles">
         <strong>Roles:</strong>
         Branding, UI/UX Design, Front-End Development.
       </p>
-      <p class="card__about--date">February 2019</p>
-    </div>
-    <div class="card__features card__features--right">
-      <h3>Features:</h3>
-      <ul class="card__list">
-        <li>Modules bundled with Webpack;</li>
-        <li>Local Storage for user data, serialized data objects, and color themes;</li>
-        <li>Switching Day/Night mode (color themes) in one click;</li>
-        <li>JSON requests;</li>
-        <li>ON/OFF Switch design inspired by <a href="https://proto.io/freebies/onoff/" 
-          aria-label="Proto.io On/Off FlipSwitch freebie">Proto.io</a>;</li>
-        <li>HTML5, CSS3, JS(ES6).</li>
-      </ul>
-    </div>
-    <div class="card__btns card__btns--right" aria-label="Project's buttons">
+      <p class="card__date">February 2019</p>
+      <div class="card__features card__features--right">
+        <h3>Features:</h3>
+        <ul class="card__list">
+          <li>Modules bundled with Webpack;</li>
+          <li>Local Storage for user data, serialized data objects, and color themes;</li>
+          <li>Switching Day/Night mode (color themes) in one click;</li>
+          <li>JSON requests;</li>
+          <li>ON/OFF Switch design inspired by <a href="https://proto.io/freebies/onoff/" 
+            aria-label="Proto.io On/Off FlipSwitch freebie">Proto.io</a>;</li>
+          <li>HTML5, CSS3, JS(ES6).</li>
+        </ul>
+      </div>
       <a href="https://wedare.tech/login/dist/" target="_blank" aria="Live Page"
         class="card__btn card__btn--light">
         <i class="fab fa-flickr icon" aria-hidden="true"></i>
@@ -203,36 +193,32 @@
         class="card__btn card__btn--secondary">
         <i class="fab fa-github-square icon" aria-hidden="true"></i>
         <span>Repository</span></a>
-    </div>
-  </div> 
-<!-- Wild Cats Gallery -->
-  <div class="card card--left">
-    <img src="images/projects/wildcats_930x790.png" alt="Login page screenshot" 
-      class="card__screenshot card__screenshot--left">
-    <img src="images/techs/AJAX.png" alt="AJAX requests" 
-      class="card__tech card__tech--right">
-    <div class="card__about card__about--right">
-      <h2 class="card__about--name">Wild Cats Cubs Gallery Page</h2>
-      <p>
+    </div> 
+  <!-- Wild Cats Gallery -->
+    <div class="card card--left">
+      <img src="images/projects/wildcats_930x790.png" alt="Login page screenshot" 
+        class="card__screenshot card__screenshot--left">
+      <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
+        <!-- class="card__tech card__tech--right"> -->
+      <h2 class="card__name">Wild Cats Cubs Gallery Page</h2>
+      <p class="card__info">
         Library of effective templates where the gallery presented with photo slider plugin Galleria, responsive layout, customized tabs and wraparound status bar fueled by jQuery.
       </p>
-      <p>
+      <p class="card__roles">
         <strong>Roles:</strong>
         Branding, UI/UX Design, Front-End Development, Plugin Customization.
       </p>
-      <p class="card__about--date">March 2019</p>
-    </div>
-    <div class="card__features card__features--right">
-      <h3>Features:</h3>
-      <ul class="card__list">
-        <li>Customized tabs;</li>
-        <li>Photo slider plugin (Galleria);</li>
-        <li>Wraparound status bar;</li>
-        <li>Responsive layout;</li>
-        <li>HTML5, CSS3, JS(ES5), jQuery(3.3).</li>
-      </ul>
-    </div>
-    <div class="card__btns card__btns--right" aria-label="Project's buttons">
+      <p class="card__date">March 2019</p>
+      <div class="card__features card__features--right">
+        <h3>Features:</h3>
+        <ul class="card__list">
+          <li>Customized tabs;</li>
+          <li>Photo slider plugin (Galleria);</li>
+          <li>Wraparound status bar;</li>
+          <li>Responsive layout;</li>
+          <li>HTML5, CSS3, JS(ES5), jQuery(3.3).</li>
+        </ul>
+      </div>
       <a href="https://wedare.tech/wildcats/" target="_blank" aria="Live Page"
         class="card__btn card__btn--light">
         <i class="fab fa-flickr icon" aria-hidden="true"></i>
@@ -241,32 +227,28 @@
         class="card__btn card__btn--secondary">
         <i class="fab fa-github-square icon" aria-hidden="true"></i>
         <span>Repository</span></a>
-    </div>
-  </div> 
-<!-- RGB game -->
-  <div class="card card--left">
-    <img src="images/projects/rgb-color-game_930x790.png" alt="RGB Color Game screenshot" 
-      class="card__screenshot card__screenshot--left">
-    <img src="images/techs/AJAX.png" alt="AJAX requests" 
-      class="card__tech card__tech--right">
-    <div class="card__about card__about--right">
-      <h2 class="card__about--name">RGB Color Game</h2>
-      <p>
+    </div> 
+  <!-- RGB game -->
+    <div class="card card--left">
+      <img src="images/projects/rgb-color-game_930x790.png" alt="RGB Color Game screenshot" 
+        class="card__screenshot card__screenshot--left">
+      <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
+        <!-- class="card__tech card__tech--right"> -->
+      <h2 class="card__name">RGB Color Game</h2>
+      <p class="card__info">
         Try to guess the right color for RGB code - values given for Red, Green, and Blue colors.
       </p>
-      <p>
+      <p class="card__roles">
         <strong>Roles:</strong>
         Branding, UI/UX Design, Animation, Front-End Development.
       </p>
-      <p class="card__about--date">November 2018</p>
-    </div>
-    <div class="card__features card__features--right">
-      <h3>Features:</h3>
-      <ul class="card__list">
-        <li>HTML5, CSS3, JS(ES6).</li>
-      </ul>
-    </div>
-    <div class="card__btns card__btns--right" aria-label="Project's buttons">
+      <p class="card__date">November 2018</p>
+      <div class="card__features card__features--right">
+        <h3>Features:</h3>
+        <ul class="card__list">
+          <li>HTML5, CSS3, JS(ES6).</li>
+        </ul>
+      </div>
       <a href="https://wedare.tech/rgb" target="_blank" aria="Live Page"
         class="card__btn card__btn--light">
         <i class="fas fa-caret-square-right icon" aria-hidden="true"></i>
@@ -275,32 +257,28 @@
         class="card__btn card__btn--secondary">
         <i class="fab fa-github-square icon" aria-hidden="true"></i>
         <span>Repository</span></a>
-    </div>
-  </div> 
-<!-- Scorekeeper -->
-  <div class="card card--left">
-    <img src="images/projects/scorekeeper_930x790.png" alt="Scorekeeper screenshot" 
-      class="card__screenshot card__screenshot--left">
-    <img src="images/techs/AJAX.png" alt="AJAX requests" 
-      class="card__tech card__tech--right">
-    <div class="card__about card__about--right">
-      <h2 class="card__about--name">Scorekeeper Website</h2>
-      <p>
+    </div> 
+  <!-- Scorekeeper -->
+    <div class="card card--left">
+      <img src="images/projects/scorekeeper_930x790.png" alt="Scorekeeper screenshot" 
+        class="card__screenshot card__screenshot--left">
+      <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
+        <!-- class="card__tech card__tech--right"> -->
+      <h2 class="card__name">Scorekeeper Website</h2>
+      <p class="card__info">
         Little helper for those venturous gamers who want to focus on actually playing but not keeping the score in mind.
       </p>
-      <p>
+      <p class="card__roles">
         <strong>Roles:</strong>
         UI/UX Design, Front-End Development.
       </p>
-      <p class="card__about--date">November 2018</p>
-    </div>
-    <div class="card__features card__features--right">
-      <h3>Features:</h3>
-      <ul class="card__list">
-        <li>HTML5, CSS3, JS(ES6).</li>
-      </ul>
-    </div>
-    <div class="card__btns card__btns--right" aria-label="Project's buttons">
+      <p class="card__date">November 2018</p>
+      <div class="card__features card__features--right">
+        <h3>Features:</h3>
+        <ul class="card__list">
+          <li>HTML5, CSS3, JS(ES6).</li>
+        </ul>
+      </div>
       <a href="https://wedare.tech/scorekeeper/" target="_blank" aria="Live Page"
         class="card__btn card__btn--light">
         <i class="fas fa-caret-square-right icon" aria-hidden="true"></i>
@@ -309,33 +287,29 @@
         class="card__btn card__btn--secondary">
         <i class="fab fa-github-square icon" aria-hidden="true"></i>
         <span>Repository</span></a>
-    </div>
-  </div> 
-<!-- Parad/Ice -->
-  <div class="card card--left">
-    <img src="images/projects/parad-ice-tasting_930x790.png" alt="Parad/Ice Tasting screenshot" 
-      class="card__screenshot card__screenshot--left">
-    <img src="images/techs/AJAX.png" alt="AJAX requests" 
-      class="card__tech card__tech--right">
-    <div class="card__about card__about--right">
-      <h2 class="card__about--name">Parad/Ice Tasting Langind Page</h2>
-      <p>
+    </div> 
+  <!-- Parad/Ice -->
+    <div class="card card--left">
+      <img src="images/projects/parad-ice-tasting_930x790.png" alt="Parad/Ice Tasting screenshot" 
+        class="card__screenshot card__screenshot--left">
+      <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
+        <!-- class="card__tech card__tech--right"> -->
+      <h2 class="card__name">Parad/Ice Tasting Langind Page</h2>
+      <p class="card__info">
         Template for an idea of popup-tasting of ice cream, gelato, and sorbet. Responsive bright design aims to fuel user's appetite.
       </p>
-      <p>
+      <p class="card__roles">
         <strong>Roles:</strong>
         Branding, Strategy, UI/UX Design, Front-End Development.
       </p>
-      <p class="card__about--date">December 2018</p>
-    </div>
-    <div class="card__features card__features--right">
-      <h3>Features:</h3>
-      <ul class="card__list">
-        <li>Bootstrap v.4;</li>
-        <li>HTML5, CSS3, JS(ES6).</li>
-      </ul>
-    </div>
-    <div class="card__btns card__btns--right" aria-label="Project's buttons">
+      <p class="card__date">December 2018</p>
+      <div class="card__features card__features--right">
+        <h3>Features:</h3>
+        <ul class="card__list">
+          <li>Bootstrap v.4;</li>
+          <li>HTML5, CSS3, JS(ES6).</li>
+        </ul>
+      </div>
       <a href="https://wedare.tech/parad-ice/" target="_blank" aria="Live Page"
         class="card__btn card__btn--light">
         <i class="fab fa-flickr icon" aria-hidden="true"></i>
@@ -344,32 +318,28 @@
         class="card__btn card__btn--secondary">
         <i class="fab fa-github-square icon" aria-hidden="true"></i>
         <span>Repository</span></a>
-    </div>
-  </div> 
-<!-- Portfolio Neo -->
-  <div class="card card--left">
-    <img src="images/projects/portfolio-neo_930x790.png" alt="Template Portfolio Wesite screenshot" 
-      class="card__screenshot card__screenshot--left">
-    <img src="images/techs/AJAX.png" alt="AJAX requests" 
-      class="card__tech card__tech--right">
-    <div class="card__about card__about--right">
-      <h2 class="card__about--name">Template Portfolio Website</h2>
-      <p>
+    </div> 
+  <!-- Portfolio Neo -->
+    <div class="card card--left">
+      <img src="images/projects/portfolio-neo_930x790.png" alt="Template Portfolio Wesite screenshot" 
+        class="card__screenshot card__screenshot--left">
+      <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
+        <!-- class="card__tech card__tech--right"> -->
+      <h2 class="card__name">Template Portfolio Website</h2>
+      <p class="card__info">
         Template portfolio of a frontend-developer and web designer with callback request form and sample projects.
       </p>
-      <p>
+      <p class="card__roles">
         <strong>Roles:</strong>
         UX Design, Front-end Development.
       </p>
-      <p class="card__about--date">December 2018</p>
-    </div>
-    <div class="card__features card__features--right">
-      <h3>Features:</h3>
-      <ul class="card__list">
-        <li>HTML5, CSS3, JS(ES6).</li>
-      </ul>
-    </div>
-    <div class="card__btns card__btns--right" aria-label="Project's buttons">
+      <p class="card__date">December 2018</p>
+      <div class="card__features card__features--right">
+        <h3>Features:</h3>
+        <ul class="card__list">
+          <li>HTML5, CSS3, JS(ES6).</li>
+        </ul>
+      </div>
       <a href="https://wedare.tech/portfolio-neo/" target="_blank" aria="Live Page"
         class="card__btn card__btn--light">
         <i class="fab fa-flickr icon" aria-hidden="true"></i>
@@ -378,34 +348,30 @@
         class="card__btn card__btn--secondary">
         <i class="fab fa-github-square icon" aria-hidden="true"></i>
         <span>Repository</span></a>
-    </div>
-  </div> 
-<!-- Gallery -->
-  <div class="card card--left">
-    <img src="images/projects/gallery_930x790.png" alt="Photo Gallery screenshot" 
-      class="card__screenshot card__screenshot--left">
-    <img src="images/techs/AJAX.png" alt="AJAX requests" 
-      class="card__tech card__tech--right">
-    <div class="card__about card__about--right">
-      <h2 class="card__about--name">Photo Gallery</h2>
-      <p>
+    </div> 
+  <!-- Gallery -->
+    <div class="card card--left">
+      <img src="images/projects/gallery_930x790.png" alt="Photo Gallery screenshot" 
+        class="card__screenshot card__screenshot--left">
+      <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
+        <!-- class="card__tech card__tech--right"> -->
+      <h2 class="card__name">Photo Gallery</h2>
+      <p class="card__info">
         Collection of photos presented in unified sepia style.
       </p>
-      <p>
+      <p class="card__roles">
         <strong>Roles:</strong>
         UI/UX Design, Front-End Development.
       </p>
-      <p class="card__about--date">July 2018</p>
-    </div>
-    <div class="card__features card__features--right">
-      <h3>Features:</h3>
-      <ul class="card__list">
-        <li>CSS Grid & Flexbox;</li>
-        <li>Retina-specific properties;</li>
-        <li>HTML5, CSS3, JS(ES6).</li>
-      </ul>
-    </div>
-    <div class="card__btns card__btns--right" aria-label="Project's buttons">
+      <p class="card__date">July 2018</p>
+      <div class="card__features card__features--right">
+        <h3>Features:</h3>
+        <ul class="card__list">
+          <li>CSS Grid & Flexbox;</li>
+          <li>Retina-specific properties;</li>
+          <li>HTML5, CSS3, JS(ES6).</li>
+        </ul>
+      </div>
       <a href="https://wedare.tech/gallery/" target="_blank" aria="Live Page"
         class="card__btn card__btn--light">
         <i class="fab fa-flickr icon" aria-hidden="true"></i>
@@ -414,33 +380,29 @@
         class="card__btn card__btn--secondary">
         <i class="fab fa-github-square icon" aria-hidden="true"></i>
         <span>Repository</span></a>
-    </div>
-  </div> 
-<!-- Java monitoring -->
-  <div class="card card--left">
-    <img src="images/projects/java-monitoring-result_930x790.png" alt="Java Screen Monitoring System screenshot" 
-        class="card__screenshot card__screenshot--left">
-    <img src="images/techs/AJAX.png" alt="AJAX requests" 
-        class="card__tech card__tech--right">
-    <div class="card__about card__about--right">
-      <h2 class="card__about--name">Screen Monitoring System</h2>
-      <p>
+    </div> 
+  <!-- Java monitoring -->
+    <div class="card card--left">
+      <img src="images/projects/java-monitoring-result_930x790.png" alt="Java Screen Monitoring System screenshot" 
+          class="card__screenshot card__screenshot--left">
+      <!-- <img src="images/techs/AJAX.png" alt="AJAX requests" 
+          class="card__tech card__tech--right"> -->
+      <h2 class="card__name">Screen Monitoring System</h2>
+      <p class="card__info">
         This application is aimed to monitor the activity on the computer where it's run, by taking every 5 seconds screenshots of the main screen and storing them in the dedicated Dropbox folder. All processes are silently performed in the background.
       </p>
-      <p>
+      <p class="card__roles">
         <strong>Roles:</strong>
         Strategy, Development.
       </p>
-      <p class="card__about--date">December 2018</p>
-    </div>
-    <div class="card__features card__features--right">
-      <h3>Features:</h3>
-      <ul class="card__list">
-        <li>Java;</li>
-        <li>Dropbox API.</li>
-      </ul>
-    </div>
-    <div class="card__btns card__btns--right" aria-label="Project's buttons">
+      <p class="card__date">December 2018</p>
+      <div class="card__features card__features--right">
+        <h3>Features:</h3>
+        <ul class="card__list">
+          <li>Java;</li>
+          <li>Dropbox API.</li>
+        </ul>
+      </div>
       <a href="https://github.com/m3ta007/JavaScreenMonitorSystem" aria="Live Page"
         class="card__btn card__btn--light">
         <i class="fab fa-java icon" aria-hidden="true"></i>
@@ -452,48 +414,44 @@
     </div>
   </div>
 </section>
-    
-    <section class="card-OLD container-fluid border border-light bg-transparent shadow-lg mb-4 rounded-1" id="contacts">
-        <h3 class="display-5 text-uppercase text-light text-center my-4">Contacts</h3>
-        <address class="text-light row align-items-center justify-content-center justify-content-sm-around p-1">
-            <div class="text-center text-sm-left text-lg-center col-sm-6 col-md-8 col-lg-6 order-2 order-sm-1 row m-0 p-0 justify-content-center">
-                <div class="text-white col-12 col-lg-10 pb-1 row justify-content-center justify-content-sm-start justify-content-lg-center">
-                    <div class="d-md-inline-flex">
-                        Anna Kanterova (Kova), <br>
-                    </div>
-                    <div class="d-md-inline-flex">
-                        CEO & Co-founder<br>
-                    </div>
-                </div>
-                <div class="row col-10 col-sm-12 align-content-center text-left p-0 pl-lg-2 pl-xl-5">
-                    <div class="col-12 col-md-6">
-                        <i class="fas fa-phone-square h4 my-0 mr-2 pt-1" aria-hidden="true"></i>
-                        <a href="tel:+1(202)790-7465">+1 (202) 790-7465</a> <br>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <i class="fas fa-envelope-square h4 my-0 mr-2 pt-1" aria-hidden="true"></i>
-                        <a href="mailto:anna@wedare.tech">anna@wedare.tech</a><br>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <i class="fab fa-linkedin h4 my-0 mr-2 pt-1" aria-hidden="true"></i>
-                            <a href="https://www.linkedin.com/in/kanterova/en" class="mr-4 mr-sm-0">LinkedIn Profile</a> <br>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <i class="fab fa-github-square h4 my-0 mr-2 pt-1" aria-hidden="true"></i>
-                            <a href="https://github.com/m3ta007/" class="mr-4 pr-3 mr-sm-0">GitHub Profile</a><br>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <i class="fas fa-external-link-square-alt h4 my-0 mr-2 pt-1" aria-hidden="true"></i>
-                            <a href="docs/Anna-Kanterova-resume.pdf" class="mr-4 pr-3 mr-sm-2" target="_blank">Resume</a><br>
-                    </div>
-                </div>
-            </div>
-        </address>
-    </section>
-</div>
 
-<footer class="footer text-light text-right card-footer small mt-5">
+<!-- Contacts -->
+<h3 class="section__name--right"><span class="section__name">Contacts</span></h3>
+
+<footer id="contacts" class="footer">
+  <address>
+    <div class="d-md-inline-flex">
+      Anna Kanterova (Kova), <br>
+    </div>
+    <div class="d-md-inline-flex">
+      Front-End Developer & Interaction Designer<br>
+    </div>
+    <div class="col-12 col-md-6">
+      <i class="fas fa-phone-square h4 my-0 mr-2 pt-1" aria-hidden="true"></i>
+      <a href="tel:+1(202)790-7465">+1 (202) 790-7465</a> <br>
+    </div>
+    <div class="col-12 col-md-6">
+      <i class="fas fa-envelope-square h4 my-0 mr-2 pt-1" aria-hidden="true"></i>
+      <a href="mailto:anna@wedare.tech">anna@wedare.tech</a><br>
+    </div>
+    <div class="col-12 col-md-6">
+      <i class="fab fa-linkedin h4 my-0 mr-2 pt-1" aria-hidden="true"></i>
+        <a href="https://www.linkedin.com/in/kanterova/en" class="mr-4 mr-sm-0">LinkedIn Profile</a> <br>
+    </div>
+    <div class="col-12 col-md-6">
+      <i class="fab fa-github-square h4 my-0 mr-2 pt-1" aria-hidden="true"></i>
+        <a href="https://github.com/m3ta007/" class="mr-4 pr-3 mr-sm-0">GitHub Profile</a><br>
+    </div>
+    <div class="col-12 col-md-6">
+      <i class="fas fa-external-link-square-alt h4 my-0 mr-2 pt-1" aria-hidden="true"></i>
+        <a href="docs/Anna-Kanterova-resume.pdf" class="mr-4 pr-3 mr-sm-2" target="_blank">Resume</a><br>
+    </div>
+  </address>
+
+  <!-- Class Old -->
+  <div class="footer text-light text-right card-footer small mt-5">
     © Anna Kova, <span id="pubDate">2018</span><span id="copyDate"></span>.
+  </div>>
 </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
