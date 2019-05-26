@@ -19,13 +19,8 @@
   --black: #000;
   --shadow: #00000015;
   
-  /* --breakpoint-xs: 0;
-  --breakpoint-sm: 576px; = 36rem
-  --breakpoint-md: 768px; = 48rem
-  --breakpoint-lg: 992px; = 62rem
-  --breakpoint-xl: 1200px; = 75rem */
-  --font-family-sans-serif: 'Ubuntu', sans-serif;
-  --font-family-monospace: 'Ubuntu Mono', monospace;
+  --font-first: 'Ubuntu', Verdana, Geneva, Tahoma, sans-serif;
+  --font-second: 'Raleway', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /* Box Model Fix */
@@ -55,7 +50,7 @@ body {
   margin: 0;
   width: 100%;
   /* min-height: 100%; */
-  font-family: var(--font-family-sans-serif);
+  font-family: var(--font-first);
   font-style: light;
   font-size: 1rem;
   font-weight: 200;
@@ -98,13 +93,13 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-size: 0.9rem;
+  font-family: var(--font-second);
 }
   @media (min-width: 48rem) {
     p {
       font-size: 1rem;
     }
   }
-
 
 /* BEMs */
 
@@ -128,17 +123,20 @@ p {
     }
   }
   .nav--scrolled {
+    background: var(--primary); /* fallback color */
     background: linear-gradient(135deg, 
                 var(--light) 59%, var(--info) 58%, var(--primary) 90%);
     background: -moz-linear-gradient(-45deg, 
                 var(--light) 59%, var(--info) 58%, var(--primary) 90%);
     background: -webkit-linear-gradient(-45deg, 
                 var(--light) 59%, var(--info) 58%, var(--primary) 90%);
-    -webkit-transition: all .5s ease-in-out;
-       -moz-transition: all .5s ease-in-out;
-        -ms-transition: all .5s ease-in-out;
-         -o-transition: all .5s ease-in-out;
-            transition: all .5s ease-in-out;
+  /* background on scroll */
+    -webkit-transition: all 1s linear;
+       -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+         -o-transition: all 1s linear;
+            transition: all 1s linear;
+            
   }
   @media screen and (prefers-reduced-motion: reduce) {
     .nav--scrolled {
@@ -199,32 +197,32 @@ p {
 
 /* Animated Hamburger Icon */
 
-.nav__toggler {
+.nav__hamburger {
+  --color: var(--white-half) !important;
+
   padding: 0.25rem;
   margin: 0.25rem;
-  font-size: 1.25rem;
   line-height: 1;
   background-color: transparent;
   border: 1px solid transparent;
   cursor: pointer;
 }
   @media (min-width: 48rem) {
-    .nav__toggler {
+    .nav__hamburger {
       display: none;
       padding: 0.75rem;
     }
   }
-  .nav__toggler:focus,
-  .nav__toggler:hover {
+  .nav__hamburger:focus,
+  .nav__hamburger:hover {
     outline: none;
     border: thin solid var(--primary);
     text-decoration: none;
   }
 
 .nav__hamburger {
-  width: 30px;
-  height: 20px;
   position: relative;
+  align-self: center;
   margin: 0px;
   -webkit-transform: rotate(0deg);
      -moz-transform: rotate(0deg);
@@ -247,26 +245,20 @@ p {
   }
 }
 
-.nav__hamburger--line {
-  display: block;
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  opacity: 0.85;
-  left: 0;
-  -webkit-transform: rotate(0deg);
-     -moz-transform: rotate(0deg);
-       -o-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-     -moz-transition: .25s ease-in-out;
-      -ms-transition: .25s ease-in-out;
-       -o-transition: .25s ease-in-out;
-          transition: .25s ease-in-out;
-  background: var(--white);
+/* Collapsing of nav menu */
+
+.nav__menu--collapse {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.35s ease;
+     -moz-transition: all 0.35s ease;
+      -ms-transition: all 0.35s ease;
+       -o-transition: all 0.35s ease;
+          transition: all 0.35s ease;
 }
   @media screen and (prefers-reduced-motion: reduce) {
-    .nav__hamburger--line {
+    .nav__menu--collapse {
       -webkit-transition: none;
          -moz-transition: none;
           -ms-transition: none;
@@ -274,63 +266,9 @@ p {
               transition: none;
     }
   }
-
-.nav__hamburger--line:nth-child(1) {
-  top: 0px;
-}
-    
-.nav__hamburger--line:nth-child(2) {
-  top: 10px; 
-}
-
-.nav__hamburger--line:nth-child(3) {
-  top: 20px; 
-}
-
-.nav__hamburger--open .nav__hamburger--line:nth-child(1) {
-  top: 11px;
-  -webkit-transform: rotate(135deg);
-     -moz-transform: rotate(135deg);
-       -o-transform: rotate(135deg);
-          transform: rotate(135deg); 
-}
-
-.nav__hamburger--open .nav__hamburger--line:nth-child(2) {
-  opacity: 0;
-  left: -60px;
-}
-
-.nav__hamburger--open .nav__hamburger--line:nth-child(3) {
-  top: 11px;
-  -webkit-transform: rotate(-135deg);
-     -moz-transform: rotate(-135deg);
-       -o-transform: rotate(-135deg);
-          transform: rotate(-135deg); 
-}
-
-/* Collapsing of nav menu */
-
-.collapse:not(.show) {
-  display: none;
-}
-.collapsing {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  -webkit-transition: height 0.35s ease;
-     -moz-transition: height 0.35s ease;
-      -ms-transition: height 0.35s ease;
-       -o-transition: height 0.35s ease;
-          transition: height 0.35s ease;
-  /* transition: linear .2s; */
-}
-  @media screen and (prefers-reduced-motion: reduce) {
-    .collapsing {
-      -webkit-transition: none;
-         -moz-transition: none;
-          -ms-transition: none;
-           -o-transition: none;
-              transition: none;
+  @media (min-width: 48rem) {
+    .nav__menu--collapse {
+      height: auto;
     }
   }
 
@@ -345,6 +283,10 @@ p {
   margin-left: auto !important;
   margin-bottom: 0;
   list-style: none;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
 }
   @media (min-width: 48rem) {
     .nav__menu {
@@ -361,6 +303,7 @@ p {
   color: var(--primary);
   text-decoration: none;
   font-size: 0.9rem;
+  font-family: var(--font-second);
 }
   @media (min-width: 48rem) {
     .nav-link {
@@ -474,7 +417,7 @@ body#scrollSpy {
     padding: 0.5rem;
     text-transform: uppercase;
     font-size: 3.25rem;
-    font-weight: 200;
+    font-weight: bolder;
     line-height: 1.35;
     letter-spacing: .2rem;
     word-spacing: .2rem;
@@ -518,7 +461,6 @@ body#scrollSpy {
 
   .jumbotron__p {
     font-size: 1.15rem;
-    font-weight: 300; 
   }
     @media (min-width: 48rem) {
       .jumbotron__p {
@@ -530,11 +472,16 @@ body#scrollSpy {
         font-size: 1.75rem;
       }
     }
+    .jumbotron__p--CTA {
+      color: var(--danger);
+      font-weight: 600;
+    }
 
   .jumbotron__btn {
     display: inline-block;
     font-weight: 400;
     text-align: center;
+    letter-spacing: 0.1rem;
     white-space: nowrap;
     vertical-align: middle;
     user-select: none;
@@ -612,12 +559,6 @@ body#scrollSpy {
   grid-auto-flow: row;
   grid-gap: 4rem;
 }
-/* @media (min-width: 20rem) {
-  .projects {
-    grid-template-columns: repeat(auto-fill, minmax(29rem, 1fr));
-    grid-gap: 4rem;
-  }
-} */
 
 .section__name {
   text-align: center;
@@ -625,8 +566,8 @@ body#scrollSpy {
 }
 .section__name--color {
   padding: 0;
-  font-size: 1.75rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: bolder;
   line-height: 1.2;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
@@ -645,13 +586,13 @@ body#scrollSpy {
 }
   @media (min-width: 48rem) {
     .section__name--color {
-      font-size: 2rem;
+      font-size: 1.75rem;
       margin: 1.5rem 1rem;
     }
   }
   @media (min-width: 75rem) {
     .section__name--color {
-      font-size: 2.25rem;
+      font-size: 2rem;
     }
   }
 
@@ -779,13 +720,15 @@ body#scrollSpy {
     }
     .card__roles {
       margin: 0;
+      font-size: 1rem;
+      color: var(--secondary);
       /* grid-specific */
       grid-area: role;
     }
     .card__date {
       margin: 0;
       color: var(--secondary);
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       /* grid-specific */
       grid-area: date;
       justify-self: start;
@@ -805,6 +748,7 @@ body#scrollSpy {
 
   .card__features {
     font-size: 0.9rem;
+    font-family: var(--font-second);
     list-style: square inside;
     margin: 0;
     /* grid-specific */
@@ -991,14 +935,17 @@ body#scrollSpy {
     }
   .contacts__title {
     color: var(--info);
+    font-weight: 400;
     letter-spacing: 0.05rem;
     margin-bottom: 1rem;
+    border-bottom: thin solid var(--danger);
   }
 
 .contacts__links {
   letter-spacing: 0.05rem;
   width: max-content;
   align-items: center;
+  font-family: var(--font-second);
 }
   .contacts__links--a {
     font-style: normal;
@@ -1016,4 +963,6 @@ body#scrollSpy {
   color: var(--danger);
   padding: 0.5rem;
   margin: 0 0 0 auto;
+  font-family: var(--font-second);
+  font-size: 0.85rem;
 }

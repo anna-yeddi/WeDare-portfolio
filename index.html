@@ -5,10 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400&amp;subset=cyrillic-ext" rel="stylesheet">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600|Ubuntu:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="css/hamburger.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
 	<link rel="shortcut icon" href="images/logo_sq.png">
 </head>
 <!-- ScrollSpy link -->
@@ -20,18 +22,15 @@
     <a href="#" class="nav__logo">
       <h3><span class="nav__logo--name">ANNA</span>Kanterova</h3>
     </a>
-  <!-- Hamburger Icon -->
-    <button id="hamburger" class="nav__toggler" type="button" 
-      data-toggle="collapse" data-target="#nav__content" 
-      aria-controls="nav__content" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="nav__hamburger">
-        <span class="nav__hamburger--line"></span>
-        <span class="nav__hamburger--line"></span>
-        <span class="nav__hamburger--line"></span>
-      </div>
-    </button>
+  <!-- Hamburger Icon by Jonathan Suh -->
+  <button class="nav__hamburger nav__hamburger--arrow" type="button"
+    aria-label="Menu" aria-controls="navigation">
+    <span class="nav__hamburger--box">
+      <span class="nav__hamburger--inner"></span>
+    </span>
+  </button>
   <!-- Full Navbar Menu -->
-    <div class="nav__menu collapse" id="nav__content">
+    <div class="nav__menu nav__menu--collapse" id="nav__content">
       <a class="nav-link" href="#projects">Projects <span class="sr-only">(current)</span></a>
       <a class="nav-link" href="#contacts">Contacts</a>
       <a class="nav-link" href="docs/Anna-Kanterova-resume.pdf" target="_blank">Resume</a>
@@ -47,9 +46,9 @@
     <h2><span class="jumbotron__h2">Do you dare to</span></h2>
     <h1><span class="jumbotron__h1">dream big?</span></h1>
     <p class="jumbotron__p">
-      If you do, we are on the same page here. My name is Anna and I also dare to enjoy coding and the magic it can create. By mixing HTML5, CSS3, and JavaScript with a splash of Bootstrap, I dare to make the web a cozier place.
+      If you do, we are on the same page here. My name is <span class="jumbotron__p--CTA">Anna</span> and I also dare to enjoy <span class="jumbotron__p--CTA">coding</span> and the <span class="jumbotron__p--CTA">magic</span> it can create. By mixing HTML5, CSS3, and JavaScript with a splash of Bootstrap, I dare to make the web a cozier place.
     </p>
-    <p class="jumbotron__p">
+    <p class="jumbotron__p jumbotron__p--CTA">
       Would you dare with me?
     </p>
     <a href="#contacts" class="jumbotron__btn jumbotron__btn--primary">Contact me</a>
@@ -444,9 +443,8 @@
 </main>
   <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="scripts.js"></script>
+    <script src="scripts/scripts.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131142493-1"></script>
 </body>
 </html>

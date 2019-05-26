@@ -12,8 +12,8 @@ $('[data-spy="scroll"]').each(function () {
 $(function () {
     $(document).scroll(function() {
         let $nav = $('.nav');
-        $nav.toggleClass('nav--scrolled', $(this).scrollTop() > $nav.height());
         $nav.toggleClass('nav--shadow', $(this).scrollTop() > $nav.height());
+        $nav.toggleClass('nav--scrolled', $(this).scrollTop() > $nav.height());
     })
 })
 
@@ -32,11 +32,16 @@ $(window).scroll(function(){
 
 // Hamburger Icon animation
 
-$(document).ready(function () {
-    $('.nav__toggler').on('click', function () {
-        $('.nav__hamburger').toggleClass('.nav__hamburger--open');
-    });
-});
+  // Look for .nav__hamburger
+  let hamburger = document.querySelector('.nav__hamburger');
+  // On click
+  hamburger.addEventListener('click', function() {
+    // Toggle class 'nav__hamburger--active'
+    hamburger.classList.toggle('nav__hamburger--active');
+    // Open/close menu
+    let nav = document.querySelector('.nav__menu');
+    nav.classList.toggle('nav__menu--collapse');
+  });
 
 
 // Copyright Date Script

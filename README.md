@@ -6,7 +6,8 @@ Original langing page for We Dare Project and Anna Kova's portfolio website. Fir
 - Markup and styles rewritten;
 - Responsive CSS Grid realized;
 - Animations tweaked;
-- Projects updated.
+- Projects updated;
+- Hamburger replaced.
 
 ## Updates 2/15/2019:
 - Navbar & jumbotron redesigned;

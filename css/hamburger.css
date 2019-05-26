@@ -1,0 +1,65 @@
+/*!
+ * Hamburgers UPDATED BY ANNA KOVA
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.nav__hamburger {
+  --color: white; /* tweaked in main.css */
+
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; }
+  .nav__hamburger:hover {
+    opacity: 0.7; }
+  .nav__hamburger.nav__hamburger--active:hover {
+    opacity: 0.7; }
+  .nav__hamburger.nav__hamburger--active .nav__hamburger--inner,
+  .nav__hamburger.nav__hamburger--active .nav__hamburger--inner::before,
+  .nav__hamburger.nav__hamburger--active .nav__hamburger--inner::after {
+    background-color: var(--color); }
+
+.nav__hamburger--box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative; }
+
+.nav__hamburger--inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; }
+  .nav__hamburger--inner, .nav__hamburger--inner::before, .nav__hamburger--inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: var(--color);
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease; }
+  .nav__hamburger--inner::before, .nav__hamburger--inner::after {
+    content: "";
+    display: block; }
+  .nav__hamburger--inner::before {
+    top: -10px; }
+  .nav__hamburger--inner::after {
+    bottom: -10px; }
+
+/* Arrow */
+
+.nav__hamburger--arrow.nav__hamburger--active .nav__hamburger--inner::before {
+  transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1); }
+
+.nav__hamburger--arrow.nav__hamburger--active .nav__hamburger--inner::after {
+  transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1); }
