@@ -40,419 +40,428 @@
   <div class="nav__scrolling"></div>
 </header>
 
-<!-- Jumbotron -->
-<main class="jumbotron">
-  <h2><span class="jumbotron__h2">Do you dare to</span></h2>
-  <h1><span class="jumbotron__h1">dream big?</span></h1>
-  <p class="jumbotron__p">
-    If you do, we are on the same page here. My name is Anna and I also dare to enjoy coding and the magic it can create. By mixing HTML5, CSS3, and JavaScript with a splash of Bootstrap, I dare to make the web a cozier place.
-  </p>
-  <p class="jumbotron__p">
-    Would you dare with me?
-  </p>
-  <a href="#contacts" class="jumbotron__btn jumbotron__btn--primary">Contact me</a>
-  <a href="#contacts" class="jumbotron__btn jumbotron__btn--danger">Hire me</a>
-</main>
+<main>
+  <!-- Jumbotron -->
+  <section class="jumbotron">
+    <h2><span class="jumbotron__h2">Do you dare to</span></h2>
+    <h1><span class="jumbotron__h1">dream big?</span></h1>
+    <p class="jumbotron__p">
+      If you do, we are on the same page here. My name is Anna and I also dare to enjoy coding and the magic it can create. By mixing HTML5, CSS3, and JavaScript with a splash of Bootstrap, I dare to make the web a cozier place.
+    </p>
+    <p class="jumbotron__p">
+      Would you dare with me?
+    </p>
+    <a href="#contacts" class="jumbotron__btn jumbotron__btn--primary">Contact me</a>
+    <a href="#contacts" class="jumbotron__btn jumbotron__btn--danger">Hire me</a>
+  </section>
 
-<!-- Projects -->
-<section id="projects">
-  <h3><span class="section__name">Projects</span></h3>
-  <div class="projects">
-    
-  <!-- GetHlp -->
-    <div class="card">
-      <img src="images/projects/getHlp_930x790.png" alt="GetHlp page screenshot" 
-        class="card__screenshot">
-      <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
-        <!-- class="card__tech card__tech--right"> -->
-      <h2 class="card__name">GetHlp</h2>
-      <p class="card__info">
-        Your Personal Assistant - GetHlp - prompts users to seek and get help with their life's challenges.
-      </p>
-      <p class="card__roles" class="card__roles">
-        <strong>Roles:</strong>
-        Branding, UI/UX Design, Front-End Development.
-      </p>
-      <div class="card__features">
-        <h3>Features:</h3>
-        <ul class="card__list">
-          <li>Mobile first design;</li>
-          <li>Responsive layout;</li>
-          <li>SASS maps, functions, mixins etc.;</li>
-          <li>HTML5, CSS3 preprocessed via SASS (Dart) and packed with Grunt (incl. PostCSS & Uglify plugins).</li>
-        </ul>
+  <!-- Projects -->
+  <section id="projects">
+    <h3><span class="section__name">Projects</span></h3>
+    <div class="projects">
+      
+    <!-- GetHlp -->
+      <div class="card">
+        <img src="images/projects/getHlp_930x790.png" alt="GetHlp page screenshot" 
+          class="card__screenshot">
+        <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
+          <!-- class="card__tech card__tech--right"> -->
+        <h2 class="card__name">GetHlp</h2>
+        <p class="card__info">
+          Your Personal Assistant - GetHlp - prompts users to seek and get help with their life's challenges.
+        </p>
+        <p class="card__roles" class="card__roles">
+          <strong>Roles:</strong>
+          Branding, UI/UX Design, Front-End Development.
+        </p>
+        <div class="card__features">
+          <h3>Features:</h3>
+          <ul class="card__list">
+            <li>Mobile first design;</li>
+            <li>Responsive layout;</li>
+            <li>SASS maps, functions, mixins etc.;</li>
+            <li>HTML5, CSS3 preprocessed via SASS (Dart) and packed with Grunt (incl. PostCSS & Uglify plugins).</li>
+          </ul>
+        </div>
+        <p class="card__date">May 2019</p>
+        <a href="https://wedare.tech/getHlp/" target="_blank" aria="Live Page"
+          class="card__btn card__btn--light">
+          <i class="fab fa-flickr card__icon" aria-hidden="true"></i>
+          <span>Explore</span></a>
+        <a href="https://github.com/m3ta007/getHelp" target="_blank" aria="GitHub Repository"
+          class="card__btn card__btn--secondary">
+          <i class="fab fa-github-square card__icon" aria-hidden="true"></i>
+          <span>Repository</span></a>
       </div>
-      <p class="card__date">May 2019</p>
-      <a href="https://wedare.tech/getHlp/" target="_blank" aria="Live Page"
-        class="card__btn card__btn--light">
-        <i class="fab fa-flickr icon" aria-hidden="true"></i>
-        <span>Explore</span></a>
-      <a href="https://github.com/m3ta007/getHelp" target="_blank" aria="GitHub Repository"
-        class="card__btn card__btn--secondary">
-        <i class="fab fa-github-square icon" aria-hidden="true"></i>
-        <span>Repository</span></a>
-    </div>
-  <!-- Currency Calculator -->
-    <div class="card">
-      <img src="images/projects/currency-calculator_930x790.png" alt="Currency Calculator screenshot" 
-        class="card__screenshot">
-      <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
-        <!-- class="card__tech card__tech--right"> -->
-      <h2 class="card__name">Currency Calculator</h2>
-      <p class="card__info">
-        Currency Converter App helps users to convert USD into another usable currency (RUB, CAD, or EUR) in just a moment. Based on current market exchange rates, the app will calculate the currency's corresponding value of the entered amount of money. Under the hood, converter makes an AJAX request to live REST API and caches current market exchange rates of several currencies in JSON format to be dynamically presented to users at the page.
-      </p>
-      <p class="card__roles">
-        <strong>Roles:</strong>
-        Branding, UI/UX Design, Development.
-      </p>
-      <p class="card__date">January 2019</p>
-      <div class="card__features">
-        <h3>Features:</h3>
-        <ul class="card__list">
-          <li>AJAX requests;</li>
-          <li>JSON API for live exchange rates updates;</li>
-          <li>HTML5, CSS3, JS(ES6).</li>
-        </ul>
-      </div>
-      <a href="https://wedare.tech/currency-calc/" target="_blank" aria="Live Page"
-        class="card__btn card__btn--light">
-        <i class="fab fa-flickr icon" aria-hidden="true"></i>
-        <span>Explore</span></a>
-      <a href="https://github.com/m3ta007/currency-calculator" target="_blank" aria="GitHub Repository"
-        class="card__btn card__btn--secondary">
-        <i class="fab fa-github-square icon" aria-hidden="true"></i>
-        <span>Repository</span></a>
-    </div> 
-  <!-- Bullseye -->
-    <div class="card card--left">
-      <img src="images/projects/bullseye_930x790.png" alt="Bullseye Game Page screenshot" 
-        class="card__screenshot card__screenshot--left">
-      <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
-        <!-- class="card__tech card__tech--right"> -->
-      <h2 class="card__name">Bullseye Game</h2>
-      <p class="card__info">
-        Online game randomizing the results.
-      </p>
-      <p class="card__roles">
-        <strong>Roles:</strong>
-        Branding, Strategy, UI/UX Design, Front-End Development.
-      </p>
-      <p class="card__date">January 2019</p>
-      <div class="card__features card__features--right">                    
-        <h3>Features:</h3>
-        <ul class="card__list">
-          <li>Babel and Browserify version available <a href="https://github.com/m3ta007/JS-dev-tools/tree/master/babel" 
-            alt="Alternative Repository">here</a>;</li>
-          <li>CSS animation "<a href="https://codepad.co/snippet/3SuRP9Xh" 
-            alt="Rainbow Loader by Avan C. source code">Rainbow Loader</a>" created by Avan C.;</li>
-          <li>HTML5, CSS3, and JS(ES2017).</li>
-        </ul>
-      </div>
-      <a href="https://wedare.tech/bullseye/" target="_blank" aria="Live Page"
-        class="card__btn card__btn--light">
-        <i class="fas fa-caret-square-right icon" aria-hidden="true"></i>
-        <span>Play now</span></a>
-      <a href="https://github.com/m3ta007/bullseye" target="_blank" 
-        class="card__btn card__btn--secondary">
-        <i class="fab fa-github-square icon" aria-hidden="true"></i>
-        <span>Repository</span></a>
-    </div>
-  <!-- Login Page -->
-    <div class="card card--left">
-      <img src="images/projects/login_930x790.png" alt="Login page screenshot" 
-        class="card__screenshot card__screenshot--left">
-      <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
-        <!-- class="card__tech card__tech--right"> -->
-      <h2 class="card__name">Login Page</h2>
-      <p class="card__info">
-        Template for the login page with options to switch screen mode between light (Day Mode) and dark (Night Mode) themes and local storage of user data and presets.
-      </p>
-      <p class="card__roles">
-        <strong>Roles:</strong>
-        Branding, UI/UX Design, Front-End Development.
-      </p>
-      <p class="card__date">February 2019</p>
-      <div class="card__features card__features--right">
-        <h3>Features:</h3>
-        <ul class="card__list">
-          <li>Modules bundled with Webpack;</li>
-          <li>Local Storage for user data, serialized data objects, and color themes;</li>
-          <li>Switching Day/Night mode (color themes) in one click;</li>
-          <li>JSON requests;</li>
-          <li>ON/OFF Switch design inspired by <a href="https://proto.io/freebies/onoff/" 
-            aria-label="Proto.io On/Off FlipSwitch freebie">Proto.io</a>;</li>
-          <li>HTML5, CSS3, JS(ES6).</li>
-        </ul>
-      </div>
-      <a href="https://wedare.tech/login/dist/" target="_blank" aria="Live Page"
-        class="card__btn card__btn--light">
-        <i class="fab fa-flickr icon" aria-hidden="true"></i>
-        <span>Explore</span></a>
-      <a href="https://github.com/m3ta007/login-page" target="_blank" 
-        class="card__btn card__btn--secondary">
-        <i class="fab fa-github-square icon" aria-hidden="true"></i>
-        <span>Repository</span></a>
-    </div> 
-  <!-- Wild Cats Gallery -->
-    <div class="card card--left">
-      <img src="images/projects/wildcats_930x790.png" alt="Login page screenshot" 
-        class="card__screenshot card__screenshot--left">
-      <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
-        <!-- class="card__tech card__tech--right"> -->
-      <h2 class="card__name">Wild Cats Cubs Gallery Page</h2>
-      <p class="card__info">
-        Library of effective templates where the gallery presented with photo slider plugin Galleria, responsive layout, customized tabs and wraparound status bar fueled by jQuery.
-      </p>
-      <p class="card__roles">
-        <strong>Roles:</strong>
-        Branding, UI/UX Design, Front-End Development, Plugin Customization.
-      </p>
-      <p class="card__date">March 2019</p>
-      <div class="card__features card__features--right">
-        <h3>Features:</h3>
-        <ul class="card__list">
-          <li>Customized tabs;</li>
-          <li>Photo slider plugin (Galleria);</li>
-          <li>Wraparound status bar;</li>
-          <li>Responsive layout;</li>
-          <li>HTML5, CSS3, JS(ES5), jQuery(3.3).</li>
-        </ul>
-      </div>
-      <a href="https://wedare.tech/wildcats/" target="_blank" aria="Live Page"
-        class="card__btn card__btn--light">
-        <i class="fab fa-flickr icon" aria-hidden="true"></i>
-        <span>Explore</span></a>
-      <a href="https://github.com/m3ta007/wild-cats" target="_blank" 
-        class="card__btn card__btn--secondary">
-        <i class="fab fa-github-square icon" aria-hidden="true"></i>
-        <span>Repository</span></a>
-    </div> 
-  <!-- RGB game -->
-    <div class="card card--left">
-      <img src="images/projects/rgb-color-game_930x790.png" alt="RGB Color Game screenshot" 
-        class="card__screenshot card__screenshot--left">
-      <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
-        <!-- class="card__tech card__tech--right"> -->
-      <h2 class="card__name">RGB Color Game</h2>
-      <p class="card__info">
-        Try to guess the right color for RGB code - values given for Red, Green, and Blue colors.
-      </p>
-      <p class="card__roles">
-        <strong>Roles:</strong>
-        Branding, UI/UX Design, Animation, Front-End Development.
-      </p>
-      <p class="card__date">November 2018</p>
-      <div class="card__features card__features--right">
-        <h3>Features:</h3>
-        <ul class="card__list">
-          <li>HTML5, CSS3, JS(ES6).</li>
-        </ul>
-      </div>
-      <a href="https://wedare.tech/rgb" target="_blank" aria="Live Page"
-        class="card__btn card__btn--light">
-        <i class="fas fa-caret-square-right icon" aria-hidden="true"></i>
-        <span>Play now</span></a>
-      <a href="https://github.com/m3ta007/RGB-Color-Game" target="_blank" 
-        class="card__btn card__btn--secondary">
-        <i class="fab fa-github-square icon" aria-hidden="true"></i>
-        <span>Repository</span></a>
-    </div> 
-  <!-- Scorekeeper -->
-    <div class="card card--left">
-      <img src="images/projects/scorekeeper_930x790.png" alt="Scorekeeper screenshot" 
-        class="card__screenshot card__screenshot--left">
-      <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
-        <!-- class="card__tech card__tech--right"> -->
-      <h2 class="card__name">Scorekeeper Website</h2>
-      <p class="card__info">
-        Little helper for those venturous gamers who want to focus on actually playing but not keeping the score in mind.
-      </p>
-      <p class="card__roles">
-        <strong>Roles:</strong>
-        UI/UX Design, Front-End Development.
-      </p>
-      <p class="card__date">November 2018</p>
-      <div class="card__features card__features--right">
-        <h3>Features:</h3>
-        <ul class="card__list">
-          <li>HTML5, CSS3, JS(ES6).</li>
-        </ul>
-      </div>
-      <a href="https://wedare.tech/scorekeeper/" target="_blank" aria="Live Page"
-        class="card__btn card__btn--light">
-        <i class="fas fa-caret-square-right icon" aria-hidden="true"></i>
-        <span>Play now</span></a>
-      <a href="https://github.com/m3ta007/score-keeper" target="_blank" 
-        class="card__btn card__btn--secondary">
-        <i class="fab fa-github-square icon" aria-hidden="true"></i>
-        <span>Repository</span></a>
-    </div> 
-  <!-- Parad/Ice -->
-    <div class="card card--left">
-      <img src="images/projects/parad-ice-tasting_930x790.png" alt="Parad/Ice Tasting screenshot" 
-        class="card__screenshot card__screenshot--left">
-      <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
-        <!-- class="card__tech card__tech--right"> -->
-      <h2 class="card__name">Parad/Ice Tasting Langind Page</h2>
-      <p class="card__info">
-        Template for an idea of popup-tasting of ice cream, gelato, and sorbet. Responsive bright design aims to fuel user's appetite.
-      </p>
-      <p class="card__roles">
-        <strong>Roles:</strong>
-        Branding, Strategy, UI/UX Design, Front-End Development.
-      </p>
-      <p class="card__date">December 2018</p>
-      <div class="card__features card__features--right">
-        <h3>Features:</h3>
-        <ul class="card__list">
-          <li>Bootstrap v.4;</li>
-          <li>HTML5, CSS3, JS(ES6).</li>
-        </ul>
-      </div>
-      <a href="https://wedare.tech/parad-ice/" target="_blank" aria="Live Page"
-        class="card__btn card__btn--light">
-        <i class="fab fa-flickr icon" aria-hidden="true"></i>
-        <span>Explore</span></a>
-      <a href="https://github.com/m3ta007/parad-ice-tasting" target="_blank" 
-        class="card__btn card__btn--secondary">
-        <i class="fab fa-github-square icon" aria-hidden="true"></i>
-        <span>Repository</span></a>
-    </div> 
-  <!-- Portfolio Neo -->
-    <div class="card card--left">
-      <img src="images/projects/portfolio-neo_930x790.png" alt="Template Portfolio Wesite screenshot" 
-        class="card__screenshot card__screenshot--left">
-      <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
-        <!-- class="card__tech card__tech--right"> -->
-      <h2 class="card__name">Template Portfolio Website</h2>
-      <p class="card__info">
-        Template portfolio of a frontend-developer and web designer with callback request form and sample projects.
-      </p>
-      <p class="card__roles">
-        <strong>Roles:</strong>
-        UX Design, Front-end Development.
-      </p>
-      <p class="card__date">December 2018</p>
-      <div class="card__features card__features--right">
-        <h3>Features:</h3>
-        <ul class="card__list">
-          <li>HTML5, CSS3, JS(ES6).</li>
-        </ul>
-      </div>
-      <a href="https://wedare.tech/portfolio-neo/" target="_blank" aria="Live Page"
-        class="card__btn card__btn--light">
-        <i class="fab fa-flickr icon" aria-hidden="true"></i>
-        <span>Explore</span></a>
-      <a href="https://github.com/m3ta007/portfolio-neo" target="_blank" 
-        class="card__btn card__btn--secondary">
-        <i class="fab fa-github-square icon" aria-hidden="true"></i>
-        <span>Repository</span></a>
-    </div> 
-  <!-- Gallery -->
-    <div class="card card--left">
-      <img src="images/projects/gallery_930x790.png" alt="Photo Gallery screenshot" 
-        class="card__screenshot card__screenshot--left">
-      <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
-        <!-- class="card__tech card__tech--right"> -->
-      <h2 class="card__name">Photo Gallery</h2>
-      <p class="card__info">
-        Collection of photos presented in unified sepia style.
-      </p>
-      <p class="card__roles">
-        <strong>Roles:</strong>
-        UI/UX Design, Front-End Development.
-      </p>
-      <p class="card__date">July 2018</p>
-      <div class="card__features card__features--right">
-        <h3>Features:</h3>
-        <ul class="card__list">
-          <li>CSS Grid & Flexbox;</li>
-          <li>Retina-specific properties;</li>
-          <li>HTML5, CSS3, JS(ES6).</li>
-        </ul>
-      </div>
-      <a href="https://wedare.tech/gallery/" target="_blank" aria="Live Page"
-        class="card__btn card__btn--light">
-        <i class="fab fa-flickr icon" aria-hidden="true"></i>
-        <span>Explore</span></a>
-      <a href="https://github.com/m3ta007/gallery-page" target="_blank" 
-        class="card__btn card__btn--secondary">
-        <i class="fab fa-github-square icon" aria-hidden="true"></i>
-        <span>Repository</span></a>
-    </div> 
-  <!-- Java monitoring -->
-    <div class="card card--left">
-      <img src="images/projects/java-monitoring-result_930x790.png" alt="Java Screen Monitoring System screenshot" 
+    <!-- Currency Calculator -->
+      <div class="card">
+        <img src="images/projects/currency-calculator_930x790.png" alt="Currency Calculator screenshot" 
+          class="card__screenshot">
+        <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
+          <!-- class="card__tech card__tech--right"> -->
+        <h2 class="card__name">Currency Calculator</h2>
+        <p class="card__info">
+          Currency Converter App helps users to convert USD into another usable currency (RUB, CAD, or EUR) in just a moment. Based on current market exchange rates, the app will calculate the currency's corresponding value of the entered amount of money. Under the hood, converter makes an AJAX request to live REST API and caches current market exchange rates of several currencies in JSON format to be dynamically presented to users at the page.
+        </p>
+        <p class="card__roles">
+          <strong>Roles:</strong>
+          Branding, UI/UX Design, Development.
+        </p>
+        <p class="card__date">January 2019</p>
+        <div class="card__features">
+          <h3>Features:</h3>
+          <ul class="card__list">
+            <li>AJAX requests;</li>
+            <li>JSON API for live exchange rates updates;</li>
+            <li>HTML5, CSS3, JS(ES6).</li>
+          </ul>
+        </div>
+        <a href="https://wedare.tech/currency-calc/" target="_blank" aria="Live Page"
+          class="card__btn card__btn--light">
+          <i class="fab fa-flickr card__icon" aria-hidden="true"></i>
+          <span>Explore</span></a>
+        <a href="https://github.com/m3ta007/currency-calculator" target="_blank" aria="GitHub Repository"
+          class="card__btn card__btn--secondary">
+          <i class="fab fa-github-square card__icon" aria-hidden="true"></i>
+          <span>Repository</span></a>
+      </div> 
+    <!-- Bullseye -->
+      <div class="card card--left">
+        <img src="images/projects/bullseye_930x790.png" alt="Bullseye Game Page screenshot" 
           class="card__screenshot card__screenshot--left">
-      <!-- <img src="images/techs/AJAX.png" alt="AJAX requests" 
-          class="card__tech card__tech--right"> -->
-      <h2 class="card__name">Screen Monitoring System</h2>
-      <p class="card__info">
-        This application is aimed to monitor the activity on the computer where it's run, by taking every 5 seconds screenshots of the main screen and storing them in the dedicated Dropbox folder. All processes are silently performed in the background.
-      </p>
-      <p class="card__roles">
-        <strong>Roles:</strong>
-        Strategy, Development.
-      </p>
-      <p class="card__date">December 2018</p>
-      <div class="card__features card__features--right">
-        <h3>Features:</h3>
-        <ul class="card__list">
-          <li>Java;</li>
-          <li>Dropbox API.</li>
-        </ul>
+        <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
+          <!-- class="card__tech card__tech--right"> -->
+        <h2 class="card__name">Bullseye Game</h2>
+        <p class="card__info">
+          Online game randomizing the results.
+        </p>
+        <p class="card__roles">
+          <strong>Roles:</strong>
+          Branding, Strategy, UI/UX Design, Front-End Development.
+        </p>
+        <p class="card__date">January 2019</p>
+        <div class="card__features card__features--right">                    
+          <h3>Features:</h3>
+          <ul class="card__list">
+            <li>Babel and Browserify version available <a href="https://github.com/m3ta007/JS-dev-tools/tree/master/babel" 
+              class="card__list--link" alt="Alternative Repository" target="_blank">here</a>;</li>
+            <li>CSS animation "<a href="https://codepad.co/snippet/3SuRP9Xh" class="card__list--link"  target="_blank"
+              alt="Rainbow Loader by Avan C. source code">Rainbow Loader</a>" created by Avan C.;</li>
+            <li>HTML5, CSS3, and JS(ES2017).</li>
+          </ul>
+        </div>
+        <a href="https://wedare.tech/bullseye/" target="_blank" aria="Live Page"
+          class="card__btn card__btn--light">
+          <i class="fas fa-caret-square-right card__icon" aria-hidden="true"></i>
+          <span>Play now</span></a>
+        <a href="https://github.com/m3ta007/bullseye" target="_blank" 
+          class="card__btn card__btn--secondary">
+          <i class="fab fa-github-square card__icon" aria-hidden="true"></i>
+          <span>Repository</span></a>
       </div>
-      <a href="https://github.com/m3ta007/JavaScreenMonitorSystem" aria="Live Page"
-        class="card__btn card__btn--light">
-        <i class="fab fa-java icon" aria-hidden="true"></i>
-        <span>Check now</span></a>
-      <a href="https://github.com/m3ta007/JavaScreenMonitorSystem" target="_blank" 
-        class="card__btn card__btn--secondary">
-        <i class="fab fa-github-square icon" aria-hidden="true"></i>
-        <span>Repository</span></a>
+    <!-- Login Page -->
+      <div class="card card--left">
+        <img src="images/projects/login_930x790.png" alt="Login page screenshot" 
+          class="card__screenshot card__screenshot--left">
+        <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
+          <!-- class="card__tech card__tech--right"> -->
+        <h2 class="card__name">Login Page</h2>
+        <p class="card__info">
+          Template for the login page with options to switch screen mode between light (Day Mode) and dark (Night Mode) themes and local storage of user data and presets.
+        </p>
+        <p class="card__roles">
+          <strong>Roles:</strong>
+          Branding, UI/UX Design, Front-End Development.
+        </p>
+        <p class="card__date">February 2019</p>
+        <div class="card__features card__features--right">
+          <h3>Features:</h3>
+          <ul class="card__list">
+            <li>Modules bundled with Webpack;</li>
+            <li>Local Storage for user data, serialized data objects, and color themes;</li>
+            <li>Switching Day/Night mode (color themes) in one click;</li>
+            <li>JSON requests;</li>
+            <li>ON/OFF Switch design inspired by <a href="https://proto.io/freebies/onoff/"
+              class="card__list--link" target="_blank"
+              aria-label="Proto.io On/Off FlipSwitch freebie">Proto.io</a>;</li>
+            <li>HTML5, CSS3, JS(ES6).</li>
+          </ul>
+        </div>
+        <a href="https://wedare.tech/login/dist/" target="_blank" aria="Live Page"
+          class="card__btn card__btn--light">
+          <i class="fab fa-flickr card__icon" aria-hidden="true"></i>
+          <span>Explore</span></a>
+        <a href="https://github.com/m3ta007/login-page" target="_blank" 
+          class="card__btn card__btn--secondary">
+          <i class="fab fa-github-square card__icon" aria-hidden="true"></i>
+          <span>Repository</span></a>
+      </div> 
+    <!-- Wild Cats Gallery -->
+      <div class="card card--left">
+        <img src="images/projects/wildcats_930x790.png" alt="Login page screenshot" 
+          class="card__screenshot card__screenshot--left">
+        <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
+          <!-- class="card__tech card__tech--right"> -->
+        <h2 class="card__name">Wild Cats Cubs Gallery Page</h2>
+        <p class="card__info">
+          Library of effective templates where the gallery presented with photo slider plugin Galleria, responsive layout, customized tabs and wraparound status bar fueled by jQuery.
+        </p>
+        <p class="card__roles">
+          <strong>Roles:</strong>
+          Branding, UI/UX Design, Front-End Development, Plugin Customization.
+        </p>
+        <p class="card__date">March 2019</p>
+        <div class="card__features card__features--right">
+          <h3>Features:</h3>
+          <ul class="card__list">
+            <li>Customized tabs;</li>
+            <li>Photo slider plugin (Galleria);</li>
+            <li>Wraparound status bar;</li>
+            <li>Responsive layout;</li>
+            <li>HTML5, CSS3, JS(ES5), jQuery(3.3).</li>
+          </ul>
+        </div>
+        <a href="https://wedare.tech/wildcats/" target="_blank" aria="Live Page"
+          class="card__btn card__btn--light">
+          <i class="fab fa-flickr card__icon" aria-hidden="true"></i>
+          <span>Explore</span></a>
+        <a href="https://github.com/m3ta007/wild-cats" target="_blank" 
+          class="card__btn card__btn--secondary">
+          <i class="fab fa-github-square card__icon" aria-hidden="true"></i>
+          <span>Repository</span></a>
+      </div> 
+    <!-- RGB game -->
+      <div class="card card--left">
+        <img src="images/projects/rgb-color-game_930x790.png" alt="RGB Color Game screenshot" 
+          class="card__screenshot card__screenshot--left">
+        <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
+          <!-- class="card__tech card__tech--right"> -->
+        <h2 class="card__name">RGB Color Game</h2>
+        <p class="card__info">
+          Try to guess the right color for RGB code - values given for Red, Green, and Blue colors.
+        </p>
+        <p class="card__roles">
+          <strong>Roles:</strong>
+          Branding, UI/UX Design, Animation, Front-End Development.
+        </p>
+        <p class="card__date">November 2018</p>
+        <div class="card__features card__features--right">
+          <h3>Features:</h3>
+          <ul class="card__list">
+            <li>HTML5, CSS3, JS(ES6).</li>
+          </ul>
+        </div>
+        <a href="https://wedare.tech/rgb" target="_blank" aria="Live Page"
+          class="card__btn card__btn--light">
+          <i class="fas fa-caret-square-right card__icon" aria-hidden="true"></i>
+          <span>Play now</span></a>
+        <a href="https://github.com/m3ta007/RGB-Color-Game" target="_blank" 
+          class="card__btn card__btn--secondary">
+          <i class="fab fa-github-square card__icon" aria-hidden="true"></i>
+          <span>Repository</span></a>
+      </div> 
+    <!-- Scorekeeper -->
+      <div class="card card--left">
+        <img src="images/projects/scorekeeper_930x790.png" alt="Scorekeeper screenshot" 
+          class="card__screenshot card__screenshot--left">
+        <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
+          <!-- class="card__tech card__tech--right"> -->
+        <h2 class="card__name">Scorekeeper Website</h2>
+        <p class="card__info">
+          Little helper for those venturous gamers who want to focus on actually playing but not keeping the score in mind.
+        </p>
+        <p class="card__roles">
+          <strong>Roles:</strong>
+          UI/UX Design, Front-End Development.
+        </p>
+        <p class="card__date">November 2018</p>
+        <div class="card__features card__features--right">
+          <h3>Features:</h3>
+          <ul class="card__list">
+            <li>HTML5, CSS3, JS(ES6).</li>
+          </ul>
+        </div>
+        <a href="https://wedare.tech/scorekeeper/" target="_blank" aria="Live Page"
+          class="card__btn card__btn--light">
+          <i class="fas fa-caret-square-right card__icon" aria-hidden="true"></i>
+          <span>Play now</span></a>
+        <a href="https://github.com/m3ta007/score-keeper" target="_blank" 
+          class="card__btn card__btn--secondary">
+          <i class="fab fa-github-square card__icon" aria-hidden="true"></i>
+          <span>Repository</span></a>
+      </div> 
+    <!-- Parad/Ice -->
+      <div class="card card--left">
+        <img src="images/projects/parad-ice-tasting_930x790.png" alt="Parad/Ice Tasting screenshot" 
+          class="card__screenshot card__screenshot--left">
+        <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
+          <!-- class="card__tech card__tech--right"> -->
+        <h2 class="card__name">Parad/Ice Tasting Langind Page</h2>
+        <p class="card__info">
+          Template for an idea of popup-tasting of ice cream, gelato, and sorbet. Responsive bright design aims to fuel user's appetite.
+        </p>
+        <p class="card__roles">
+          <strong>Roles:</strong>
+          Branding, Strategy, UI/UX Design, Front-End Development.
+        </p>
+        <p class="card__date">December 2018</p>
+        <div class="card__features card__features--right">
+          <h3>Features:</h3>
+          <ul class="card__list">
+            <li>Bootstrap v.4;</li>
+            <li>HTML5, CSS3, JS(ES6).</li>
+          </ul>
+        </div>
+        <a href="https://wedare.tech/parad-ice/" target="_blank" aria="Live Page"
+          class="card__btn card__btn--light">
+          <i class="fab fa-flickr card__icon" aria-hidden="true"></i>
+          <span>Explore</span></a>
+        <a href="https://github.com/m3ta007/parad-ice-tasting" target="_blank" 
+          class="card__btn card__btn--secondary">
+          <i class="fab fa-github-square card__icon" aria-hidden="true"></i>
+          <span>Repository</span></a>
+      </div> 
+    <!-- Portfolio Neo -->
+      <div class="card card--left">
+        <img src="images/projects/portfolio-neo_930x790.png" alt="Template Portfolio Wesite screenshot" 
+          class="card__screenshot card__screenshot--left">
+        <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
+          <!-- class="card__tech card__tech--right"> -->
+        <h2 class="card__name">Template Portfolio Website</h2>
+        <p class="card__info">
+          Template portfolio of a frontend-developer and web designer with callback request form and sample projects.
+        </p>
+        <p class="card__roles">
+          <strong>Roles:</strong>
+          UX Design, Front-end Development.
+        </p>
+        <p class="card__date">December 2018</p>
+        <div class="card__features card__features--right">
+          <h3>Features:</h3>
+          <ul class="card__list">
+            <li>HTML5, CSS3, JS(ES6).</li>
+          </ul>
+        </div>
+        <a href="https://wedare.tech/portfolio-neo/" target="_blank" aria="Live Page"
+          class="card__btn card__btn--light">
+          <i class="fab fa-flickr card__icon" aria-hidden="true"></i>
+          <span>Explore</span></a>
+        <a href="https://github.com/m3ta007/portfolio-neo" target="_blank" 
+          class="card__btn card__btn--secondary">
+          <i class="fab fa-github-square card__icon" aria-hidden="true"></i>
+          <span>Repository</span></a>
+      </div> 
+    <!-- Gallery -->
+      <div class="card card--left">
+        <img src="images/projects/gallery_930x790.png" alt="Photo Gallery screenshot" 
+          class="card__screenshot card__screenshot--left">
+        <!-- <img src="images/techs/AJAX.png" alt="AJAX requests"  -->
+          <!-- class="card__tech card__tech--right"> -->
+        <h2 class="card__name">Photo Gallery</h2>
+        <p class="card__info">
+          Collection of photos presented in unified sepia style.
+        </p>
+        <p class="card__roles">
+          <strong>Roles:</strong>
+          UI/UX Design, Front-End Development.
+        </p>
+        <p class="card__date">July 2018</p>
+        <div class="card__features card__features--right">
+          <h3>Features:</h3>
+          <ul class="card__list">
+            <li>CSS Grid & Flexbox;</li>
+            <li>Retina-specific properties;</li>
+            <li>HTML5, CSS3, JS(ES6).</li>
+          </ul>
+        </div>
+        <a href="https://wedare.tech/gallery/" target="_blank" aria="Live Page"
+          class="card__btn card__btn--light">
+          <i class="fab fa-flickr card__icon" aria-hidden="true"></i>
+          <span>Explore</span></a>
+        <a href="https://github.com/m3ta007/gallery-page" target="_blank" 
+          class="card__btn card__btn--secondary">
+          <i class="fab fa-github-square card__icon" aria-hidden="true"></i>
+          <span>Repository</span></a>
+      </div> 
+    <!-- Java monitoring -->
+      <div class="card card--left">
+        <img src="images/projects/java-monitoring-result_930x790.png" alt="Java Screen Monitoring System screenshot" 
+            class="card__screenshot card__screenshot--left">
+        <!-- <img src="images/techs/AJAX.png" alt="AJAX requests" 
+            class="card__tech card__tech--right"> -->
+        <h2 class="card__name">Screen Monitoring Virus</h2>
+        <p class="card__info">
+          This application is aimed to monitor the activity on the computer where it's run, by taking every 5 seconds screenshots of the main screen and storing them in the dedicated Dropbox folder. All processes are silently performed in the background.
+        </p>
+        <p class="card__roles">
+          <strong>Roles:</strong>
+          Strategy, Development.
+        </p>
+        <p class="card__date">December 2018</p>
+        <div class="card__features card__features--right">
+          <h3>Features:</h3>
+          <ul class="card__list">
+            <li>Java;</li>
+            <li>Dropbox API.</li>
+          </ul>
+        </div>
+        <a href="https://github.com/m3ta007/JavaScreenMonitorSystem" target="_blank" aria="Live Page"
+          class="card__btn card__btn--light">
+          <i class="fab fa-java card__icon" aria-hidden="true"></i>
+          <span>Check now</span></a>
+        <a href="https://github.com/m3ta007/JavaScreenMonitorSystem" target="_blank" 
+          class="card__btn card__btn--secondary">
+          <i class="fab fa-github-square card__icon" aria-hidden="true"></i>
+          <span>Repository</span></a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Contacts -->
-<h3 class="section__name--right"><span class="section__name">Contacts</span></h3>
+  <!-- Contacts -->
+  <h3 class="section__name--right"><span class="section__name">Contacts</span></h3>
 
-<footer id="contacts" class="footer">
-  <address>
-    <div class="d-md-inline-flex">
-      Anna Kanterova (Kova), <br>
-    </div>
-    <div class="d-md-inline-flex">
-      Front-End Developer & Interaction Designer<br>
-    </div>
-    <div class="col-12 col-md-6">
-      <i class="fas fa-phone-square h4 my-0 mr-2 pt-1" aria-hidden="true"></i>
-      <a href="tel:+1(202)790-7465">+1 (202) 790-7465</a> <br>
-    </div>
-    <div class="col-12 col-md-6">
-      <i class="fas fa-envelope-square h4 my-0 mr-2 pt-1" aria-hidden="true"></i>
-      <a href="mailto:anna@wedare.tech">anna@wedare.tech</a><br>
-    </div>
-    <div class="col-12 col-md-6">
-      <i class="fab fa-linkedin h4 my-0 mr-2 pt-1" aria-hidden="true"></i>
-        <a href="https://www.linkedin.com/in/kanterova/en" class="mr-4 mr-sm-0">LinkedIn Profile</a> <br>
-    </div>
-    <div class="col-12 col-md-6">
-      <i class="fab fa-github-square h4 my-0 mr-2 pt-1" aria-hidden="true"></i>
-        <a href="https://github.com/m3ta007/" class="mr-4 pr-3 mr-sm-0">GitHub Profile</a><br>
-    </div>
-    <div class="col-12 col-md-6">
-      <i class="fas fa-external-link-square-alt h4 my-0 mr-2 pt-1" aria-hidden="true"></i>
-        <a href="docs/Anna-Kanterova-resume.pdf" class="mr-4 pr-3 mr-sm-2" target="_blank">Resume</a><br>
-    </div>
-  </address>
+  <footer id="contacts" class="contacts--background">
+    <address class="contacts">
+      <div class="contacts__name">
+        Anna Kanterova (Kova), <br>
+      </div>
+      <div class="contacts__title">
+        Front-End Developer & Interaction Designer<br>
+      </div>
+      <div class="contacts__phone">
+        <i class="fas fa-phone-square contacts__icon" aria-hidden="true"></i>
+        <a href="tel:+1(202)790-7465" class="contacts__link">
+          +1 (202) 790-7465</a> <br>
+      </div>
+      <div class="contacts__email">
+        <i class="fas fa-envelope-square contacts__icon" aria-hidden="true"></i>
+        <a href="mailto:anna@wedare.tech" class="contacts__link" target="_blank">
+          anna@wedare.tech</a><br>
+      </div>
+      <div class="contacts__linkedin">
+        <i class="fab fa-linkedin contacts__icon" aria-hidden="true"></i>
+        <a href="https://www.linkedin.com/in/kanterova/en" class="contacts__link" target="_blank">
+          LinkedIn Profile</a> <br>
+      </div>
+      <div class="contacts__github">
+        <i class="fab fa-github-square contacts__icon" aria-hidden="true"></i>
+        <a href="https://github.com/m3ta007/" class="contacts__link" target="_blank">
+          GitHub Profile</a><br>
+      </div>
+      <div class="contacts__resume">
+        <i class="fas fa-external-link-square-alt contacts__icon" aria-hidden="true"></i>
+        <a href="docs/Anna-Kanterova-resume.pdf" class="contacts__link" target="_blank">
+          Resume</a><br>
+      </div>
+    </address>
 
-  <!-- Class Old -->
-  <div class="footer text-light text-right card-footer small mt-5">
-    © Anna Kova, <span id="pubDate">2018</span><span id="copyDate"></span>.
-  </div>>
-</footer>
+    <!-- Class Old -->
+    <div class="footer">
+      © Anna Kova, <span id="pubDate">2018</span><span id="copyDate"></span>.
+    </div>
+  </footer>
+</main>
+  <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

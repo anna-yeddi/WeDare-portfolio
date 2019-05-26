@@ -54,7 +54,7 @@ html {
 body {
   margin: 0;
   width: 100%;
-  min-height: 100%;
+  /* min-height: 100%; */
   font-family: var(--font-family-sans-serif);
   font-style: light;
   font-size: 1rem;
@@ -602,13 +602,20 @@ body#scrollSpy {
 .projects {
   margin: 0 auto;
   padding: 0;
+  width: 100%;
 
   /* main grid for a section */
-  --grid-min-size: 30rem;
+  --grid-min-size: 20rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(var(--grid-min-size), 1fr));
   grid-auto-flow: row;
   grid-gap: 2rem;
+}
+@media (min-width: 20rem) {
+  .projects {
+    grid-template-columns: repeat(auto-fill, minmax(29rem, 1fr));
+    grid-gap: 4rem;
+  }
 }
 
 .section__name {
@@ -661,7 +668,7 @@ body#scrollSpy {
   grid-gap: 0.5rem;
   grid-auto-flow: row;
   grid-auto-rows: minmax(1rem, auto);
-  justify-items: center;
+  justify-items: start;
   align-items: center;
   margin: 1rem 0;
 }
@@ -677,7 +684,7 @@ body#scrollSpy {
       grid-template-rows: minmax(5rem, auto-fill) minmax(1rem, auto);
       grid-template-areas: 
       "img img  img  img  img  img"
-      " .  name name name date  . "
+      " .  name name date date  . "
       " .  info info feat feat  . "
       " .  role   .  feat feat  . "
       " .    .  btnL btnR  .    . ";
@@ -696,7 +703,6 @@ body#scrollSpy {
         "img  img  btnL btnR . ";
       grid-gap: 1.5rem;
       align-items: space-between;
-      justify-items: start;
     }
   }
   @media (min-width: 62rem) {
@@ -723,6 +729,7 @@ body#scrollSpy {
   .card__screenshot {
     object-position: top;
     width: 100%;
+    display: block;
     box-shadow: 0 1rem 3rem var(--shadow);
 
     /* grid-specific */
@@ -825,6 +832,9 @@ body#scrollSpy {
       padding-left: 0;
       margin-bottom: 0;
     }
+    .card__list--link {  
+      text-decoration: underline;
+    }
   
     .card__btn {
       display: inline-block;
@@ -870,6 +880,10 @@ body#scrollSpy {
              -o-transform: translateY(-.3rem);
                 transform: translateY(-.3rem);
       }
+      .card__icon {
+        margin-right: 0.3rem;
+        font-size: 1.3rem;
+      }
       .card__btn--light {
         color: var(--light);
         border-color: var(--light);
@@ -908,45 +922,86 @@ body#scrollSpy {
   margin-top: 3rem; 
 }
 
-.footer {
-  /* background with a gradient */
-  background-color: var(--light); /* fallback color */
-  background: linear-gradient(217deg, rgba(238, 158, 144, 1), rgba(233, 202, 190,0.7) 50.71%),
-              linear-gradient(127deg, rgba(236, 170, 150, 1), rgba(233, 202, 190,0.7) 60.71%),
-              linear-gradient(336deg, rgba(233, 202, 190, 0.6), rgba(233, 202, 190,1) 90.71%), 
-              center center/cover no-repeat;
-  background: -moz-linear-gradient(217deg, rgba(238, 158, 144, 1), rgba(233, 202, 190,0.7) 50.71%),
-              -moz-linear-gradient(127deg, rgba(236, 170, 150, 1), rgba(233, 202, 190,0.7) 60.71%),
-              -moz-linear-gradient(336deg, rgba(233, 202, 190, 0.6), rgba(233, 202, 190,1) 90.71%), 
-              center center/cover no-repeat;
-  background: -webkit-linear-gradient(217deg, rgba(238, 158, 144, 1), rgba(233, 202, 190,0.7) 50.71%),
-              -webkit-linear-gradient(127deg, rgba(236, 170, 150, 1), rgba(233, 202, 190,0.7) 60.71%),
-              -webkit-linear-gradient(336deg, rgba(233, 202, 190, 0.6), rgba(233, 202, 190,1) 90.71%), 
-              center center/cover no-repeat;
+.contacts {
+  padding: 5rem 1.5rem;
   color: var(--info);
-  -webkit-clip-path: polygon(50% 0%, 100% 5%, 100% 100%, 0 100%, 0 5%);
-     -moz-clip-path: polygon(50% 0%, 100% 5%, 100% 100%, 0 100%, 0 5%);
-          clip-path: polygon(50% 0%, 100% 5%, 100% 100%, 0 100%, 0 5%);
-  box-shadow: 0 1rem 3rem var(--shadow);
-  -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
+  font-size: 1rem;
+  
+  /* grid for contacts */
+  display: grid;
+  grid-template-columns: 1fr repeat(auto-fill, minmax(10rem, 1fr));
+  justify-content: center;
 }
+  .contacts--background {
+    /* background with a gradient */
+    background-color: var(--light); /* fallback color */
+    background: linear-gradient(217deg, rgba(238, 158, 144, 1), rgba(233, 202, 190,0.7) 50.71%),
+                linear-gradient(127deg, rgba(236, 170, 150, 1), rgba(233, 202, 190,0.7) 60.71%),
+                linear-gradient(336deg, rgba(233, 202, 190, 0.6), rgba(233, 202, 190,1) 90.71%), 
+                center center/cover no-repeat;
+    background: -moz-linear-gradient(217deg, rgba(238, 158, 144, 1), rgba(233, 202, 190,0.7) 50.71%),
+                -moz-linear-gradient(127deg, rgba(236, 170, 150, 1), rgba(233, 202, 190,0.7) 60.71%),
+                -moz-linear-gradient(336deg, rgba(233, 202, 190, 0.6), rgba(233, 202, 190,1) 90.71%), 
+                center center/cover no-repeat;
+    background: -webkit-linear-gradient(217deg, rgba(238, 158, 144, 1), rgba(233, 202, 190,0.7) 50.71%),
+                -webkit-linear-gradient(127deg, rgba(236, 170, 150, 1), rgba(233, 202, 190,0.7) 60.71%),
+                -webkit-linear-gradient(336deg, rgba(233, 202, 190, 0.6), rgba(233, 202, 190,1) 90.71%), 
+                center center/cover no-repeat;
+    -webkit-clip-path: polygon(50% 0%, 100% 20%, 100% 100%, 0 100%, 0 20%);
+      -moz-clip-path: polygon(50% 0%, 100% 20%, 100% 100%, 0 100%, 0 20%);
+            clip-path: polygon(50% 0%, 100% 20%, 100% 100%, 0 100%, 0 20%);
+    box-shadow: 0 1rem 3rem var(--shadow);
+    -webkit-background-size: cover;
+      -moz-background-size: cover;
+        -o-background-size: cover;
+            background-size: cover;
+  }
   @media (min-width: 36rem) {
-    .contacts {
-      padding: 12rem 1.5rem 5rem 1.5rem;
-      margin-bottom: 3rem;
-      -webkit-clip-path: polygon(50% 0%, 100% 20%, 100% 100%, 0 100%, 0 20%);
-         -moz-clip-path: polygon(50% 0%, 100% 20%, 100% 100%, 0 100%, 0 20%);
-              clip-path: polygon(50% 0%, 100% 20%, 100% 100%, 0 100%, 0 20%);
+    .contacts--background {
+      padding: 8rem 1.5rem;
+      -webkit-clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 0 100%, 0 40%);
+        -moz-clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 0 100%, 0 40%);
+              clip-path: polygon(50% 0%, 100% 40%, 100% 100%, 0 100%, 0 40%);
     }
   }
 
+.contacts__name {
+  font-style: normal;
+}
 
-.icon {
-  margin-right: 0.3rem;
+.contacts__title {
+  font-style: normal;
+
+}
+
+.contacts__phone {
+}
+
+
+.contacts__link {
+  font-style: normal;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.contacts__icon {
+  margin: 0.3rem;
   font-size: 1.3rem;
+}
+.contacts__email {
+
+}
+
+.contacts__linkedin {
+
+}
+
+.contacts__github {
+
+}
+
+.contacts__resume {
+
 }
 
 .footer {
