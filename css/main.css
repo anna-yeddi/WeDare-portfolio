@@ -705,6 +705,17 @@ body#scrollSpy {
        -moz-background-clip: padding-box;
             background-clip: padding-box;
   }
+  .card__screenshot:hover,
+  .card__screenshot:focus {
+    outline: 0;
+    cursor: pointer;
+    background-color: transparent;
+    -webkit-transform: translateY(-.3rem);
+       -moz-transform: translateY(-.3rem);
+        -ms-transform: translateY(-.3rem);
+         -o-transform: translateY(-.3rem);
+            transform: translateY(-.3rem);
+  }
 
   .card__screenshot--img {
     object-position: top;
