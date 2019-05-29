@@ -370,31 +370,18 @@ body#scrollSpy {
 
 .jumbotron {
   min-height: 90vh;
-  /* height: min-content; */
-  /* width: 100%; */
   text-align: center;
   margin-bottom: 2rem;
   padding: 2rem; /* fallback */
-  padding-top: 10rem; /* fallback */
+  padding-top: 5rem; /* fallback */
   padding: 35% 5% 10% 5%;
   align-items: center;
 }
-  .jumbotron::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
-    content: '';
-    background-color: transparent;
-    z-index: 0;
-  }
   @media (min-width: 36rem) {
     .jumbotron {
       margin-bottom: 3rem;
-      padding: 5rem; /* fallback */
-      padding: 20%;
+      padding: 4rem; /* fallback */
+      padding: 15%;
       -webkit-clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
          -moz-clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
               clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
@@ -504,6 +491,7 @@ body#scrollSpy {
     font-size: 1rem;
     color: var(--white);
     line-height: 1.5;
+    z-index: 3;
     -webkit-transition: color .2s ease-in-out, background-color .2s ease-in-out, 
                         border-color .2s ease-in-out, box-shadow .2s ease-in-out;
        -moz-transition: color .2s ease-in-out, background-color .2s ease-in-out, 
