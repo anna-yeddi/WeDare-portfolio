@@ -2,6 +2,11 @@
 
 Original langing page for We Dare Project and Anna Kova's portfolio website. First created in December 2018.
 
+## Updates June 2019:
+- Accessible login page project added;
+- Animations on scroll included with AOS library by Michalsnik;
+- Schema fixed.
+
 ## Updates March through May 2019:
 - Markup and styles rewritten;
 - Responsive CSS Grid realized;

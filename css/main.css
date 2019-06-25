@@ -30,6 +30,7 @@
   box-sizing: border-box;
 }
 
+/* Global styles */
 
 html {
   width: 100%;
@@ -37,30 +38,21 @@ html {
   /* for ScrollSpy and Nav */
   position: relative !important;
   line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent;
+     -webkit-text-size-adjust: 100%;
+         -ms-text-size-adjust: 100%;
+           -ms-overflow-style: scrollbar;
 }
 
 body {
-  margin: 0;
-  width: 100%;
-  /* min-height: 100%; */
-  font-family: var(--font-first);
-  font-style: light;
-  font-size: 1rem;
-  font-weight: 200;
-  line-height: 1.5;
-  letter-spacing: 0.08rem;
-  color: var(--offwhite);
-  text-align: left;
-
   /* for the ScrollSpy */
   position: relative;
 
   /* for the sticky footer */
   margin-bottom: var(--footer-h);
+
+  width: 100%;
+  margin: 0;
 
   /* backgroung with a gradient */
   background-color: var(--primary); /* fallback color */
@@ -74,9 +66,26 @@ body {
               var(--primary) 5%, var(--info) 20%, var(--primary) 35%, var(--info) 50%, var(--primary) 65%, var(--info) 80%, var(--primary) 95%), 
               center center/cover no-repeat;
   -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
+      -moz-background-size: cover;
+        -o-background-size: cover;
           background-size: cover;
+  color: var(--offwhite);
+  text-align: left;
+  font-family: var(--font-first);
+  font-style: light;
+  font-weight: 200;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.08rem;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-transition: none;
+       -moz-transition: none;
+         -o-transition: none;
+            transition: none;
+  }
 }
 
 a {
@@ -84,13 +93,13 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--white);
   margin: 0;
+  color: var(--white);
 }
 
 p {
-  font-size: 0.9rem;
   font-family: var(--font-second);
+  font-size: 0.9rem;
 }
   @media (min-width: 48rem) {
     p {
@@ -109,10 +118,10 @@ p {
   right: 0;
   left: 0;
   z-index: 100;
-  padding: 0.25rem;
   margin: 0;
-  list-style: none;
+  padding: 0.25rem;
   color: var(--white);
+  list-style: none;
 }
   @media (min-width: 62rem) {
     .nav {
@@ -149,13 +158,13 @@ p {
   }
 
 .nav__container {
-  width: 100%;
-  padding: 0.25rem;
-  margin: 0;
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;
   justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0.25rem;
 }
   @media (min-width: 48rem) {
     .nav__container {
@@ -166,15 +175,15 @@ p {
 
 .nav__logo > h3 {
   display: inline-block;
+  margin: 0 1rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  margin: 0 1rem;
   color: var(--white);
-  font-weight: 200;
   font-size: 1.5rem;
+  font-weight: 200;
   text-decoration: none;
-  letter-spacing: 0.02rem;
   line-height: inherit;
+  letter-spacing: 0.02rem;
   white-space: nowrap;
 }
   @media (min-width: 48rem) {
@@ -197,11 +206,11 @@ p {
 .nav__hamburger {
   --color: var(--white-half) !important;
 
-  padding: 0.25rem;
   margin: 0.25rem;
-  line-height: 1;
+  padding: 0.25rem;
   background-color: transparent;
   border: 1px solid transparent;
+  line-height: 1;
   cursor: pointer;
 }
   @media (min-width: 48rem) {
@@ -219,8 +228,8 @@ p {
 
 .nav__hamburger {
   position: relative;
-  align-self: center;
   margin: 0px;
+  align-self: center;
   -webkit-transform: rotate(0deg);
      -moz-transform: rotate(0deg);
        -o-transform: rotate(0deg);
@@ -276,14 +285,14 @@ p {
   flex-basis: 100%;
   flex-grow: 1;
   flex-direction: column;
-  padding-left: 0;
   margin-left: auto !important;
   margin-bottom: 0;
+  padding-left: 0;
   list-style: none;
-  cursor: pointer;
   transition-property: opacity, filter;
   transition-duration: 0.3s;
   transition-timing-function: linear;
+  cursor: pointer;
 }
   @media (min-width: 48rem) {
     .nav__menu {
@@ -298,9 +307,9 @@ p {
   display: block;
   padding: 0.25rem 1rem;
   color: var(--primary);
-  text-decoration: none;
-  font-size: 0.9rem;
   font-family: var(--font-second);
+  font-size: 0.9rem;
+  text-decoration: none;
 }
   @media (min-width: 48rem) {
     .nav-link {
@@ -326,12 +335,12 @@ p {
     width: 1px;
     height: 1px;
     padding: 0;
+    border: 0;
     overflow: hidden;
     -webkit-clip: rect(0, 0, 0, 0);
        -moz-clip: rect(0, 0, 0, 0);
             clip: rect(0, 0, 0, 0);
     white-space: nowrap;
-    border: 0;
   }
   .sr-only-focusable:active, .sr-only-focusable:focus {
     position: static;
@@ -351,9 +360,9 @@ p {
   top: 0;
   left: 0;
   z-index: 1500;
+  width: 0%;
   height: 3px;
   background: var(--danger);
-  width: 0%;
 }
 
 /* ScrollSpy indicator */
@@ -370,12 +379,12 @@ body#scrollSpy {
 
 .jumbotron {
   min-height: 90vh;
-  text-align: center;
   margin-bottom: 2rem;
   padding: 2rem; /* fallback */
   padding-top: 5rem; /* fallback */
   padding: 35% 5% 10% 5%;
   align-items: center;
+  text-align: center;
 }
   @media (min-width: 36rem) {
     .jumbotron {
@@ -415,15 +424,15 @@ body#scrollSpy {
   .jumbotron__h1 {
     margin: 1.5rem auto;
     padding: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem var(--shadow);
+    color: var(--white);
+    background: var(--danger);
     text-transform: uppercase;
     font-size: 3.25rem;
     font-weight: bolder;
     line-height: 1.35;
-    letter-spacing: .2rem;
     word-spacing: .2rem;
-    box-shadow: 0 0.125rem 0.25rem var(--shadow);
-    color: var(--white);
-    background: var(--danger);
+    letter-spacing: .2rem;
   }
     @media (min-width: 48rem) {
       .jumbotron__h1 {
@@ -437,16 +446,16 @@ body#scrollSpy {
     }
 
   .jumbotron__h2 {
+    z-index: 2;
     padding: 0.5rem;
-    font-size: 2rem;
-    font-weight: 100;
-    line-height: 1.2;
-    letter-spacing: .1rem;
-    word-spacing: .1rem;
     box-shadow: 0 0.125rem 0.25rem var(--shadow);
     color: var(--white);
     background: var(--danger);
-    z-index: 2;
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 1.2;
+    word-spacing: .1rem;
+    letter-spacing: .1rem;
   }
     @media (min-width: 48rem) {
       .jumbotron__h2 {
@@ -479,19 +488,22 @@ body#scrollSpy {
 
   .jumbotron__btn {
     display: inline-block;
-    font-weight: 400;
+    z-index: 3;
+    margin: 1rem 0.5rem;
+    padding: 0.375rem 0.75rem;
+    border: 1px solid transparent;
+    box-shadow: 0 1rem 3rem var(--shadow);
+    color: var(--white);
+    vertical-align: middle;
     text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
     letter-spacing: 0.1rem;
     white-space: nowrap;
-    vertical-align: middle;
+    -webkit-text-decoration-skip: objects;
+                 text-decoration: none;
     user-select: none;
-    border: 1px solid transparent;
-    padding: 0.375rem 0.75rem;
-    margin: 1rem 0.5rem;
-    font-size: 1rem;
-    color: var(--white);
-    line-height: 1.5;
-    z-index: 3;
     -webkit-transition: color .2s ease-in-out, background-color .2s ease-in-out, 
                         border-color .2s ease-in-out, box-shadow .2s ease-in-out;
        -moz-transition: color .2s ease-in-out, background-color .2s ease-in-out, 
@@ -502,9 +514,6 @@ body#scrollSpy {
                         border-color .2s ease-in-out, box-shadow .2s ease-in-out;
             transition: color .2s ease-in-out, background-color .2s ease-in-out, 
                         border-color .2s ease-in-out, box-shadow .2s ease-in-out;
-                 text-decoration: none;
-    -webkit-text-decoration-skip: objects;
-    box-shadow: 0 1rem 3rem var(--shadow);
   }
     @media screen and (prefers-reduced-motion: reduce) {
       .jumbotron__btn {
@@ -518,8 +527,8 @@ body#scrollSpy {
     .jumbotron__btn:hover,
     .jumbotron__btn:focus {
       outline: 0;
-      cursor: pointer;
       background-color: transparent;
+      cursor: pointer;
       -webkit-transform: translateY(-.3rem);
          -moz-transform: translateY(-.3rem);
           -ms-transform: translateY(-.3rem);
@@ -549,30 +558,24 @@ body#scrollSpy {
 /* PROJECTS */
 
 .projects {
-  margin: 0 auto;
-  padding: 0;
-  width: 100%;
-
   /* main grid for a section */
   --grid-min-size: 22rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--grid-min-size), 1fr));
   grid-auto-flow: row;
   grid-gap: 4rem;
+
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .section__name {
-  text-align: center;
   margin: 1.25rem 0.25rem;
+  text-align: center;
 }
 .section__name--color {
   padding: 0;
-  font-size: 1.5rem;
-  font-weight: bolder;
-  line-height: 1.2;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  word-spacing: 0.1rem;
   color: var(--light);
   background: linear-gradient(135deg,
               var(--offwhite) 7.5%, var(--light) 50%, var(--warning) 92.5%);
@@ -584,11 +587,17 @@ body#scrollSpy {
      -moz-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  line-height: 1.2;
+  word-spacing: 0.1rem;
+  letter-spacing: 0.1rem;
 }
   @media (min-width: 48rem) {
     .section__name--color {
-      font-size: 1.75rem;
       margin: 1.5rem 1rem;
+      font-size: 1.75rem;
     }
   }
   @media (min-width: 75rem) {
@@ -613,14 +622,14 @@ body#scrollSpy {
   grid-gap: 0.5rem;
   grid-auto-flow: row;
   grid-auto-rows: minmax(1rem, auto);
+  margin: 1rem 0;
   justify-items: start;
   align-items: center;
-  margin: 1rem 0;
 }
   @media (min-width: 20rem) {
     .card {
-      margin: 2rem 0;
       grid-gap: 1rem;
+      margin: 2rem 0;
     }
   }
   @media (min-width: 36rem) {
@@ -671,9 +680,9 @@ body#scrollSpy {
   }
   
   .card__screenshot {
-    object-position: top;
-    width: 100%;
     display: block;
+    width: 100%;
+    object-position: top;
     box-shadow: 0 1rem 3rem var(--shadow);
 
     /* grid-specific */
@@ -696,8 +705,8 @@ body#scrollSpy {
   .card__screenshot:hover,
   .card__screenshot:focus {
     outline: 0;
-    cursor: pointer;
     background-color: transparent;
+    cursor: pointer;
     -webkit-transform: translateY(-.3rem);
        -moz-transform: translateY(-.3rem);
         -ms-transform: translateY(-.3rem);
@@ -706,15 +715,12 @@ body#scrollSpy {
   }
 
   .card__screenshot--img {
-    object-position: top;
-    width: 100%;
     display: block;
+    width: 100%;
+    object-position: top;
   }
 
     .card__name {
-      text-transform: uppercase;
-      font-size: 2rem;
-      line-height: normal;
       margin: 1rem 0;
       justify-self: start;
       background: linear-gradient(135deg,
@@ -727,19 +733,25 @@ body#scrollSpy {
          -moz-background-clip: text;
               background-clip: text;
       -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      font-size: 2rem;
+      line-height: normal;
+
       /* grid-specific */
       grid-area: name;
     }
     .card__info {
       margin: 0;
       justify-self: start;
+
       /* grid-specific */
       grid-area: info;
     }
     .card__roles {
       margin: 0;
-      font-size: 1rem;
       color: var(--secondary);
+      font-size: 1rem;
+
       /* grid-specific */
       grid-area: role;
     }
@@ -747,14 +759,15 @@ body#scrollSpy {
       margin: 0;
       color: var(--secondary);
       font-size: 0.85rem;
+
       /* grid-specific */
       grid-area: date;
       justify-self: start;
     }
       @media (min-width: 36em) {
         .card__date {
-          justify-self: end;
           margin: 1rem 1rem 0 0;
+          justify-self: end;
         }
       }
       @media (min-width: 44rem) {
@@ -765,16 +778,17 @@ body#scrollSpy {
       }
 
   .card__features {
-    font-size: 0.9rem;
-    font-family: var(--font-second);
-    list-style: square inside;
     margin: 0;
+    list-style: square inside;
+    font-family: var(--font-second);
+    font-size: 0.9rem;
+
     /* grid-specific */
     grid-area: feat;
   }
     .card__list {
-      padding-left: 0;
       margin-bottom: 0;
+      padding-left: 0;
     }
     .card__list--link {  
       text-decoration: underline;
@@ -782,16 +796,17 @@ body#scrollSpy {
   
     .card__btn {
       display: inline-block;
-      font-weight: 400;
-      text-align: center;
-      white-space: nowrap;
-      vertical-align: middle;
-      border: 1px solid transparent;
-      padding: 0.35rem 0.7rem;
       margin: 1rem 0;
-      font-size: 0.9rem;
+      padding: 0.35rem 0.7rem;
       background-color: transparent;
+      border: 1px solid transparent;
+      box-shadow: 0 1rem 3rem var(--shadow);
+      text-align: center;
+      vertical-align: middle;
+      font-size: 0.9rem;
+      font-weight: 400;
       line-height: 1.5;
+      white-space: nowrap;
       -webkit-transition: color .2s ease-in-out, background-color .2s ease-in-out, 
                           border-color .2s ease-in-out, box-shadow .2s ease-in-out;
          -moz-transition: color .2s ease-in-out, background-color .2s ease-in-out, 
@@ -804,7 +819,6 @@ body#scrollSpy {
                           border-color .2s ease-in-out, box-shadow .2s ease-in-out;
       text-decoration: none;
       -webkit-text-decoration-skip: objects;
-      box-shadow: 0 1rem 3rem var(--shadow)
     }
       @media screen and (prefers-reduced-motion: reduce) {
         .card__btn {
@@ -829,25 +843,27 @@ body#scrollSpy {
         font-size: 1.3rem;
       }
       .card__btn--light {
+        margin-left: 0;
+        padding-top: 0.6rem;
         color: var(--light);
         border-color: var(--light);
-        padding-top: 0.6rem;
-        margin-left: 0;
+
         /* grid-specific */
         grid-area: btnL;
         justify-self: center;
       }
         .card__btn--light:hover,
         .card__btn--light:focus {
+          color: var(--info);
           background-color: var(--light);
           border-color: var(--light--half);
-          color: var(--info);
         }
       .card__btn--secondary {
+        margin-right: 0;
+        padding-top: 0.6rem;
         color: var(--secondary);
         border-color: var(--secondary);
-        padding-top: 0.6rem;
-        margin-right: 0;
+
         /* grid-specific */
         grid-area: btnR;
         justify-self: start;
@@ -866,20 +882,19 @@ body#scrollSpy {
 }
 
 .contacts {
-  padding: 5rem 1.5rem;
-  color: var(--info);
-  font-size: 1rem;
-  line-height: 1.5;
-  letter-spacing: 0.08rem;
-  
   /* grid for contacts */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
   grid-gap: 0.5rem;
   grid-auto-flow: row;
   grid-auto-columns: 1fr;
-  /* justify-content: space-around; */
   justify-items: space-around;
+
+  padding: 5rem 1.5rem;
+  color: var(--info);
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.08rem;
 }
   @media (min-width: 36rem) {
     .contacts {
@@ -902,18 +917,18 @@ body#scrollSpy {
                 -webkit-linear-gradient(336deg, rgba(233, 202, 190, 0.6), rgba(233, 202, 190,1) 90.71%), 
                 center center/cover no-repeat;
     -webkit-clip-path: polygon(50% 0%, 100% 20%, 100% 100%, 0 100%, 0 20%);
-      -moz-clip-path: polygon(50% 0%, 100% 20%, 100% 100%, 0 100%, 0 20%);
+       -moz-clip-path: polygon(50% 0%, 100% 20%, 100% 100%, 0 100%, 0 20%);
             clip-path: polygon(50% 0%, 100% 20%, 100% 100%, 0 100%, 0 20%);
     box-shadow: 0 1rem 3rem var(--shadow);
     -webkit-background-size: cover;
-      -moz-background-size: cover;
-        -o-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
             background-size: cover;
   }
   @media (min-width: 36rem) {
     .contacts--background {
       -webkit-clip-path: polygon(50% 0%, 100% 35%, 100% 100%, 0 100%, 0 35%);
-        -moz-clip-path: polygon(50% 0%, 100% 35%, 100% 100%, 0 100%, 0 35%);
+         -moz-clip-path: polygon(50% 0%, 100% 35%, 100% 100%, 0 100%, 0 35%);
               clip-path: polygon(50% 0%, 100% 35%, 100% 100%, 0 100%, 0 35%);
     }
   }
@@ -952,23 +967,23 @@ body#scrollSpy {
       color: var(--danger);
     }
   .contacts__title {
+    margin-bottom: 1rem;
+    border-bottom: thin solid var(--danger);
     color: var(--info);
     font-weight: 400;
     letter-spacing: 0.05rem;
-    margin-bottom: 1rem;
-    border-bottom: thin solid var(--danger);
   }
 
 .contacts__links {
-  letter-spacing: 0.05rem;
   width: max-content;
   align-items: center;
   font-family: var(--font-second);
+  letter-spacing: 0.05rem;
 }
   .contacts__links--a {
+    font-size: 1rem;
     font-style: normal;
     text-decoration: none;
-    font-size: 1rem;
   }
   .contacts__icon {
     margin: 0.3rem;
@@ -977,10 +992,10 @@ body#scrollSpy {
 
 .footer {
   width: 80%;
-  text-align: end;
-  color: var(--danger);
-  padding: 0.5rem;
   margin: 0 0 0 auto;
+  padding: 0.5rem;
+  color: var(--danger);
+  text-align: end;
   font-family: var(--font-second);
   font-size: 0.85rem;
 }
