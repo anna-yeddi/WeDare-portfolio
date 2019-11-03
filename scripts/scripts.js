@@ -33,14 +33,26 @@ $(window).scroll(function(){
 // Hamburger Icon animation
 
   // Look for .nav__hamburger
-  let hamburger = document.querySelector('.nav__hamburger');
+  let hamburger = document.querySelector('.nav__hamburger'),
+      nav = document.querySelector('.nav__menu');
+  //     navLinks = document.querySelectorAll('.nav-link'),
+  //     isHidden = nav.classList.contains('nav__menu--collapse');
+  // let setAria = () => {
+  //     for (let i = 0; i < navLinks.length ; i++) {
+  //       navLinks[i].setAttribute('aria-hidden', isHidden);
+  //       // navLinks[i].setAttribute('tabindex', -1);
+  //     }
+  //   };
+
+  // setAria();
   // On click
   hamburger.addEventListener('click', function() {
     // Toggle class 'nav__hamburger--active'
     hamburger.classList.toggle('nav__hamburger--active');
     // Open/close menu
-    let nav = document.querySelector('.nav__menu');
     nav.classList.toggle('nav__menu--collapse');
+    // isHidden = !isHidden;
+    // setAria();
   });
 
 

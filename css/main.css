@@ -1,21 +1,18 @@
 /* Variables */
 :root {
-  --primary: #0870a5;
-  --primary-half: #0871a581;
-  --primary-third: #0871a5be;
-  --secondary: #6FB6D2;
-  --secondary-half: #6FB6D281;
+  --primary: #044D81;
+  --primary-half: #044D8181;
+  --primary-third: #044D81be;
+  --secondary: #AFF6FF;
+  --secondary-half: #AFF6FF81;
   --success: #5FBE00;
   --info: #015079;
-  --warning: #EE9E90;
-  --danger: #E75854;
-  --dark: #242223;
-  --light: #e9cabe;
-  --light--half: #e9cabe81;
-  --offwhite: #dee2e6;
-  --white: #f6f8f9;
-  --white-half: #f6f8f981;
-  --white-third: #f6f8f9be;
+  --light: #FFEADE;
+  --darker: #FFB7B4;
+  /* --darker: #FFA8A5; */
+  --dark: #D3413C;
+  /* --dark: #E75854; */
+  --white: #ffffff;
   --black: #000;
   --shadow: #00000015;
   
@@ -28,6 +25,10 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+*:focus {
+  outline: 2px solid var(--dark)!important;  
 }
 
 /* Global styles */
@@ -69,7 +70,7 @@ body {
       -moz-background-size: cover;
         -o-background-size: cover;
           background-size: cover;
-  color: var(--offwhite);
+  color: var(--light);
   text-align: left;
   font-family: var(--font-first);
   font-style: light;
@@ -95,6 +96,10 @@ a {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   color: var(--white);
+}
+
+h4 {
+  font-size: 1.1rem;
 }
 
 p {
@@ -129,13 +134,14 @@ p {
     }
   }
   .nav--scrolled {
+    background: var(--white); /* fallback color */
     background: var(--primary); /* fallback color */
     background: linear-gradient(135deg, 
-                var(--light) 59%, var(--info) 58%, var(--primary) 90%);
+                var(--white) 25%, var(--light) 57%, var(--info) 57%, var(--primary) 90%);
     background: -moz-linear-gradient(-45deg, 
-                var(--light) 59%, var(--info) 58%, var(--primary) 90%);
+                var(--white) 25%, var(--light) 57%, var(--info) 57%, var(--primary) 90%);
     background: -webkit-linear-gradient(-45deg, 
-                var(--light) 59%, var(--info) 58%, var(--primary) 90%);
+                var(--white) 25%, var(--light) 57%, var(--info) 57%, var(--primary) 90%);
   /* background on scroll */
     -webkit-transition: all 1s linear;
        -moz-transition: all 1s linear;
@@ -173,12 +179,12 @@ p {
     }
   }
 
-.nav__logo > h3 {
+.nav__logo > h2 {
   display: inline-block;
   margin: 0 1rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  color: var(--white);
+  color: var(--primary);
   font-size: 1.5rem;
   font-weight: 200;
   text-decoration: none;
@@ -187,24 +193,24 @@ p {
   white-space: nowrap;
 }
   @media (min-width: 48rem) {
-    .nav__logo > h3 {
+    .nav__logo > h2 {
       font-size: 1.75rem;
     }
   }
   @media (min-width: 75rem) {
-    .nav__logo > h3 {
+    .nav__logo > h2 {
       font-size: 2rem;
     }
   }
   .nav__logo--name {
-    color: var(--danger);
+    color: var(--dark);
     font-weight: bolder;
   }
 
 /* Animated Hamburger Icon */
 
 .nav__hamburger {
-  --color: var(--white-half) !important;
+  --color: var(--white) !important;
 
   margin: 0.25rem;
   padding: 0.25rem;
@@ -221,8 +227,6 @@ p {
   }
   .nav__hamburger:focus,
   .nav__hamburger:hover {
-    outline: none;
-    border: thin solid var(--primary);
     text-decoration: none;
   }
 
@@ -251,32 +255,6 @@ p {
   }
 }
 
-/* Collapsing of nav menu */
-
-.nav__menu--collapse {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  -webkit-transition: all 0.35s ease;
-     -moz-transition: all 0.35s ease;
-      -ms-transition: all 0.35s ease;
-       -o-transition: all 0.35s ease;
-          transition: all 0.35s ease;
-}
-  @media screen and (prefers-reduced-motion: reduce) {
-    .nav__menu--collapse {
-      -webkit-transition: none;
-         -moz-transition: none;
-          -ms-transition: none;
-           -o-transition: none;
-              transition: none;
-    }
-  }
-  @media (min-width: 48rem) {
-    .nav__menu--collapse {
-      height: auto;
-    }
-  }
 
 /* Full Navbar Menu */
 
@@ -315,20 +293,51 @@ p {
     .nav-link {
       padding-right: 0.75rem;
       padding-left: 0.75rem;
-      color: var(--white-half);
+      color: var(--white);
       font-size: 1rem;
     }
   }
   .nav-link:hover,
   .nav-link:focus {
-    color: var(--white-third);
+    background-color: var(--dark);
+    color: var(--white);
   }
   .nav-link--active,
   .nav-link.active,
   .nav-link.show {
-    color: var(--white);
+    color: var(--light);
+    text-decoration: underline;
   }
   
+/* Collapsing of nav menu */
+
+.nav__menu--collapse {
+  display: none;
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.35s ease;
+     -moz-transition: all 0.35s ease;
+      -ms-transition: all 0.35s ease;
+       -o-transition: all 0.35s ease;
+          transition: all 0.35s ease;
+}
+  @media screen and (prefers-reduced-motion: reduce) {
+    .nav__menu--collapse {
+      -webkit-transition: none;
+         -moz-transition: none;
+          -ms-transition: none;
+           -o-transition: none;
+              transition: none;
+    }
+  }
+  @media (min-width: 48rem) {
+    .nav__menu--collapse {
+      display: block;
+      height: auto;
+    }
+  }
+
   /* Scroll Spy */
   .sr-only {
     position: absolute;
@@ -362,7 +371,7 @@ p {
   z-index: 1500;
   width: 0%;
   height: 3px;
-  background: var(--danger);
+  background: var(--dark);
 }
 
 /* ScrollSpy indicator */
@@ -396,19 +405,17 @@ body#scrollSpy {
               clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
     }
   }
-  .jumbotron--background {
+  .jumbotron--background,
+  .contacts--background {
     background-color: var(--light); /* fallback color */
-    background: linear-gradient(217deg, rgba(238, 158, 144, 1), rgba(233, 202, 190,0.7) 50.71%),
-                linear-gradient(127deg, rgba(236, 170, 150, 1), rgba(233, 202, 190,0.7) 60.71%),
-                linear-gradient(336deg, rgba(233, 202, 190, 0.6), rgba(233, 202, 190,1) 90.71%), 
+    background: linear-gradient(-45deg,
+                var(--white) 7.5%, var(--light) 50%, var(--darker) 92.5%),
                 center center/cover no-repeat;
-    background: -moz-linear-gradient(217deg, rgba(238, 158, 144, 1), rgba(233, 202, 190,0.7) 50.71%),
-                -moz-linear-gradient(127deg, rgba(236, 170, 150, 1), rgba(233, 202, 190,0.7) 60.71%),
-                -moz-linear-gradient(336deg, rgba(233, 202, 190, 0.6), rgba(233, 202, 190,1) 90.71%), 
+    background: -moz-linear-gradient(45deg,
+                var(--white) 7.5%, var(--light) 50%, var(--darker) 92.5%),
                 center center/cover no-repeat;
-    background: -webkit-linear-gradient(217deg, rgba(238, 158, 144, 1), rgba(233, 202, 190,0.7) 50.71%),
-                -webkit-linear-gradient(127deg, rgba(236, 170, 150, 1), rgba(233, 202, 190,0.7) 60.71%),
-                -webkit-linear-gradient(336deg, rgba(233, 202, 190, 0.6), rgba(233, 202, 190,1) 90.71%), 
+    background: -webkit-linear-gradient(45deg,
+                var(--white) 7.5%, var(--light) 50%, var(--darker) 92.5%),
                 center center/cover no-repeat;
     color: var(--info);
     -webkit-clip-path: polygon(100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
@@ -426,7 +433,7 @@ body#scrollSpy {
     padding: 0.5rem;
     box-shadow: 0 0.125rem 0.25rem var(--shadow);
     color: var(--white);
-    background: var(--danger);
+    background: var(--dark);
     text-transform: uppercase;
     font-size: 3.25rem;
     font-weight: bolder;
@@ -450,7 +457,7 @@ body#scrollSpy {
     padding: 0.5rem;
     box-shadow: 0 0.125rem 0.25rem var(--shadow);
     color: var(--white);
-    background: var(--danger);
+    background: var(--dark);
     font-size: 2rem;
     font-weight: 100;
     line-height: 1.2;
@@ -482,7 +489,7 @@ body#scrollSpy {
       }
     }
     .jumbotron__p--CTA {
-      color: var(--danger);
+      color: var(--dark);
       font-weight: 600;
     }
 
@@ -491,9 +498,8 @@ body#scrollSpy {
     z-index: 3;
     margin: 1rem 0.5rem;
     padding: 0.375rem 0.75rem;
-    border: 1px solid transparent;
+    border: 1px solid var(--white);
     box-shadow: 0 1rem 3rem var(--shadow);
-    color: var(--white);
     vertical-align: middle;
     text-align: center;
     font-size: 1rem;
@@ -526,8 +532,10 @@ body#scrollSpy {
     }
     .jumbotron__btn:hover,
     .jumbotron__btn:focus {
+      background-color: var(--dark);
+      border-color: var(--dark);
+      color: var(--white);
       outline: 0;
-      background-color: transparent;
       cursor: pointer;
       -webkit-transform: translateY(-.3rem);
          -moz-transform: translateY(-.3rem);
@@ -535,22 +543,16 @@ body#scrollSpy {
            -o-transform: translateY(-.3rem);
               transform: translateY(-.3rem);
     }
-    .jumbotron__btn--primary {
+    .jumbotron__btn--left {
       background-color: var(--primary);
+      border-color: var(--primary);
+      color: var(--white);
     }
-      .jumbotron__btn--primary:hover,
-      .jumbotron__btn--primary:focus {
-        color: var(--primary);
-        border-color: var(--primary);
-      }
-    .jumbotron__btn--danger {
-      background-color: var(--danger);
+    .jumbotron__btn--right {
+      background-color: var(--dark);
+      border-color: var(--white);
+      color: var(--white);
     }
-      .jumbotron__btn--danger:hover,
-      .jumbotron__btn--danger:focus {
-        color: var(--danger);
-        border-color: var(--danger);
-      }
 
 
 /* Sections */
@@ -575,18 +577,14 @@ body#scrollSpy {
   text-align: center;
 }
 .section__name--color {
-  padding: 0;
-  color: var(--light);
+  padding: .5rem 1rem;
+  color: var(--primary);
   background: linear-gradient(135deg,
-              var(--offwhite) 7.5%, var(--light) 50%, var(--warning) 92.5%);
+              var(--white) 7.5%, var(--light) 50%, var(--darker) 92.5%);
   background: -moz-linear-gradient(-45deg,
-              var(--offwhite) 7.5%, var(--light) 50%, var(--warning) 92.5%);
+              var(--white) 7.5%, var(--light) 50%, var(--darker) 92.5%);
   background: -webkit-linear-gradient(-45deg,
-              var(--offwhite) 7.5%, var(--light) 50%, var(--warning) 92.5%);
-  -webkit-background-clip: text;
-     -moz-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
+              var(--white) 7.5%, var(--light) 50%, var(--darker) 92.5%);
   text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: bolder;
@@ -691,13 +689,13 @@ body#scrollSpy {
 
     /* border */
     padding: 0.25rem;
-    background-color: var(--light);
+    background-color: var(--light); /* fallback color */
     background: linear-gradient(135deg,
-                var(--offwhite) 7.5%, var(--light) 50%, var(--warning) 92.5%);
+                var(--white) 7.5%, var(--light) 50%, var(--darker) 92.5%);
     background: -moz-linear-gradient(-45deg,
-                var(--offwhite) 7.5%, var(--light) 50%, var(--warning) 92.5%);
+                var(--white) 7.5%, var(--light) 50%, var(--darker) 92.5%);
     background: -webkit-linear-gradient(-45deg,
-                var(--offwhite) 7.5%, var(--light) 50%, var(--warning) 92.5%);
+                var(--white) 7.5%, var(--light) 50%, var(--darker) 92.5%);
     -webkit-background-clip: padding-box;
        -moz-background-clip: padding-box;
             background-clip: padding-box;
@@ -723,12 +721,14 @@ body#scrollSpy {
     .card__name {
       margin: 1rem 0;
       justify-self: start;
+      background-color: var(--primary); /* fallback color */
+      color: var(--white); /* fallback color */
       background: linear-gradient(135deg,
-                  var(--offwhite) 7.5%, var(--light) 50%, var(--warning) 92.5%);
+                  var(--white) 7.5%, var(--light) 50%, var(--dark) 92.5%);
       background: -moz-linear-gradient(-45deg,
-                  var(--offwhite) 7.5%, var(--light) 50%, var(--warning) 92.5%);
+                  var(--white) 7.5%, var(--light) 50%, var(--dark) 92.5%);
       background: -webkit-linear-gradient(-45deg,
-                  var(--offwhite) 7.5%, var(--light) 50%, var(--warning) 92.5%);
+                  var(--white) 7.5%, var(--light) 50%, var(--dark) 92.5%);
       -webkit-background-clip: text;
          -moz-background-clip: text;
               background-clip: text;
@@ -740,25 +740,12 @@ body#scrollSpy {
       /* grid-specific */
       grid-area: name;
     }
-    .card__info {
-      margin: 0;
-      justify-self: start;
 
-      /* grid-specific */
-      grid-area: info;
-    }
-    .card__roles {
-      margin: 0;
-      color: var(--secondary);
-      font-size: 1rem;
-
-      /* grid-specific */
-      grid-area: role;
-    }
     .card__date {
       margin: 0;
-      color: var(--secondary);
-      font-size: 0.85rem;
+      color: var(--white);
+      font-size: 0.8rem;
+      font-weight: bold;
 
       /* grid-specific */
       grid-area: date;
@@ -777,6 +764,23 @@ body#scrollSpy {
         }
       }
 
+    .card__info {
+      margin: 0;
+      justify-self: start;
+
+      /* grid-specific */
+      grid-area: info;
+    }
+    .card__roles {
+      margin: 0;
+      color: var(--light);
+      font-family: var(--font-second);
+      font-size: 0.9rem;
+
+      /* grid-specific */
+      grid-area: role;
+    }
+
   .card__features {
     margin: 0;
     list-style: square inside;
@@ -792,13 +796,18 @@ body#scrollSpy {
     }
     .card__list--link {  
       text-decoration: underline;
+      color: var(--white);
+    }
+    .card__list--link:focus,  
+    .card__list--link:hover {  
+      background-color: var(--dark);
     }
   
     .card__btn {
       display: inline-block;
       margin: 1rem 0;
       padding: 0.35rem 0.7rem;
-      background-color: transparent;
+      /* background-color: transparent; */
       border: 1px solid transparent;
       box-shadow: 0 1rem 3rem var(--shadow);
       text-align: center;
@@ -829,7 +838,10 @@ body#scrollSpy {
                   transition: none;
         }
       }
+      .card__btn:focus,
       .card__btn:hover {
+        background-color: var(--dark);
+        border-color: var(--dark);
         color: var(--white);
         cursor: pointer;
         -webkit-transform: translateY(-.3rem);
@@ -842,37 +854,34 @@ body#scrollSpy {
         margin-right: 0.3rem;
         font-size: 1.3rem;
       }
-      .card__btn--light {
+      .card__btn--left {
         margin-left: 0;
         padding-top: 0.6rem;
-        color: var(--light);
-        border-color: var(--light);
+        color: var(--info);
+        border-color: var(--info);
+        background-color: var(--white);
+        /* color: var(--white);
+        border-color: var(--white);
+        background-color: var(--info); */
 
         /* grid-specific */
         grid-area: btnL;
         justify-self: center;
       }
-        .card__btn--light:hover,
-        .card__btn--light:focus {
-          color: var(--info);
-          background-color: var(--light);
-          border-color: var(--light--half);
-        }
-      .card__btn--secondary {
+      .card__btn--right {
         margin-right: 0;
         padding-top: 0.6rem;
-        color: var(--secondary);
-        border-color: var(--secondary);
+        color: var(--info);
+        border-color: var(--info);
+        background-color: var(--light);
+        /* color: var(--light);
+        border-color: var(--light);
+        background-color: var(--info); */
 
         /* grid-specific */
         grid-area: btnR;
         justify-self: start;
       }
-        .card__btn--secondary:hover,
-        .card__btn--secondary:focus {
-          background-color: var(--info);
-          border-color: var(--secondary-half);
-        }
 
 
 /* CONTACTS */
@@ -891,7 +900,7 @@ body#scrollSpy {
   justify-items: space-around;
 
   padding: 5rem 1.5rem;
-  color: var(--info);
+  color: var(--primary);
   font-size: 1rem;
   line-height: 1.5;
   letter-spacing: 0.08rem;
@@ -902,20 +911,7 @@ body#scrollSpy {
     }
   }
   .contacts--background {
-    /* background with a gradient */
-    background-color: var(--light); /* fallback color */
-    background: linear-gradient(217deg, rgba(238, 158, 144, 1), rgba(233, 202, 190,0.7) 50.71%),
-                linear-gradient(127deg, rgba(236, 170, 150, 1), rgba(233, 202, 190,0.7) 60.71%),
-                linear-gradient(336deg, rgba(233, 202, 190, 0.6), rgba(233, 202, 190,1) 90.71%), 
-                center center/cover no-repeat;
-    background: -moz-linear-gradient(217deg, rgba(238, 158, 144, 1), rgba(233, 202, 190,0.7) 50.71%),
-                -moz-linear-gradient(127deg, rgba(236, 170, 150, 1), rgba(233, 202, 190,0.7) 60.71%),
-                -moz-linear-gradient(336deg, rgba(233, 202, 190, 0.6), rgba(233, 202, 190,1) 90.71%), 
-                center center/cover no-repeat;
-    background: -webkit-linear-gradient(217deg, rgba(238, 158, 144, 1), rgba(233, 202, 190,0.7) 50.71%),
-                -webkit-linear-gradient(127deg, rgba(236, 170, 150, 1), rgba(233, 202, 190,0.7) 60.71%),
-                -webkit-linear-gradient(336deg, rgba(233, 202, 190, 0.6), rgba(233, 202, 190,1) 90.71%), 
-                center center/cover no-repeat;
+    /* background with a gradient from .jumbotron */
     -webkit-clip-path: polygon(50% 0%, 100% 20%, 100% 100%, 0 100%, 0 20%);
        -moz-clip-path: polygon(50% 0%, 100% 20%, 100% 100%, 0 100%, 0 20%);
             clip-path: polygon(50% 0%, 100% 20%, 100% 100%, 0 100%, 0 20%);
@@ -960,16 +956,17 @@ body#scrollSpy {
     }
   }
   .contacts__name {
-    color: var(--info);
+    font-size: 1.75rem;
+    color: var(--primary);
     text-transform: uppercase;
   }
     .contacts__name--first {
-      color: var(--danger);
+      color: var(--dark);
     }
   .contacts__title {
     margin-bottom: 1rem;
-    border-bottom: thin solid var(--danger);
-    color: var(--info);
+    border-bottom: thin solid var(--dark);
+    color: var(--primary);
     font-weight: 400;
     letter-spacing: 0.05rem;
   }
@@ -994,7 +991,7 @@ body#scrollSpy {
   width: 80%;
   margin: 0 0 0 auto;
   padding: 0.5rem;
-  color: var(--danger);
+  color: var(--primary);
   text-align: end;
   font-family: var(--font-second);
   font-size: 0.85rem;
